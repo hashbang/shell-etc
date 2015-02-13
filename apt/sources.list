@@ -1,0 +1,5 @@
+deb http://mirror.rackspace.com/debian jessie main
+deb-src http://mirror.rackspace.com/debian jessie main
+
+deb http://mirror.rackspace.com/debian-security/ jessie/updates main
+deb-src http://mirror.rackspace.com/debian-security/ jessie/updates main
