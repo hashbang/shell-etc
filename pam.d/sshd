@@ -34,7 +34,7 @@ session    optional     pam_motd.so  motd=/run/motd.dynamic
 session    optional     pam_motd.so noupdate
 
 # Print the status of the user's mailbox upon successful login.
-session    optional     pam_mail.so standard noenv # [1]
+session    optional     pam_mail.so dir=~/Mail standard noenv # [1]
 
 # Set up user limits from /etc/security/limits.conf.
 session    required     pam_limits.so
