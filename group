@@ -49,3 +49,4 @@ netdev:x:109:
 ssh:x:110:
 debian:x:1000:
 lrvick:x:1001:
+messagebus:x:111:
