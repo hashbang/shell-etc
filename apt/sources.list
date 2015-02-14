@@ -1,5 +1,7 @@
-deb http://mirror.rackspace.com/debian jessie main
-deb-src http://mirror.rackspace.com/debian jessie main
+deb http://ftp.debian.org/debian/  jessie main contrib non-free
+deb-src http://ftp.debian.org/debian/  jessie main contrib non-free
 
-deb http://mirror.rackspace.com/debian-security/ jessie/updates main
-deb-src http://mirror.rackspace.com/debian-security/ jessie/updates main
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+deb http://weechat.org/debian jessie main
