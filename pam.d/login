@@ -93,7 +93,7 @@ session    optional   pam_motd.so
 # in /etc/login.defs to make sure that removing a user 
 # also removes the user's mail spool file.
 # See comments in /etc/login.defs
-session    optional   pam_mail.so standard
+session    optional   pam_mail.so dir=~/Mail standard
 
 # Sets the loginuid process attribute
 session    required     pam_loginuid.so
