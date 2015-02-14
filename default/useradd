@@ -5,7 +5,7 @@
 # Similar to DHSELL in adduser. However, we use "sh" here because
 # useradd is a low level utility and should be as general
 # as possible
-SHELL=/bin/sh
+SHELL=/bin/bash
 #
 # The default group for users
 # 100=users on Debian systems
