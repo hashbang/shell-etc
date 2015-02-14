@@ -54,6 +54,7 @@ DEADJOE
 # end section managed by etckeeper
 
 shadow
+passwd
 ssl/certs
 ssh/ssh_host_dsa_key
 ssh/ssh_host_ecdsa_key
