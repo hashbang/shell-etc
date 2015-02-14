@@ -1,0 +1,4 @@
+mount_loopback_t
+public_content_rw_t
+public_content_t
+swapfile_t
