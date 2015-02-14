@@ -1,0 +1,238 @@
+#
+#
+# User-specific file contexts, generated via libsemanage
+# use semanage command to manage system users to change the file_context
+#
+#
+
+
+#
+# Home Context for user unconfined_u
+#
+
+/home/[^/]*/.+	unconfined_u:object_r:user_home_t:s0
+/home/[^/]*/((www)|(web)|(public_html))(/.+)?	unconfined_u:object_r:httpd_user_content_t:s0
+/home/[^/]*/((www)|(web)|(public_html))/cgi-bin(/.+)?	unconfined_u:object_r:httpd_user_script_exec_t:s0
+/home/[^/]*/((www)|(web)|(public_html))(/.*)?/\.htaccess	--	unconfined_u:object_r:httpd_user_htaccess_t:s0
+/home/[^/]*/((www)|(web)|(public_html))(/.*)?/logs(/.*)?	unconfined_u:object_r:httpd_user_ra_content_t:s0
+/home/[^/]*/a?quota\.(user|group)	--	unconfined_u:object_r:quota_db_t:s0
+/home/[^/]*/\.ssh(/.*)?	unconfined_u:object_r:ssh_home_t:s0
+/home/[^/]*/\.uml(/.*)?	unconfined_u:object_r:uml_rw_t:s0
+/home/[^/]*/\.dbus(/.*)?	unconfined_u:object_r:session_dbusd_home_t:s0
+/home/[^/]*/\.giFT(/.*)?	unconfined_u:object_r:gift_home_t:s0
+/home/[^/]*/\.java(/.*)?	unconfined_u:object_r:java_home_t:s0
+/home/[^/]*/\.wine(/.*)?	unconfined_u:object_r:wine_home_t:s0
+/home/[^/]*/\.xauth.*	--	unconfined_u:object_r:xauth_home_t:s0
+/home/[^/]*/\.fonts(/.*)?	unconfined_u:object_r:user_fonts_t:s0
+/home/[^/]*/\.gconf(/.*)?	unconfined_u:object_r:gconf_home_t:s0
+/home/[^/]*/\.gnome(/.*)?	unconfined_u:object_r:gnome_home_t:s0
+/home/[^/]*/\.gnupg(/.+)?	unconfined_u:object_r:gpg_secret_t:s0
+/home/[^/]*/\.irssi(/.*)?	unconfined_u:object_r:irc_home_t:s0
+/home/[^/]*/\.adobe(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/\.gnash(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/vmware(/.*)?	unconfined_u:object_r:vmware_file_t:s0
+/home/[^/]*/\.pulse(/.*)?	unconfined_u:object_r:pulseaudio_home_t:s0
+/home/[^/]*/\.pyzor(/.*)?	unconfined_u:object_r:pyzor_home_t:s0
+/home/[^/]*/\.razor(/.*)?	unconfined_u:object_r:razor_home_t:s0
+/home/[^/]*/\.spamd(/.*)?	unconfined_u:object_r:spamd_home_t:s0
+/home/[^/]*/\.gconfd(/.*)?	unconfined_u:object_r:gconf_home_t:s0
+/home/[^/]*/\.gnome2(/.*)?	unconfined_u:object_r:gnome_home_t:s0
+/home/[^/]*/irclogs(/.*)?	unconfined_u:object_r:irc_log_home_t:s0
+/home/[^/]*/\.kismet(/.*)?	unconfined_u:object_r:kismet_home_t:s0
+/home/[^/]*/\.galeon(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/\.spicec(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/Maildir(/.*)?	unconfined_u:object_r:mail_home_rw_t:s0
+/home/[^/]*/\.vmware(/.*)?	unconfined_u:object_r:vmware_file_t:s0
+/home/[^/]*/\.screen(/.*)?	unconfined_u:object_r:screen_home_t:s0
+/home/[^/]*/\.tvtime(/.*)?	unconfined_u:object_r:tvtime_home_t:s0
+/home/[^/]*/\.vmware[^/]*/.*\.cfg	--	unconfined_u:object_r:vmware_conf_t:s0
+/home/[^/]*/\.forward[^/]*	--	unconfined_u:object_r:mail_home_t:s0
+/home/[^/]*/\.mozilla(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/\.phoenix(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/\.mplayer(/.*)?	unconfined_u:object_r:mplayer_home_t:s0
+/home/[^/]*/\.maildir(/.*)?	unconfined_u:object_r:mail_home_rw_t:s0
+/home/[^/]*/\.libvirt(/.*)?	unconfined_u:object_r:virt_home_t:s0
+/home/[^/]*/\.netscape(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/\.virtinst(/.*)?	unconfined_u:object_r:virt_home_t:s0
+/home/[^/]*/\.evolution(/.*)?	unconfined_u:object_r:evolution_home_t:s0
+/home/[^/]*/public_git(/.*)?	unconfined_u:object_r:git_user_content_t:s0
+/home/[^/]*/\.wireshark(/.*)?	unconfined_u:object_r:wireshark_home_t:s0
+/home/[^/]*/\.ICAClient(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/\.serverauth.*	--	unconfined_u:object_r:xauth_home_t:s0
+/home/[^/]*/\.Xauthority.*	--	unconfined_u:object_r:xauth_home_t:s0
+/home/[^/]*/\.fonts/auto(/.*)?	unconfined_u:object_r:user_fonts_cache_t:s0
+/home/[^/]*/\.macromedia(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/\.camel_certs(/.*)?	unconfined_u:object_r:evolution_home_t:s0
+/home/[^/]*/\.cache/wocky(/.*)?	unconfined_u:object_r:telepathy_gabble_cache_home_t:s0
+/home/[^/]*/\.thunderbird(/.*)?	unconfined_u:object_r:thunderbird_home_t:s0
+/home/[^/]*/\.fonts\.cache-.*	--	unconfined_u:object_r:user_fonts_cache_t:s0
+/home/[^/]*/\.ICEauthority.*	--	unconfined_u:object_r:iceauth_home_t:s0
+/home/[^/]*/\.gcjwebplugin(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/\.libvirt/qemu(/.*)?	unconfined_u:object_r:svirt_home_t:s0
+/home/[^/]*/\.polipo-cache(/.*)?	unconfined_u:object_r:polipo_cache_home_t:s0
+/home/[^/]*/\.spamassassin(/.*)?	unconfined_u:object_r:spamassassin_home_t:s0
+/home/[^/]*/\.icedteaplugin(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/zimbrauserdata(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/\.gnome2_private(/.*)?	unconfined_u:object_r:gnome_home_t:s0
+/home/[^/]*/\.cache/chromium(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/VirtualMachines(/.*)?	unconfined_u:object_r:virt_home_t:s0
+/home/[^/]*/\.gnome2/keyrings(/.*)?	unconfined_u:object_r:gnome_keyring_home_t:s0
+/home/[^/]*/\.config/chromium(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/\.mozilla/plugins(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/home/[^/]*/\.cache/telepathy(/.*)?	unconfined_u:object_r:telepathy_cache_home_t:s0
+/home/[^/]*/\.mission-control(/.*)?	unconfined_u:object_r:telepathy_mission_control_home_t:s0
+/home/[^/]*/cxoffice/bin/wine.+	--	unconfined_u:object_r:wine_exec_t:s0
+/home/[^/]*/\.telepathy-sunshine(/.*)?	unconfined_u:object_r:telepathy_sunshine_home_t:s0
+/home/[^/]*/VirtualMachines/isos(/.*)?	unconfined_u:object_r:virt_content_t:s0
+/home/[^/]*/\.config/google-chrome(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/home/[^/]*/\.local/share/TpLogger(/.*)?	unconfined_u:object_r:telepathy_logger_data_home_t:s0
+/home/[^/]*/\.local/share/telepathy(/.*)?	unconfined_u:object_r:telepathy_data_home_t:s0
+/home/[^/]*/\.cache/telepathy/logger(/.*)?	unconfined_u:object_r:telepathy_logger_cache_home_t:s0
+/home/[^/]*/\.cache/telepathy/gabble(/.*)?	unconfined_u:object_r:telepathy_gabble_cache_home_t:s0
+/home/[^/]*/\.cache/telepathy/avatars/gabble(/.*)?	unconfined_u:object_r:telepathy_gabble_cache_home_t:s0
+/home/[^/]*/\.local/share/telepathy/mission-control(/.*)?	unconfined_u:object_r:telepathy_mission_control_data_home_t:s0
+/home/[^/]*	-d	unconfined_u:object_r:user_home_dir_t:s0
+/home/[^/]*/\.ppprc	--	unconfined_u:object_r:ppp_home_t:s0
+/home/[^/]*/\.mailrc	--	unconfined_u:object_r:mail_home_t:s0
+/home/[^/]*/\.my\.cnf	--	unconfined_u:object_r:mysqld_home_t:s0
+/home/[^/]*/\.polipo	--	unconfined_u:object_r:polipo_config_home_t:s0
+/home/[^/]*/\.rhosts	--	unconfined_u:object_r:rlogind_home_t:s0
+/home/[^/]*/\.rlogin	--	unconfined_u:object_r:rlogind_home_t:s0
+/home/[^/]*/\.ircmotd	--	unconfined_u:object_r:irc_home_t:s0
+/home/[^/]*/\.k5login	--	unconfined_u:object_r:krb5_home_t:s0
+/home/[^/]*/\.asoundrc	--	unconfined_u:object_r:alsa_home_t:s0
+/home/[^/]*/\.esd_auth	--	unconfined_u:object_r:pulseaudio_home_t:s0
+/home/[^/]*/\.screenrc	--	unconfined_u:object_r:screen_home_t:s0
+/home/[^/]*/\.forbidden	--	unconfined_u:object_r:polipo_config_home_t:s0
+/home/[^/]*/\.tmux\.conf	--	unconfined_u:object_r:screen_home_t:s0
+/home/[^/]*/\.fonts\.conf	--	unconfined_u:object_r:user_fonts_config_t:s0
+/home/[^/]*/dead\.letter	--	unconfined_u:object_r:mail_home_t:s0
+/home/[^/]*/\.procmailrc	--	unconfined_u:object_r:procmail_home_t:s0
+/home/[^/]*/\.fetchmailrc	--	unconfined_u:object_r:fetchmail_home_t:s0
+/home/[^/]*/\.esmtp_queue	--	unconfined_u:object_r:mail_home_t:s0
+/home/[^/]*/\.oidentd\.conf	--	unconfined_u:object_r:oidentd_home_t:s0
+/home/[^/]*/\.pulse-cookie	--	unconfined_u:object_r:pulseaudio_home_t:s0
+/home/[^/]*/\.gnupg/log-socket	-s	unconfined_u:object_r:gpg_agent_tmp_t:s0
+/home/[^/]*/\.cache/\.mc_connections	--	unconfined_u:object_r:telepathy_mission_control_cache_home_t:s0
+/home/a?quota\.(user|group)	--	system_u:object_r:quota_db_t:s0
+/home/lost\+found/.*	<<none>>
+/home	-d	system_u:object_r:home_root_t:s0
+/home	-l	system_u:object_r:home_root_t:s0
+/home/\.journal	<<none>>
+/home/lost\+found	-d	system_u:object_r:lost_found_t:s0
+/tmp/gconfd-.*/.*	--	unconfined_u:object_r:gconf_tmp_t:s0
+/tmp/\.exchange-.*(/.*)?	unconfined_u:object_r:evolution_exchange_tmp_t:s0
+/tmp/gconfd-.*	-d	unconfined_u:object_r:user_tmp_t:s0
+
+
+#
+# Home Context for user root
+#
+
+/root/.+	unconfined_u:object_r:user_home_t:s0
+/root/((www)|(web)|(public_html))(/.+)?	unconfined_u:object_r:httpd_user_content_t:s0
+/root/((www)|(web)|(public_html))/cgi-bin(/.+)?	unconfined_u:object_r:httpd_user_script_exec_t:s0
+/root/((www)|(web)|(public_html))(/.*)?/\.htaccess	--	unconfined_u:object_r:httpd_user_htaccess_t:s0
+/root/((www)|(web)|(public_html))(/.*)?/logs(/.*)?	unconfined_u:object_r:httpd_user_ra_content_t:s0
+/root/a?quota\.(user|group)	--	unconfined_u:object_r:quota_db_t:s0
+/root/\.ssh(/.*)?	unconfined_u:object_r:ssh_home_t:s0
+/root/\.uml(/.*)?	unconfined_u:object_r:uml_rw_t:s0
+/root/\.dbus(/.*)?	unconfined_u:object_r:session_dbusd_home_t:s0
+/root/\.giFT(/.*)?	unconfined_u:object_r:gift_home_t:s0
+/root/\.java(/.*)?	unconfined_u:object_r:java_home_t:s0
+/root/\.wine(/.*)?	unconfined_u:object_r:wine_home_t:s0
+/root/\.xauth.*	--	unconfined_u:object_r:xauth_home_t:s0
+/root/\.fonts(/.*)?	unconfined_u:object_r:user_fonts_t:s0
+/root/\.gconf(/.*)?	unconfined_u:object_r:gconf_home_t:s0
+/root/\.gnome(/.*)?	unconfined_u:object_r:gnome_home_t:s0
+/root/\.gnupg(/.+)?	unconfined_u:object_r:gpg_secret_t:s0
+/root/\.irssi(/.*)?	unconfined_u:object_r:irc_home_t:s0
+/root/\.adobe(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/\.gnash(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/vmware(/.*)?	unconfined_u:object_r:vmware_file_t:s0
+/root/\.pulse(/.*)?	unconfined_u:object_r:pulseaudio_home_t:s0
+/root/\.pyzor(/.*)?	unconfined_u:object_r:pyzor_home_t:s0
+/root/\.razor(/.*)?	unconfined_u:object_r:razor_home_t:s0
+/root/\.spamd(/.*)?	unconfined_u:object_r:spamd_home_t:s0
+/root/\.gconfd(/.*)?	unconfined_u:object_r:gconf_home_t:s0
+/root/\.gnome2(/.*)?	unconfined_u:object_r:gnome_home_t:s0
+/root/irclogs(/.*)?	unconfined_u:object_r:irc_log_home_t:s0
+/root/\.kismet(/.*)?	unconfined_u:object_r:kismet_home_t:s0
+/root/\.galeon(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/\.spicec(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/Maildir(/.*)?	unconfined_u:object_r:mail_home_rw_t:s0
+/root/\.vmware(/.*)?	unconfined_u:object_r:vmware_file_t:s0
+/root/\.screen(/.*)?	unconfined_u:object_r:screen_home_t:s0
+/root/\.tvtime(/.*)?	unconfined_u:object_r:tvtime_home_t:s0
+/root/\.vmware[^/]*/.*\.cfg	--	unconfined_u:object_r:vmware_conf_t:s0
+/root/\.forward[^/]*	--	unconfined_u:object_r:mail_home_t:s0
+/root/\.mozilla(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/\.phoenix(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/\.mplayer(/.*)?	unconfined_u:object_r:mplayer_home_t:s0
+/root/\.maildir(/.*)?	unconfined_u:object_r:mail_home_rw_t:s0
+/root/\.libvirt(/.*)?	unconfined_u:object_r:virt_home_t:s0
+/root/\.netscape(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/\.virtinst(/.*)?	unconfined_u:object_r:virt_home_t:s0
+/root/\.evolution(/.*)?	unconfined_u:object_r:evolution_home_t:s0
+/root/public_git(/.*)?	unconfined_u:object_r:git_user_content_t:s0
+/root/\.wireshark(/.*)?	unconfined_u:object_r:wireshark_home_t:s0
+/root/\.ICAClient(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/\.serverauth.*	--	unconfined_u:object_r:xauth_home_t:s0
+/root/\.Xauthority.*	--	unconfined_u:object_r:xauth_home_t:s0
+/root/\.fonts/auto(/.*)?	unconfined_u:object_r:user_fonts_cache_t:s0
+/root/\.macromedia(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/\.camel_certs(/.*)?	unconfined_u:object_r:evolution_home_t:s0
+/root/\.cache/wocky(/.*)?	unconfined_u:object_r:telepathy_gabble_cache_home_t:s0
+/root/\.thunderbird(/.*)?	unconfined_u:object_r:thunderbird_home_t:s0
+/root/\.fonts\.cache-.*	--	unconfined_u:object_r:user_fonts_cache_t:s0
+/root/\.ICEauthority.*	--	unconfined_u:object_r:iceauth_home_t:s0
+/root/\.gcjwebplugin(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/\.libvirt/qemu(/.*)?	unconfined_u:object_r:svirt_home_t:s0
+/root/\.polipo-cache(/.*)?	unconfined_u:object_r:polipo_cache_home_t:s0
+/root/\.spamassassin(/.*)?	unconfined_u:object_r:spamassassin_home_t:s0
+/root/\.icedteaplugin(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/zimbrauserdata(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/\.gnome2_private(/.*)?	unconfined_u:object_r:gnome_home_t:s0
+/root/\.cache/chromium(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/VirtualMachines(/.*)?	unconfined_u:object_r:virt_home_t:s0
+/root/\.gnome2/keyrings(/.*)?	unconfined_u:object_r:gnome_keyring_home_t:s0
+/root/\.config/chromium(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/\.mozilla/plugins(/.*)?	unconfined_u:object_r:mozilla_plugin_home_t:s0
+/root/\.cache/telepathy(/.*)?	unconfined_u:object_r:telepathy_cache_home_t:s0
+/root/\.mission-control(/.*)?	unconfined_u:object_r:telepathy_mission_control_home_t:s0
+/root/cxoffice/bin/wine.+	--	unconfined_u:object_r:wine_exec_t:s0
+/root/\.telepathy-sunshine(/.*)?	unconfined_u:object_r:telepathy_sunshine_home_t:s0
+/root/VirtualMachines/isos(/.*)?	unconfined_u:object_r:virt_content_t:s0
+/root/\.config/google-chrome(/.*)?	unconfined_u:object_r:mozilla_home_t:s0
+/root/\.local/share/TpLogger(/.*)?	unconfined_u:object_r:telepathy_logger_data_home_t:s0
+/root/\.local/share/telepathy(/.*)?	unconfined_u:object_r:telepathy_data_home_t:s0
+/root/\.cache/telepathy/logger(/.*)?	unconfined_u:object_r:telepathy_logger_cache_home_t:s0
+/root/\.cache/telepathy/gabble(/.*)?	unconfined_u:object_r:telepathy_gabble_cache_home_t:s0
+/root/\.cache/telepathy/avatars/gabble(/.*)?	unconfined_u:object_r:telepathy_gabble_cache_home_t:s0
+/root/\.local/share/telepathy/mission-control(/.*)?	unconfined_u:object_r:telepathy_mission_control_data_home_t:s0
+/root	-d	unconfined_u:object_r:user_home_dir_t:s0
+/root/\.ppprc	--	unconfined_u:object_r:ppp_home_t:s0
+/root/\.mailrc	--	unconfined_u:object_r:mail_home_t:s0
+/root/\.my\.cnf	--	unconfined_u:object_r:mysqld_home_t:s0
+/root/\.polipo	--	unconfined_u:object_r:polipo_config_home_t:s0
+/root/\.rhosts	--	unconfined_u:object_r:rlogind_home_t:s0
+/root/\.rlogin	--	unconfined_u:object_r:rlogind_home_t:s0
+/root/\.ircmotd	--	unconfined_u:object_r:irc_home_t:s0
+/root/\.k5login	--	unconfined_u:object_r:krb5_home_t:s0
+/root/\.asoundrc	--	unconfined_u:object_r:alsa_home_t:s0
+/root/\.esd_auth	--	unconfined_u:object_r:pulseaudio_home_t:s0
+/root/\.screenrc	--	unconfined_u:object_r:screen_home_t:s0
+/root/\.forbidden	--	unconfined_u:object_r:polipo_config_home_t:s0
+/root/\.tmux\.conf	--	unconfined_u:object_r:screen_home_t:s0
+/root/\.fonts\.conf	--	unconfined_u:object_r:user_fonts_config_t:s0
+/root/dead\.letter	--	unconfined_u:object_r:mail_home_t:s0
+/root/\.procmailrc	--	unconfined_u:object_r:procmail_home_t:s0
+/root/\.fetchmailrc	--	unconfined_u:object_r:fetchmail_home_t:s0
+/root/\.esmtp_queue	--	unconfined_u:object_r:mail_home_t:s0
+/root/\.oidentd\.conf	--	unconfined_u:object_r:oidentd_home_t:s0
+/root/\.pulse-cookie	--	unconfined_u:object_r:pulseaudio_home_t:s0
+/root/\.gnupg/log-socket	-s	unconfined_u:object_r:gpg_agent_tmp_t:s0
+/root/\.cache/\.mc_connections	--	unconfined_u:object_r:telepathy_mission_control_cache_home_t:s0
+/tmp/gconfd-root/.*	--	unconfined_u:object_r:gconf_tmp_t:s0
+/tmp/\.exchange-root(/.*)?	unconfined_u:object_r:evolution_exchange_tmp_t:s0
+/tmp/gconfd-root	-d	unconfined_u:object_r:user_tmp_t:s0
