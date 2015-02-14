@@ -1,0 +1,147 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          selinux-basics
+# Required-Start:    $remote_fs
+# Required-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Basic SELinux management
+# Description:       Prepare system for SELinux usage, e.g. relabeling the fs.
+### END INIT INFO
+#
+# Author:	Erich Schubert <erich@debian.org>
+#
+
+set -e
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DESC="SELinux contexts"
+NAME=selinux-basics
+SCRIPTNAME=/etc/init.d/$NAME
+
+# Read config file if it is present.
+#if [ -r /etc/default/$NAME ]
+#then
+#	. /etc/default/$NAME
+#fi
+
+selinuxfs=`LC_ALL=C awk '/ selinuxfs / { print $2 }' /proc/mounts`
+selinuxenabled=
+# is selinux enabled?
+if [ -n "$selinuxfs" -a "`cat /proc/self/attr/current 2>/dev/null`" ]; then
+	if [ -r $selinuxfs/enforce ]; then
+		selinuxenabled=`cat $selinuxfs/enforce 2>/dev/null`
+	else
+		# we can't read /selinux/enforce, so we assume it's enforced...
+		selinuxenabled=1
+	fi
+fi
+
+# Relabel /dev and /etc/mtab
+relabel_minimal() {
+	# when selinux is enabled, relabel /dev
+	if [ -n "$selinuxenabled" -a -x /sbin/restorecon ]; then
+		/sbin/restorecon -R /dev /etc/mtab 2>/dev/null
+	fi
+}
+
+# Do a complete relabel when requested
+selinux_complete_relabel() {
+	# tell user what is going on
+	log_action_begin_msg "Relabeling your filesystems for SELinux..."
+	# disable selinux
+	echo 0 > $selinuxfs/enforce
+	# fix file labels using fixfiles
+	/sbin/fixfiles -f -F relabel > /dev/null || true
+	# unset relabling flag, if present
+	if [ -e  /.autorelabel ]; then 
+		rm -f /.autorelabel || \
+		log_failure_msg "Warning, couldn't remove autorelabel flag!"
+	fi
+	# re-enable SELinux if enabled before
+	if [ ! -f /.autorelabel ]; then
+		echo "Relabeled, now reboot"
+		umount -a || true
+		sync
+		reboot
+	fi
+}
+
+# Check whether we should relabel
+selinux_relabel() {
+	if [ -n "$selinuxenabled" ]; then
+		if [ -f /.autorelabel ] || grep -q '\<autorelabel\>' /proc/cmdline ;
+		then
+			selinux_complete_relabel
+		else
+			# full relabelling not requested
+			relabel_minimal
+		fi
+	else
+		# now this is a bit hackish, we should discuss it maybe
+		# when selinux is not enabled, but installed, we set the
+		# autorelabel flag for the next boot...
+		if [ -e /etc/selinux ]; then
+			if [ ! -f /.autorelabel ]; then touch /.autorelabel; fi
+		fi
+	fi
+}
+
+#
+#	Function that starts the daemon/service.
+#
+d_start() {
+	# consider relabeling the filesystem
+	selinux_relabel
+	if [ -n "$selinuxfs" -a -r /proc/self/attr/current ]; then
+		if grep -q kernel_t /proc/self/attr/current; then
+			log_failure_msg "selinux contexts incorrect, please try relabeling and a reboot (init should not be running as kernel_t)"
+		fi
+		if grep -q init_t /proc/self/attr/current; then
+			log_failure_msg "init script running as init_t, not initrc_t please try relabeling and a reboot"
+		fi
+	fi
+}
+
+#
+#	Function that stops the daemon/service.
+#
+d_stop() {
+	#   1 if daemon was already stopped
+	return 1
+}
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	if [ -n "$selinuxfs" -o -e /etc/selinux ]; then
+		log_daemon_msg "Checking SELinux contexts" "$NAME"
+		echo ""
+		d_start
+		case "$?" in
+			0|1) log_end_msg 0 ;;
+			2) log_end_msg 1 ;;
+		esac
+	fi
+	;;
+  stop)
+	;;
+  restart|force-reload)
+	if [ -n "$selinuxfs" -o -e /etc/selinux ]; then
+		log_daemon_msg "Checking SELinux contexts" "$NAME"
+		echo ""
+		d_start
+		case "$?" in
+			0|1) log_end_msg 0 ;;
+			2) log_end_msg 1 ;;
+		esac
+	fi
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
+	exit 3
+	;;
+esac
+
+exit 0
