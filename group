@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:debian
 floppy:x:25:debian
 tape:x:26:
-sudo:x:27:lrvick
+sudo:x:27:lrvick,deleriux
 audio:x:29:debian
 dip:x:30:debian
 www-data:x:33:
@@ -50,3 +50,5 @@ ssh:x:110:
 debian:x:1000:
 lrvick:x:1001:
 messagebus:x:111:
+nslcd:x:112:
+deleriux:x:1002:
