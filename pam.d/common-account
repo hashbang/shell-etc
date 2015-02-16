@@ -22,5 +22,7 @@ account	requisite			pam_deny.so
 # since the modules above will each just jump around
 account	required			pam_permit.so
 # and here are more per-package modules (the "Additional" block)
+account	sufficient			pam_localuser.so 
+account	[default=bad success=ok user_unknown=ignore]	pam_sss.so 
 account	[success=ok new_authtok_reqd=done ignore=ignore user_unknown=ignore authinfo_unavail=ignore default=bad]	pam_ldap.so minimum_uid=1000
 # end of pam-auth-update config

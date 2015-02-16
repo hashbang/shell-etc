@@ -22,5 +22,6 @@ session	requisite			pam_deny.so
 session	required			pam_permit.so
 # and here are more per-package modules (the "Additional" block)
 session	required	pam_unix.so 
+session	optional			pam_sss.so 
 session	[success=ok default=ignore]	pam_ldap.so minimum_uid=1000
 # end of pam-auth-update config
