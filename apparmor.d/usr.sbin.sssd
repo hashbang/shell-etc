@@ -1,0 +1,42 @@
+#include <tunables/global>
+
+/usr/sbin/sssd {
+  #include <abstractions/base>
+  #include <abstractions/kerberosclient>
+  #include <abstractions/nameservice>
+  #include <abstractions/user-tmp>
+
+  capability dac_override,
+  capability dac_read_search,
+  capability setgid,
+  capability setuid,
+  capability sys_nice,
+
+  @{PROC} r,
+  @{PROC}/[0-9]*/status r,
+
+  /etc/krb5.keytab k,
+  /etc/ldap/ldap.conf r,
+  /etc/localtime r,
+  /etc/shells r,
+  /etc/sssd/sssd.conf r,
+
+  /usr/sbin/sssd rmix,
+  /usr/lib/@{multiarch}/ldb/modules/ldb/* m,
+  /usr/lib/@{multiarch}/sssd/* rix,
+
+  /tmp/{,.}krb5cc_* rwk,
+
+  /var/lib/sss/* rw,
+  /var/lib/sss/db/* rwk,
+  /var/lib/sss/pipes/* rw,
+  /var/lib/sss/pipes/private/* rw,
+  /var/lib/sss/pubconf/* rw,
+  /var/log/sssd/* rw,
+  /var/tmp/host_* rw,
+
+  /{,var/}run/sssd.pid rw,
+
+  # Site-specific additions and overrides. See local/README for details.
+  #include <local/usr.sbin.sssd>
+}
