@@ -12,17 +12,8 @@
 # pam-auth-update to manage selection of other modules.  See
 # pam-auth-update(8) for details.
 
-# here are the per-package modules (the "Primary" block)
-session	[default=1]			pam_permit.so
-# here's the fallback if no module succeeds
-session	requisite			pam_deny.so
-# prime the stack with a positive return value if there isn't one already;
-# this avoids us returning an error just because nothing sets a success code
-# since the modules above will each just jump around
-session	required			pam_permit.so
-# and here are more per-package modules (the "Additional" block)
-session	required	pam_unix.so 
+session required        pam_env.so
+session	optional	pam_unix.so 
 session	optional	pam_sss.so
 session optional        pam_mkhomedir.so
-session	[success=ok default=ignore]	pam_ldap.so minimum_uid=1000
 # end of pam-auth-update config
