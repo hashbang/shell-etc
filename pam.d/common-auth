@@ -22,6 +22,7 @@ auth	[default=bad success=ok user_unknown=ignore]	pam_sss.so use_first_pass
 # prime the stack with a positive return value if there isn't one already;
 # this avoids us returning an error just because nothing sets a success code
 # since the modules above will each just jump around
-auth	required			pam_permit.so
+#auth	required			pam_permit.so
+auth    required                        pam_deny.so
 # and here are more per-package modules (the "Additional" block)
 # end of pam-auth-update config
