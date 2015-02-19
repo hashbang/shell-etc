@@ -14,15 +14,9 @@
 # pam-auth-update(8) for details.
 
 # here are the per-package modules (the "Primary" block)
-auth	[success=3 default=ignore]	pam_unix.so nullok_secure
-auth	[default=bad success=ok user_unknown=ignore]	pam_sss.so use_first_pass
-#auth	[success=1 default=ignore]	pam_ldap.so minimum_uid=1000 use_first_pass
-# here's the fallback if no module succeeds
-#auth	requisite			pam_deny.so
+auth	sufficient                      pam_unix.so nullok_secure
+auth	sufficient                      pam_sss.so use_first_pass
+auth	required			pam_deny.so
 # prime the stack with a positive return value if there isn't one already;
 # this avoids us returning an error just because nothing sets a success code
 # since the modules above will each just jump around
-#auth	required			pam_permit.so
-auth    required                        pam_deny.so
-# and here are more per-package modules (the "Additional" block)
-# end of pam-auth-update config
