@@ -1,0 +1,5 @@
+mydestination=hashbang.sh va1.hashbang.sh
+myhostname=va1
+mydomain=hashbang.sh
+myorigin=$mydomain
+inet_interfaces=all
