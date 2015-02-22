@@ -37,6 +37,7 @@ message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
 text/plain; more %s; needsterminal
 text/plain; vim %s; needsterminal
 text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
 application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
 text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
