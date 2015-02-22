@@ -32,3 +32,5 @@ if [ -d /etc/profile.d ]; then
   done
   unset i
 fi
+
+export MAIL=~/Mail
