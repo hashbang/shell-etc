@@ -28,7 +28,7 @@ This can also be used to set up new #! shell servers to add to our pool.
 2. Run setup script
 
     ```bash
-    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/apt/setup.sh
+    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/setup.sh
     chown +x setup.sh
     ./setup.sh
     ```
