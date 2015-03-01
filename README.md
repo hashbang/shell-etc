@@ -28,12 +28,18 @@ This can also be used to set up new #! shell servers to add to our pool.
 2. Sync '/etc' directory.
 
     ```bash
+    cd /etc
+    git init
+    git remote add origin https://github.com/hashbang/shell-etc.git
+    git fetch --all
+    git reset --hard origin/master
     ```
 
 3.  Enable SELinux
 
-
     ```bash
+    selinux-activate
+    reboot
     ```
 
 ## Notes ##
