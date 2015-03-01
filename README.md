@@ -21,9 +21,8 @@ This can also be used to set up new #! shell servers to add to our pool.
 1. Install all packages
 
     ```bash
-    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt /tmp/packages.txt
-    dpkg --set-selections < /tmp/packages.txt
-    apt-get dselect-upgrade
+    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt -O /tmp/packages.txt
+    aptitude install $(cat /tmp/packages.txt | awk '{print $1}')
     ```
 
 2. Sync '/etc' directory.
