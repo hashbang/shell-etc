@@ -14,32 +14,23 @@ This can also be used to set up new #! shell servers to add to our pool.
 
 ## Requirements ##
 
-  * Debian Jessie (8.0)
+  * Debian 7+
 
-## Usage / Installation ##
+## Installation ##
 
-1. Install all packages
+1. Adjust partitions to match fstab.sample
 
-    ```bash
-    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt -O /tmp/packages.txt
-    aptitude install $(cat /tmp/packages.txt | awk '{print $1}')
-    ```
+    1. Ensure /home is own partition with nosuid and usrquota enabled
+    2. Make /proc hide process ids of other users with hidepid=2
 
-2. Sync '/etc' directory.
+    Refer to: [fstab.sample](https://raw.githubusercontent.com/hashbang/shell-etc/master/fstab.sample)
 
-    ```bash
-    cd /etc
-    git init
-    git remote add origin https://github.com/hashbang/shell-etc.git
-    git fetch --all
-    git reset --hard origin/master
-    ```
-
-3.  Enable SELinux
+2. Run setup script
 
     ```bash
-    selinux-activate
-    reboot
+    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/apt/setup.sh
+    chown +x setup.sh
+    ./setup.sh
     ```
 
 ## Notes ##
