@@ -29,8 +29,7 @@ This can also be used to set up new #! shell servers to add to our pool.
 
     ```bash
     wget https://raw.githubusercontent.com/hashbang/shell-etc/master/setup.sh
-    chown +x setup.sh
-    ./setup.sh
+    bash setup.sh
     ```
 
 ## Notes ##
