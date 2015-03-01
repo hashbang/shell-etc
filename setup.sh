@@ -9,8 +9,8 @@ apt-get update
 apt-get upgrade -y -q --force-yes
 apt-get dist-upgrade -y -q --force-yes
 
-wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt -O /tmp/packages.txt
-aptitude install -y -q $(cat /tmp/packages.txt | awk '{print $1}')
+#wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt -O /tmp/packages.txt
+#aptitude install -y -q $(cat /tmp/packages.txt | awk '{print $1}')
 #apt-get install -y -q -t unstable selinux-policy-default
 
 #cd /etc
