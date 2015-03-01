@@ -62,3 +62,6 @@ ssh/ssh_host_rsa_key
 *-
 *.gz
 alternatives
+network/interfaces
+networks
+provisor.ini
