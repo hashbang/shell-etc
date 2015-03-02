@@ -18,9 +18,9 @@ git reset --hard origin/master
 wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt -O /tmp/packages.txt
 aptitude install -y -q $(cat /tmp/packages.txt | awk '{print $1}')
 
-#apt-get install -y -q -t unstable selinux-policy-default
-#selinux-activate
+apt-get install -y -q -t unstable selinux-policy-default
+selinux-activate
 
 for drive in $(lsblk -io KNAME | tail -n +2); do grub-install /dev/$drive; done
 
-#reboot
+reboot
