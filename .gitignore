@@ -54,8 +54,16 @@ DEADJOE
 # end section managed by etckeeper
 
 shadow
+shadow.org
+gshadow
 passwd
+passwd.org
+subgid
+subuid
+group
+group.org
 ssl/certs
+ssl/private
 ssh/ssh_host_dsa_key
 ssh/ssh_host_ecdsa_key
 ssh/ssh_host_rsa_key
@@ -71,4 +79,6 @@ resolvconf/resolv.conf.d/original
 ssh/ssh_host_dsa_key.pub
 ssh/ssh_host_ecdsa_key.pub
 ssh/ssh_host_rsa_key.pub
+hostname
+machine-id
 provisor.ini
