@@ -17,6 +17,8 @@ apt-get install -y -q -t unstable selinux-policy-default
 selinux-activate
 
 cd /etc
+rm -rf .git
+git init
 git remote add origin https://github.com/hashbang/shell-etc.git
 git fetch --all
 git reset --hard origin/master
