@@ -16,12 +16,10 @@ apt-get install -y -q -t unstable selinux-policy-default
 
 selinux-activate
 
-# currently makes Atlantic.net debian boxees unbootable
-# needs research
-#cd /etc
-#git remote add origin https://github.com/hashbang/shell-etc.git
-#git fetch --all
-#git reset --hard origin/master
+cd /etc
+git remote add origin https://github.com/hashbang/shell-etc.git
+git fetch --all
+git reset --hard origin/master
 
 for drive in $(lsblk -io KNAME | tail -n +2); do grub-install /dev/$drive; done
 
