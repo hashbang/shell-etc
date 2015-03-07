@@ -28,6 +28,7 @@ git init
 git remote add origin https://github.com/hashbang/shell-etc.git
 git fetch --all
 git reset --hard origin/master
+git clean -f
 
 # Install grub to all devices (overkill, but safe)
 for drive in $(lsblk -io KNAME | tail -n +2); do grub-install /dev/$drive; done
