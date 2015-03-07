@@ -76,6 +76,7 @@ fstab
 hosts
 resolv.conf
 resolvconf/resolv.conf.d/original
+udev/rules.d/70-persistent-net.rules
 ssh/ssh_host_dsa_key.pub
 ssh/ssh_host_ecdsa_key.pub
 ssh/ssh_host_rsa_key.pub
