@@ -11,6 +11,7 @@ aptitude-common					install
 aspell						install
 aspell-en					install
 auditd						install
+autopoint					install
 autotools-dev					install
 base-files					install
 base-passwd					install
@@ -39,11 +40,14 @@ cron						install
 curl						install
 dash						install
 dbus						install
+dctrl-tools					install
 debconf						install
 debconf-i18n					install
 debconf-utils					install
+debhelper					install
 debian-archive-keyring				install
 debianutils					install
+dh-lua						install
 dh-python					install
 dictionaries-common				install
 diffutils					install
@@ -75,6 +79,7 @@ gcc-4.8-base:amd64				install
 gcc-4.9						install
 gcc-4.9-base:amd64				install
 geoip-database					install
+gettext						install
 gettext-base					install
 git						install
 git-man						install
@@ -108,6 +113,7 @@ initscripts					install
 insserv						install
 install-info					install
 installation-report				install
+intltool-debian					install
 iproute						install
 iproute2					install
 iptables					install
@@ -138,6 +144,7 @@ libapt-pkg4.12:amd64				install
 libasan1:amd64					install
 libasn1-8-heimdal:amd64				install
 libaspell15:amd64				install
+libasprintf-dev:amd64				install
 libasprintf0c2:amd64				install
 libassuan0:amd64				install
 libatk1.0-0:amd64				install
@@ -175,6 +182,7 @@ libcloog-isl4:amd64				install
 libcollection4:amd64				install
 libcomerr2:amd64				install
 libcrack2:amd64					install
+libcroco3:amd64					install
 libcryptsetup4:amd64				install
 libcups2:amd64					install
 libcurl3:amd64					install
@@ -203,6 +211,7 @@ libexpat1:amd64					install
 libfakeroot:amd64				install
 libffi6:amd64					install
 libfile-fcntllock-perl				install
+libfile-find-rule-perl				install
 libfontconfig1:amd64				install
 libfreetype6:amd64				install
 libfuse2:amd64					install
@@ -215,6 +224,8 @@ libgdbm3:amd64					install
 libgdk-pixbuf2.0-0:amd64			install
 libgdk-pixbuf2.0-common				install
 libgeoip1:amd64					install
+libgettextpo-dev:amd64				install
+libgettextpo0:amd64				install
 libglib2.0-0:amd64				install
 libglib2.0-data					install
 libgmp10:amd64					install
@@ -282,6 +293,7 @@ libluajit-5.1-common				install
 liblwres90					install
 liblzma5:amd64					install
 libmagic1:amd64					install
+libmail-sendmail-perl				install
 libmnl0:amd64					install
 libmount1:amd64					install
 libmpc3:amd64					install
@@ -300,6 +312,7 @@ libnss-ldapd:amd64				install
 libnss-sss:amd64				install
 libnss3:amd64					install
 libntdb1:amd64					install
+libnumber-compare-perl				install
 libp11-kit0:amd64				install
 libpam-ldapd:amd64				install
 libpam-modules:amd64				install
@@ -356,6 +369,7 @@ libsemanage1:amd64				install
 libsensors4:amd64				install
 libsepol1:amd64					install
 libsigc++-2.0-0c2a:amd64			install
+libsigsegv2:amd64				install
 libslang2:amd64					install
 libsmartcols1:amd64				install
 libsqlite3-0:amd64				install
@@ -368,6 +382,7 @@ libsss-idmap0					install
 libsss-sudo					install
 libstdc++-4.9-dev:amd64				install
 libstdc++6:amd64				install
+libsys-hostname-long-perl			install
 libsystemd0:amd64				install
 libtalloc2:amd64				install
 libtasn1-3:amd64				install
@@ -377,6 +392,7 @@ libtcl8.6:amd64					install
 libtdb1:amd64					install
 libtevent0:amd64				install
 libtext-charwidth-perl				install
+libtext-glob-perl				install
 libtext-iconv-perl				install
 libtext-wrapi18n-perl				install
 libthai-data					install
@@ -444,6 +460,7 @@ lua5.1						install
 lua5.2						install
 luajit						install
 luarocks					install
+m4						install
 make						install
 man-db						install
 manpages					install
@@ -531,6 +548,7 @@ perl-base					install
 perl-modules					install
 pinentry-gtk2					install
 pkg-config					install
+po-debconf					install
 policycoreutils					install
 postfix						install
 postfix-ldap					install
