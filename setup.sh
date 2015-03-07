@@ -9,10 +9,15 @@ wget https://raw.githubusercontent.com/hashbang/shell-etc/master/apt/sources.lis
 wget https://raw.githubusercontent.com/hashbang/shell-etc/master/apt/preferences -O /etc/apt/preferences
 wget https://raw.githubusercontent.com/hashbang/shell-etc/master/packages.txt -O /etc/packages.txt
 
+
 apt-get update
 apt-get dist-upgrade -o Dpkg::Options::="--force-confnew" -y -q --force-yes
 aptitude install -y -q $(cat /etc/packages.txt | awk '{print $1}')
 apt-get install -y -q -t unstable selinux-policy-default
+
+# remove any packages (and configs) on local system not listed in packages.txt
+apt-get remove -y -q $(diff <(dpkg --get-selections) <(cat /etc/packages.txt) | egrep "^<" | awk '{ print $2 }')
+aptitude purge -y -q ~c
 
 selinux-activate
 
