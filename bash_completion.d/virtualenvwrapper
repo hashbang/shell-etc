@@ -1,0 +1,9 @@
+# bash completion snippet for virtualenvwrapper
+
+USE_FULL=no
+
+if [ "$USE_FULL" = "yes" ]; then
+    . /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+else
+    . /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+fi
