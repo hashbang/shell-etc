@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+  - pip: name='git+https://github.com/hashbang/provisor/#egg=provisor'
+  - pip: name='git+https://github.com/hashbang/hashbangctl/#egg=hashbangctl'

@@ -84,3 +84,5 @@ hostname
 machine-id
 provisor.ini
 hashbangctl.conf
+
+src/*
