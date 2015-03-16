@@ -83,3 +83,4 @@ ssh/ssh_host_rsa_key.pub
 hostname
 machine-id
 provisor.ini
+hashbangctl.conf
