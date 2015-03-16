@@ -30,6 +30,11 @@ git fetch --all
 git reset --hard origin/master
 git clean -f
 
+# Disable who(1), last(1) and lastlog(8) for normal users
+chmod o-r /var/run/utmp
+chmod o-r /var/log/wtmp
+chmod o-r /var/log/lastlog
+
 # Install grub to all devices (overkill, but safe)
 for drive in $(lsblk -io KNAME | tail -n +2); do grub-install /dev/$drive; done
 
