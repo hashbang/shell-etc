@@ -64,9 +64,7 @@ group
 group.org
 ssl/certs
 ssl/private
-ssh/ssh_host_dsa_key
-ssh/ssh_host_ecdsa_key
-ssh/ssh_host_rsa_key
+ssh/ssh_host_*_key
 *-
 *.gz
 alternatives
