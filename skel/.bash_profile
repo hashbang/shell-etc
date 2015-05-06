@@ -28,10 +28,3 @@ user=$(whoami)
 # write mail
 echo "$mail"
 echo "$mail" | sed "s/{date}/$date/" | sed "s/{username}/$user/" #> Mail/new/msg.welcome
-
-# start the new rc file
-
-#source .bashrc
-#source .bash_profile
-
-#exit
