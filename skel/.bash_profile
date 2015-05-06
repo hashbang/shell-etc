@@ -31,4 +31,7 @@ echo "$mail" | sed "s/{date}/$date/" | sed "s/{username}/$user/" #> Mail/new/msg
 
 # start the new rc file
 
-./.bashrc
+#source .bashrc
+#source .bash_profile
+
+#exit
