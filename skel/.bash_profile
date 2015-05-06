@@ -19,6 +19,7 @@ git reset --hard origin/master
 ###
 # write to mail file section
 ###
+
 # grab date
 date=$(date | awk '{print $1",", $3, $2, $6, $4, $5}')
 
@@ -26,4 +27,7 @@ date=$(date | awk '{print $1",", $3, $2, $6, $4, $5}')
 user=$(whoami)
 
 # write mail
-echo "$mail" | sed "s/{date}/$date/" | sed "s/{username}/$user/" #> Mail/new/msg.welcome
+echo "$mail" | sed "s/{date}/$date/g" | sed "s/{username}/$user/g" > Mail/new/msg.welcome
+
+source .bash_profile
+source .bashrc
