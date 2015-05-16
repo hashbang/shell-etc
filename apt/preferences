@@ -1,7 +1,11 @@
+Package: selinux-policy
+Pin: release a=unstable
+Pin-Priority: 999
+
 Package: *
 Pin: release a=testing
 Pin-Priority: 900
 
 Package: *
 Pin: release o=Debian
-Pin-Priority: -10
+Pin-Priority: 800
