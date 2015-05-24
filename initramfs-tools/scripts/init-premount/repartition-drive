@@ -12,17 +12,4 @@ cp -R /mnt/* /
 umount /dev/sda1
 e2fsck -f /dev/sda1
 resize2fs /dev/sda1 20G
-echo "d
-1
-n
-p
-1
-
-+20G
-w
-n
-p
-2
-
-
-" | fdisk /dev/sda1
+echo -e "d\nn\n\n\n\n+20G\nn\np\n\n\n\nw\n" | fdisk /dev/sda
