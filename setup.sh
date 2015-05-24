@@ -29,6 +29,7 @@ git remote add origin https://github.com/hashbang/shell-etc.git
 git fetch --all
 git reset --hard origin/master
 git clean -f
+chmod 0600 /etc/sssd/sssd.conf
 
 # Disable users knowing about other users
 chmod o-r /var/run/utmp # Used by who(1)
