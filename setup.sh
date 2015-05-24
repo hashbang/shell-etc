@@ -37,6 +37,9 @@ chmod o-r /var/log/lastlog # Used by lastlog(8)
 chmod o-r /home # prevent listing of all home dirs.
 
 # Install grub to all devices (overkill, but safe)
-for drive in $(lsblk -io KNAME | tail -n +2); do grub-install /dev/$drive; done
+grub-install /dev/sda
+
+# Update initramfs to include repartioning logic
+update-initramfs -u
 
 reboot

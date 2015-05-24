@@ -1,0 +1,28 @@
+#!/bin/bash
+
+mount | grep /dev/sda && echo "/dev/sda mounted. Aborting" && exit
+test -e /dev/sda2 && echo "/dev/sda2 already exists. Aborting" && exit
+
+set -e
+
+mkdir /mnt
+modprobe ext4
+mount /dev/sda1 /mnt
+cp -R /mnt/* /
+umount /dev/sda1
+e2fsck -f /dev/sda1
+resize2fs /dev/sda1 20G
+echo "d
+1
+n
+p
+1
+
++20G
+w
+n
+p
+2
+
+
+" | fdisk /dev/sda1
