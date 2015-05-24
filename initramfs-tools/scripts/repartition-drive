@@ -3,8 +3,6 @@
 mount | grep /dev/sda && echo "/dev/sda mounted. Aborting" && exit
 test -e /dev/sda2 && echo "/dev/sda2 already exists. Aborting" && exit
 
-set -e
-
 mkdir /mnt
 modprobe ext4
 mount /dev/sda1 /mnt
