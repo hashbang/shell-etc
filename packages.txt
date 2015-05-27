@@ -58,6 +58,7 @@ distro-info					install
 distro-info-data				install
 dmidecode					install
 dmsetup						install
+dnsutils					install
 dpkg						install
 dpkg-dev					install
 e2fslibs:amd64					install
@@ -475,6 +476,7 @@ multiarch-support				install
 mutt						install
 mutt-patched					install
 nano						install
+ncdu						install
 ncurses-base					install
 ncurses-bin					install
 ncurses-term					install
