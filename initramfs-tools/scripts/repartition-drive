@@ -6,7 +6,11 @@ test -e /dev/sda2 && echo "/dev/sda2 already exists. Aborting" && exit
 mkdir /mnt
 modprobe ext4
 mount /dev/sda1 /mnt
-cp -R /mnt/* /
+cp -R /mnt/lib /
+cp -R /mnt/lib64 /
+cp -R /mnt/bin /
+cp -R /mnt/sbin /
+cp -R /mnt/usr /
 umount /dev/sda1
 e2fsck -f /dev/sda1
 resize2fs /dev/sda1 20G
