@@ -542,6 +542,7 @@ openssh-server					install
 openssh-sftp-server				install
 openssl						install
 os-prober					install
+pandoc						install
 parted						install
 passwd						install
 patch						install
