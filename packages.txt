@@ -689,6 +689,7 @@ tasksel						install
 tasksel-data					install
 tcpd						install
 telnet						install
+tig						install
 tmux						install
 traceroute					install
 tzdata						install
