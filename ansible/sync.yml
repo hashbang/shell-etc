@@ -4,13 +4,25 @@
   connection: local
   tasks:
   - shell: /usr/bin/dpkg --get-selections > /etc/packages.txt
-  - shell: /usr/bin/etckeeper push
 
-#- name: sync debian packages to all servers
+- name: Pull latest /etc files on all servers
+  hosts: shell-servers
+  sudo: yes
+  tasks:
+  - shell: git pull chdir=/etc
+
+- name: Update system packages on all servers
+  hosts: shell-servers
+  sudo: yes
+  tasks:
+  - apt: update_cache=yes
+  - apt: upgrade=dist
+
+#- name: Add/Remove packages on all servers to match packages.txt
 #  hosts: shell-servers
 #  sudo: yes
 #  tasks:
-#  - command: 
+#  - shell: 
 
 - name: update #! python packages to all servers
   hosts: shell-servers
