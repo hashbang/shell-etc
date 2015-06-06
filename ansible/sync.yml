@@ -1,0 +1,32 @@
+---
+- name: Update list of locally installed packages
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - shell: /usr/bin/dpkg --get-selections > /etc/packages.txt
+
+- name: Pull latest /etc files on all servers
+  hosts: shell-servers
+  sudo: yes
+  tasks:
+  - shell: git pull chdir=/etc
+
+- name: Update system packages on all servers
+  hosts: shell-servers
+  sudo: yes
+  tasks:
+  - apt: update_cache=yes
+  - apt: upgrade=dist
+
+#- name: Add/Remove packages on all servers to match packages.txt
+#  hosts: shell-servers
+#  sudo: yes
+#  tasks:
+#  - shell: 
+
+- name: update #! python packages to all servers
+  hosts: shell-servers
+  sudo: yes
+  tasks:
+  - pip: name='git+https://github.com/hashbang/provisor/#egg=provisor'
+  - pip: name='git+https://github.com/hashbang/hashbangctl/#egg=hashbangctl'
