@@ -4,6 +4,7 @@
   connection: local
   tasks:
   - shell: /usr/bin/dpkg --get-selections > /etc/packages.txt
+  - shell: etckeeper commit -m 'update packages.txt'
 
 - name: Pull latest /etc files on all servers
   hosts: shell-servers
@@ -11,18 +12,16 @@
   tasks:
   - shell: git pull chdir=/etc
 
-- name: Update system packages on all servers
+- name: Update/Sync system packages across all servers
   hosts: shell-servers
   sudo: yes
   tasks:
   - apt: update_cache=yes
   - apt: upgrade=dist
-
-#- name: Add/Remove packages on all servers to match packages.txt
-#  hosts: shell-servers
-#  sudo: yes
-#  tasks:
-#  - shell: 
+  - shell: aptitude install -y -q $(cat /etc/packages.txt | awk '{print $1}')
+  - shell: apt-get install -y -q -t unstable selinux-policy-default
+  - shell: apt-get remove -y -q $(diff <(dpkg --get-selections) <(cat /etc/packages.txt) | egrep "^<" | awk '{ print $2 }')
+  - shell: aptitude purge -y -q ~c
 
 - name: update #! python packages to all servers
   hosts: shell-servers
