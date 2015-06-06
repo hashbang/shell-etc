@@ -3,6 +3,7 @@ acpi						install
 acpi-support-base				install
 acpid						install
 adduser						install
+ansible						install
 apt						install
 apt-transport-https				install
 apt-utils					install
@@ -543,6 +544,7 @@ openssh-sftp-server				install
 openssl						install
 os-prober					install
 pandoc						install
+pandoc-data					install
 parted						install
 passwd						install
 patch						install
@@ -580,11 +582,14 @@ python-distro-info				install
 python-ecdsa					install
 python-html5lib					install
 python-html5lib-whl				install
+python-httplib2					install
 python-ipy					install
+python-jinja2					install
 python-json-pointer				install
 python-jsonpatch				install
 python-ldap					install
 python-lxml					install
+python-markupsafe				install
 python-minimal					install
 python-ndg-httpsclient				install
 python-oauth					install

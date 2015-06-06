@@ -1,8 +1,20 @@
 ---
-- name: sync packages across all servers
+- name: Update list of locally installed packages
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - shell: /usr/bin/dpkg --get-selections > /etc/packages.txt
+  - shell: /usr/bin/etckeeper push
+
+#- name: sync debian packages to all servers
+#  hosts: shell-servers
+#  sudo: yes
+#  tasks:
+#  - command: 
+
+- name: update #! python packages to all servers
   hosts: shell-servers
   sudo: yes
-
   tasks:
   - pip: name='git+https://github.com/hashbang/provisor/#egg=provisor'
   - pip: name='git+https://github.com/hashbang/hashbangctl/#egg=hashbangctl'
