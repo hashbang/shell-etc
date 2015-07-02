@@ -538,6 +538,7 @@ npm						install
 nscd						install
 nslcd						install
 nslcd-utils					install
+oidentd						install
 openssh-client					install
 openssh-server					install
 openssh-sftp-server				install
