@@ -1,0 +1,17 @@
+# options to use when starting oidentd as daemon:
+# -m	lookup masquaraded connections in /etc/oidentd_masq.users
+# -f	forward requests for masquaraded connections to real host
+# -q	don't log connections to oidentd
+# see oidentd(8) for detailed list
+OIDENT_OPTIONS="-mf"
+
+# user / group
+OIDENT_USER=oident
+OIDENT_GROUP=oident
+
+# Allow the default router to act as an oidentd proxy? (yes/no)
+# this is needed behind a masquarading router that runs oidentd -f
+# if your identd proxy is not the default router, you have to
+# manually specify it via -P
+OIDENT_BEHIND_PROXY=yes
+

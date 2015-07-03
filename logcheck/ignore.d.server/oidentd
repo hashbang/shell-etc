@@ -1,0 +1,5 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: Connection from [._[:alnum:]-]+ \([0-9a-f.:]+\):[0-9]{1,5}$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: Connection from [0-9a-f.:]+:[0-9]{1,5}$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: \[[0-9a-f.:]+\.[0-9]{1,3}\] Successful lookup \(by forward\): [0-9]+ \([0-9]+\) , [0-9]+ : [_[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: \[[._[:alnum:]-]+\] Successful lookup: [0-9]+ , [0-9]+ : [_[:alnum:]-]+ \([_[:alnum:]-]+\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: \[localhost\] [0-9]+ , [0-9]+ : ERROR : NO-USER
