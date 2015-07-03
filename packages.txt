@@ -712,9 +712,11 @@ virtualenv					install
 virtualenv-clone				install
 virtualenvwrapper				install
 wamerican					install
-weechat-core					install
-weechat-curses					install
-weechat-plugins					install
+weechat-curses					deinstall
+weechat-devel					install
+weechat-devel-core				install
+weechat-devel-curses				install
+weechat-devel-plugins				install
 wget						install
 whiptail					install
 whois						install
