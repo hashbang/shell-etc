@@ -31,6 +31,7 @@ cloud-init					install
 cloud-initramfs-dyn-netconf			install
 cloud-initramfs-growroot			install
 cloud-utils					install
+cmake						install
 console-setup					install
 console-setup-linux				install
 coreutils					install
@@ -299,7 +300,9 @@ libmpc3:amd64					install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
 libncurses5:amd64				install
+libncurses5-dev:amd64				install
 libncursesw5:amd64				install
+libncursesw5-dev:amd64				install
 libnetfilter-acct1:amd64			install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
