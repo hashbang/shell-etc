@@ -36,7 +36,9 @@ application/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info d
 message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
 text/plain; more %s; needsterminal
 text/plain; vim %s; needsterminal
+text/html; /usr/bin/elinks -force-html %s; needsterminal; description=HTML Text; nametemplate=%s.html
 text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+text/html; /usr/bin/elinks -force-html -dump %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; nametemplate=%s.html
 application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
