@@ -66,6 +66,7 @@ dpkg-dev					install
 e2fslibs:amd64					install
 e2fsprogs					install
 eject						install
+elinks						install
 emacsen-common					install
 etckeeper					install
 euca2ools					install
