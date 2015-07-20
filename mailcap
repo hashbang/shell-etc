@@ -35,32 +35,11 @@ application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/us
 application/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
 message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
 text/plain; more %s; needsterminal
-text/english; emacs24 %s; test=test -n "$DISPLAY"
-text/plain; emacs24 %s; test=test -n "$DISPLAY"
-text/x-makefile; emacs24 %s; test=test -n "$DISPLAY"
-text/x-c++hdr; emacs24 %s; test=test -n "$DISPLAY"
-text/x-c++src; emacs24 %s; test=test -n "$DISPLAY"
-text/x-chdr; emacs24 %s; test=test -n "$DISPLAY"
-text/x-csrc; emacs24 %s; test=test -n "$DISPLAY"
-text/x-java; emacs24 %s; test=test -n "$DISPLAY"
-text/x-moc; emacs24 %s; test=test -n "$DISPLAY"
-text/x-pascal; emacs24 %s; test=test -n "$DISPLAY"
-text/x-tcl; emacs24 %s; test=test -n "$DISPLAY"
-text/x-tex; emacs24 %s; test=test -n "$DISPLAY"
-application/x-shellscript; emacs24 %s; test=test -n "$DISPLAY"
-text/x-c; emacs24 %s; test=test -n "$DISPLAY"
-text/x-c++; emacs24 %s; test=test -n "$DISPLAY"
 text/plain; vim %s; needsterminal
-text/html; /usr/bin/elinks -force-html %s; needsterminal; description=HTML Text; nametemplate=%s.html
-text/html; /usr/bin/links %s; needsterminal; description=HTML Text; nametemplate=%s.html
 text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
-text/html; /usr/bin/w3m -T text/html %s; needsterminal; description=HTML Text; nametemplate=%s.html
-text/html; /usr/bin/elinks -force-html -dump %s; copiousoutput; description=HTML Text; nametemplate=%s.html
-text/html; /usr/bin/links -dump %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; nametemplate=%s.html
 application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
-text/html; /usr/bin/w3m -I %{charset} -dump -T text/html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 text/html; /usr/bin/lynx -dump -force_html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
 text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
