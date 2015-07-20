@@ -308,6 +308,7 @@ libmpfr4:amd64					install
 libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
+libncursesw5-dev:amd64				install
 libnetfilter-acct1:amd64			install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
@@ -729,7 +730,6 @@ wamerican					install
 weechat						install
 weechat-core					install
 weechat-curses					install
-weechat-devel-curses				deinstall
 weechat-plugins					install
 wget						install
 whiptail					install
