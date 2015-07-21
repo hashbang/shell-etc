@@ -12,6 +12,8 @@ aptitude-common					install
 aspell						install
 aspell-en					install
 auditd						install
+autoconf					install
+automake					install
 autopoint					install
 autotools-dev					install
 base-files					install
