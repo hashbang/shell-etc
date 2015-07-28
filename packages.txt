@@ -12,6 +12,8 @@ aptitude-common					install
 aspell						install
 aspell-en					install
 auditd						install
+autoconf					install
+automake					install
 autopoint					install
 autotools-dev					install
 base-files					install
@@ -72,6 +74,7 @@ elinks-data					install
 emacsen-common					install
 etckeeper					install
 euca2ools					install
+exuberant-ctags					install
 fakeroot					install
 file						install
 findutils					install
