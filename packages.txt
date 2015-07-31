@@ -90,6 +90,9 @@ gcc-4.9-base:amd64				install
 geoip-database					install
 gettext						install
 gettext-base					install
+ghc6						install
+ghc6-prof					install
+ghc6-doc					install
 git						install
 git-man						install
 glances						install
@@ -107,6 +110,8 @@ guile-2.0-libs:amd64				install
 gyp						install
 gzip						install
 hddtemp						install
+haskell-platform				install
+haskell-platform-doc				install
 hicolor-icon-theme				install
 hostname					install
 htop						install
