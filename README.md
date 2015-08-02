@@ -7,10 +7,13 @@
 This is the '/etc' directory of the #! shell servers.
 Git management is handled via [etckeeper](http://etckeeper.branchable.com/)
 
+This can also be used to set up new #! shell servers to add to our pool.
+
+## Contribution ##
 You can "Fork" and "Pull Request" any changes you would like to see on our
 servers.
 
-This can also be used to set up new #! shell servers to add to our pool.
+If you would like to have particular package installed in #! shell servers, add it to packages.txt and send a pull request. While we accept most pull requests, packages that require X11 as dependency will not be merged.
 
 ## Requirements ##
 
