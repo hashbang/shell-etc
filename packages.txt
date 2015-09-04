@@ -195,6 +195,7 @@ libcroco3:amd64					install
 libcryptsetup4:amd64				install
 libcups2:amd64					install
 libcurl3:amd64					install
+libcurl3-dev					install
 libcurl3-gnutls:amd64				install
 libcwidget3:amd64				install
 libdatrie1:amd64				install
