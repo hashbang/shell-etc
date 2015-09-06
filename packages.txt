@@ -87,6 +87,7 @@ gcc						install
 gcc-4.8-base:amd64				install
 gcc-4.9						install
 gcc-4.9-base:amd64				install
+gdb						install
 geoip-database					install
 gettext						install
 gettext-base					install
