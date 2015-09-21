@@ -1,0 +1,9 @@
+#!/bin/sh
+# See https://xkcd.com/686/ -- Admin mourning
+
+DAYS=15
+
+lastlog -b $DAYS -u 3000-65533         | \
+    tail -n +2                         | \
+    awk '{print $1}'                   | \
+    xargs -n1 loginctl terminate-user
