@@ -486,6 +486,8 @@ man-db						install
 manpages					install
 manpages-dev					install
 mawk						install
+mc						install
+mc-data						install
 mime-support					install
 mosh						install
 mount						install
