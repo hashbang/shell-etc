@@ -1,7 +1,7 @@
 #!/bin/sh
 # See https://xkcd.com/686/ -- Admin mourning
 
-DAYS=15
+DAYS=30
 
 USERS=`
 lastlog -b $DAYS -u 3000-65533         | \
