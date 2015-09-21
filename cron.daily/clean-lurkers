@@ -3,7 +3,14 @@
 
 DAYS=15
 
+USERS=`
 lastlog -b $DAYS -u 3000-65533         | \
     tail -n +2                         | \
-    awk '{print $1}'                   | \
-    xargs -n1 loginctl terminate-user
+    awk '{print $1}'
+`
+
+for i in $USERS; do
+    if [ ! -f /home/$i/.keep-account ]; then
+	loginctl terminate-user $i
+    fi
+done
