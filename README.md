@@ -7,7 +7,7 @@
 This is the '/etc' directory of the #! shell servers.
 Git management is handled via [etckeeper](http://etckeeper.branchable.com/)
 
-This can also be used to set up new #! shell servers to add to our pool.
+New servers added to the pool will also have this configuration to give users an equal experience.
 
 ## Contribution ##
 You can "Fork" and "Pull Request" any changes you would like to see on our
