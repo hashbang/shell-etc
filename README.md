@@ -82,5 +82,5 @@ While we accept most pull requests, packages that require X11 as dependency will
   Talk to us via:
 
   [Email](mailto://team@hashbang.sh) |
-  [IRC](ircs://irc.hashbang.sh:6697/#!) |
+  <a href="ircs://irc.hashbang.sh:6697/#!">IRC</a> |
   [Github](http://github.com/hashbang/)
