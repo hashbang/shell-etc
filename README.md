@@ -10,6 +10,7 @@ Git management is handled via [etckeeper](http://etckeeper.branchable.com/)
 New servers added to the pool will also have this configuration to give users an equal experience.
 
 ## Contribution ##
+
 You can "Fork" and "Pull Request" any changes you would like to see on our
 servers.
 
