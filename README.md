@@ -13,7 +13,8 @@ New servers added to the pool will also have this configuration to give users an
 You can "Fork" and "Pull Request" any changes you would like to see on our
 servers.
 
-If you would like to have particular package installed in #! shell servers, add it to packages.txt and send a pull request. While we accept most pull requests, packages that require X11 as dependency will not be merged.
+If you would like to have particular package installed in #! shell servers, add it to packages.txt and send a pull request.
+While we accept most pull requests, packages that require X11 as dependency will not be merged.
 
 ## Requirements ##
 
