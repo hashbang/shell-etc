@@ -40,7 +40,7 @@ While we accept most pull requests, packages that require X11 as dependency will
       cp -R /mnt/* /
       umount /dev/sda1
       ```
-    7. Shrink rootfs and creeate /home partition
+    7. Shrink rootfs and create /home partition
       ```
       e2fsck -f /dev/sda1
       resize2fs /dev/sda1 20G
