@@ -7,10 +7,15 @@
 This is the '/etc' directory of the #! shell servers.
 Git management is handled via [etckeeper](http://etckeeper.branchable.com/)
 
+New servers added to the pool will also have this configuration to give users an equal experience.
+
+## Contribution ##
+
 You can "Fork" and "Pull Request" any changes you would like to see on our
 servers.
 
-This can also be used to set up new #! shell servers to add to our pool.
+If you would like to have particular package installed in #! shell servers, add it to packages.txt and send a pull request.
+While we accept most pull requests, packages that require X11 as dependency will not be merged.
 
 ## Requirements ##
 
@@ -35,7 +40,7 @@ This can also be used to set up new #! shell servers to add to our pool.
       cp -R /mnt/* /
       umount /dev/sda1
       ```
-    7. Shrink rootfs and creeate /home partition
+    7. Shrink rootfs and create /home partition
       ```
       e2fsck -f /dev/sda1
       resize2fs /dev/sda1 20G
@@ -77,5 +82,5 @@ This can also be used to set up new #! shell servers to add to our pool.
   Talk to us via:
 
   [Email](mailto://team@hashbang.sh) |
-  [IRC](irc://irc.hashbang.sh/+6697) |
+  [IRC](ircs://irc.hashbang.sh:6697/#!) |
   [Github](http://github.com/hashbang/)
