@@ -35,6 +35,7 @@ cloud-initramfs-growroot			install
 cloud-utils					install
 cmake						install
 cmake-data					install
+command-not-found				install
 console-setup					install
 console-setup-linux				install
 coreutils					install
