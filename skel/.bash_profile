@@ -16,6 +16,9 @@ git remote add origin https://github.com/hashbang/dotfiles
 git fetch
 git reset --hard origin/master
 
+# Setup submodules
+git submodule update --init --recursive
+
 ###
 # write to mail file section
 ###
