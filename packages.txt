@@ -701,6 +701,7 @@ sssd-krb5-common				install
 sssd-ldap					install
 sssd-proxy					install
 startpar					install
+stow						install
 strace						install
 sudo						install
 systemd						install
