@@ -1,11 +1,9 @@
+# Give jessie priority over everything
 Package: *
-Pin: release a=stable
-Pin-Priority: 999
-
-Package: *
-Pin: release a=testing
+Pin: release n=jessie
 Pin-Priority: 900
 
+# Give stretch priority over unstable (which has the default 500 priority)
 Package: *
-Pin: release o=Debian
+Pin: release n=stretch
 Pin-Priority: 800
