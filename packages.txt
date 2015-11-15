@@ -5,6 +5,7 @@ acpid						install
 adduser						install
 ansible						install
 apt						install
+apt-file					install
 apt-transport-https				install
 apt-utils					install
 aptitude					install
