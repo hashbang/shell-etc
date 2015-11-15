@@ -1,0 +1,25 @@
+# (c) Zygmunt Krynicki 2007,
+# Licensed under GPL, see COPYING for the whole text
+#
+# This script will look-up command in the database and suggest
+# installation of packages available from the repository
+
+# Pseudo-namespace cnf_
+
+function cnf_preexec() {
+    typeset -g cnf_command="${1%% *}"
+}
+
+function cnf_precmd() {
+    (($?)) && [ -n "$cnf_command" ] && [ -x /usr/share/command-not-found/command-not-found ] && {
+        whence -- "$cnf_command" >& /dev/null ||
+            /usr/bin/python /usr/share/command-not-found/command-not-found -- "$cnf_command"
+        unset cnf_command
+    }
+}
+
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+preexec_functions+=cnf_preexec
+precmd_functions+=cnf_precmd
+
