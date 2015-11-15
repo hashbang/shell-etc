@@ -35,7 +35,6 @@ cloud-initramfs-growroot			install
 cloud-utils					install
 cmake						install
 cmake-data					install
-command-not-found				install
 console-setup					install
 console-setup-linux				install
 coreutils					install
@@ -88,6 +87,7 @@ gcc						install
 gcc-4.8-base:amd64				install
 gcc-4.9						install
 gcc-4.9-base:amd64				install
+gcc-5-base:amd64				install
 gdb						install
 geoip-database					install
 gettext						install
@@ -378,6 +378,7 @@ libref-array1:amd64				install
 libroken18-heimdal:amd64			install
 librtmp1:amd64					install
 libruby2.1:amd64				install
+libruby2.2:amd64				install
 libsasl2-2:amd64				install
 libsasl2-dev					install
 libsasl2-modules:amd64				install
@@ -468,6 +469,7 @@ linux-image-amd64				install
 linux-libc-dev:amd64				install
 lm-sensors					install
 locales						install
+locales-all					install
 locate						install
 login						install
 logrotate					install
@@ -679,6 +681,8 @@ resolvconf					install
 rsync						install
 rsyslog						install
 ruby						install
+ruby-power-assert				install
+ruby-test-unit					install
 ruby2.1						install
 rubygems-integration				install
 samba-libs:amd64				install
