@@ -459,10 +459,12 @@ libxfixes3:amd64				install
 libxi6:amd64					install
 libxinerama1:amd64				install
 libxml2:amd64					install
+libxml2-dev:amd64				install
 libxmuu1:amd64					install
 libxrandr2:amd64				install
 libxrender1:amd64				install
 libxslt1.1:amd64				install
+libxslt1-dev:amd64				install
 libxtables10					install
 libyaml-0-2:amd64				install
 linux-base					install
