@@ -681,6 +681,7 @@ python3.4					install
 python3.4-dev					install
 python3.4-minimal				install
 readline-common					install
+reptyr						install
 resolvconf					install
 rsync						install
 rsyslog						install
