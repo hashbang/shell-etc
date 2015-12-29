@@ -7,8 +7,14 @@
 # at the start and end of all non-interactive sessions.
 #
 
+# Environment setup
 session	required	pam_env.so
+
+# User restrictions
 session	required	pam_namespace.so  unmnt_remnt
+session	required	pam_limits.so
+
+# Passwd database handling
 session	sufficient	pam_sss.so
 session	sufficient	pam_unix.so
 session	required	pam_deny.so
