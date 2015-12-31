@@ -509,6 +509,7 @@ ncurses-term					install
 net-tools					install
 netbase						install
 netcat-traditional				install
+nethack-console					install
 nfacct						install
 node-abbrev					install
 node-ansi					install
