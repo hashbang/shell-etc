@@ -1,0 +1,7 @@
+;;; -*- Lisp -*-
+;;; this file gets installed as /etc/sbcl.rc and run on every
+;;; invocation of sbcl
+
+(if (probe-file "/etc/lisp-config.lisp")
+    (load "/etc/lisp-config.lisp")
+    (format t "~%;;; Hey: there is no /etc/lisp-config.lisp file, please run \"dpkg-reconfigure common-lisp-controller\" as root"))

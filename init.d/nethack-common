@@ -1,0 +1,35 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          nethack-common
+# Required-Start:    $remote_fs
+# Required-Stop:     $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Nethack save-file recovery script for Debian
+# Description:       Recovers Nethack save-files on start
+### END INIT INFO
+#
+# Ben Gertzfield (che@debian.org) 29 July 1997
+# Copyright 1997 Ben Gertzfield. This script is released under the
+# GNU General Public License, version 2 or later.
+
+. /lib/lsb/init-functions
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+set -e
+
+case "$1" in
+  start)
+    # Has the nethack package been removed?
+    test -x /usr/lib/games/nethack/recover-all || exit 0
+    exec /usr/lib/games/nethack/recover-all
+    ;;
+  stop|reload|restart|force-reload|status)
+    ;;
+  *)
+    N=/etc/init.d/nethack-common 
+    echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+    exit 1
+    ;;
+esac
