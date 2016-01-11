@@ -833,6 +833,7 @@ wamerican					install
 weechat						install
 weechat-core					install
 weechat-curses					install
+weechat-plugins					install
 wget						install
 whiptail					install
 whois						install
