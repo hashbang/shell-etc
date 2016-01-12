@@ -1,0 +1,2 @@
+deb https://weechat.org/debian jessie main
+deb-src https://weechat.org/debian jessie main
