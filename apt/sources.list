@@ -1,11 +1,12 @@
-deb http://ftp.debian.org/debian/  jessie main contrib non-free
-deb-src http://ftp.debian.org/debian/  jessie main contrib non-free
+deb http://httpredir.debian.org/debian/  jessie main contrib non-free
+deb-src http://httpredir.debian.org/debian/  jessie main contrib non-free
 
 deb http://security.debian.org/ jessie/updates main contrib non-free
 deb-src http://security.debian.org/ jessie/updates main contrib non-free
 
 # Newer releases.  Use with care and pin.
-deb http://ftp.debian.org/debian/     stretch main contrib non-free
-deb-src http://ftp.debian.org/debian/ stretch main contrib non-free
+deb http://httpredir.debian.org/debian/     stretch main contrib non-free
+deb-src http://httpredir.debian.org/debian/ stretch main contrib non-free
 
-deb http://ftp.us.debian.org/debian/ unstable main contrib non-free
+deb http://httpredir.debian.org/debian/ unstable main contrib non-free
+deb-src http://httpredir.debian.org/debian/ unstable main contrib non-free
