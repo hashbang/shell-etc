@@ -1,4 +1,0 @@
-# Use packages from stretch (if more up-to-date) for weechat
-Package: weechat* libncurses* libtinfo* ncurses* libruby2.2 ruby-test-unit libstdc++6
-Pin: release n=stretch
-Pin-Priority: 900
