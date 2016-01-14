@@ -34,9 +34,7 @@ build-essential					install
 busybox						install
 bzip2						install
 ca-certificates					install
-ca-certificates-java				install
 checkpolicy					install
-clojure1.6					install
 cloud-init					install
 cloud-initramfs-dyn-netconf			install
 cloud-initramfs-growroot			install
@@ -114,7 +112,6 @@ gnugo						install
 gnupg						install
 gnupg-agent					install
 gnupg2						install
-golang-go					install
 gpgv						install
 grep						install
 groff-base					install
@@ -134,7 +131,6 @@ iamerican					install
 ibritish					install
 ienglish-common					install
 ifupdown					install
-imagemagick					install
 imagemagick-common				install
 info						install
 init						install
@@ -237,7 +233,6 @@ libdebconfclient0:amd64				install
 libdevmapper1.02.1:amd64			install
 libdhash1:amd64					install
 libdiscover2					install
-libdjvulibre21:amd64				install
 libdns-export100				install
 libdns100					install
 libdpkg-perl					install
@@ -286,12 +281,13 @@ libgpg-error0:amd64				install
 libgpgme11:amd64				install
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
-libgs9						install
 libgssapi-krb5-2:amd64				install
 libgssapi3-heimdal:amd64			install
 libgtk2.0-0:amd64				install
 libgtk2.0-bin					install
 libgtk2.0-common				install
+libgumbo-dev:amd64				install
+libgumbo1:amd64					install
 libharfbuzz0b:amd64				install
 libhcrypto4-heimdal:amd64			install
 libheimbase1-heimdal:amd64			install
@@ -318,6 +314,7 @@ libjbig0:amd64					install
 libjbig2dec0					install
 libjemalloc1					install
 libjpeg62-turbo:amd64				install
+libjs-excanvas					deinstall
 libjs-jquery					install
 libjs-node-uuid					install
 libjs-sphinxdoc					install
@@ -637,7 +634,6 @@ nscd						install
 nslcd						install
 nslcd-utils					install
 oidentd						install
-openjdk-7-jre-headless:amd64			install
 openssh-client					install
 openssh-server					install
 openssh-sftp-server				install
@@ -647,7 +643,6 @@ pandoc						install
 pandoc-data					install
 parallel					install
 parted						install
-pass						install
 passwd						install
 patch						install
 pciutils					install
