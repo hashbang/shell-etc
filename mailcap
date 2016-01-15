@@ -44,7 +44,6 @@ text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; n
 application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
 text/html; /usr/bin/w3m -I %{charset} -dump -T text/html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
-text/html; /usr/bin/html2text '%s'; copiousoutput; description=HTML Text
 text/html; /usr/bin/lynx -dump -force_html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
 text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
