@@ -128,6 +128,7 @@ text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; n
 application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
 text/html; /usr/bin/w3m -I %{charset} -dump -T text/html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
+text/html; /usr/bin/html2text '%s'; copiousoutput; description=HTML Text
 image/avs; display-im6. 'avs:%s'; test=test -n "$DISPLAY"
 image/bie; display-im6 'jbig:%s'; test=test -n "$DISPLAY"
 image/x-ms-bmp; display-im6 'bmp:%s'; test=test -n "$DISPLAY"
