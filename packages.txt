@@ -34,7 +34,9 @@ build-essential					install
 busybox						install
 bzip2						install
 ca-certificates					install
+ca-certificates-java				deinstall
 checkpolicy					install
+clojure1.6					deinstall
 cloud-init					install
 cloud-initramfs-dyn-netconf			install
 cloud-initramfs-growroot			install
@@ -112,6 +114,7 @@ gnugo						install
 gnupg						install
 gnupg-agent					install
 gnupg2						install
+golang-go					deinstall
 gpgv						install
 grep						install
 groff-base					install
@@ -131,6 +134,7 @@ iamerican					install
 ibritish					install
 ienglish-common					install
 ifupdown					install
+imagemagick					deinstall
 imagemagick-common				install
 info						install
 init						install
@@ -634,6 +638,7 @@ nscd						install
 nslcd						install
 nslcd-utils					install
 oidentd						install
+openjdk-7-jre-headless:amd64			deinstall
 openssh-client					install
 openssh-server					install
 openssh-sftp-server				install
@@ -643,6 +648,7 @@ pandoc						install
 pandoc-data					install
 parallel					install
 parted						install
+pass						deinstall
 passwd						install
 patch						install
 pciutils					install
