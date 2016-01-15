@@ -34,7 +34,9 @@ build-essential					install
 busybox						install
 bzip2						install
 ca-certificates					install
+ca-certificates-java				install
 checkpolicy					install
+clojure1.6					install
 cloud-init					install
 cloud-initramfs-dyn-netconf			install
 cloud-initramfs-growroot			install
@@ -61,6 +63,7 @@ debconf-utils					install
 debhelper					install
 debian-archive-keyring				install
 debianutils					install
+default-jre-headless				install
 dh-lua						install
 dh-python					install
 dictionaries-common				install
@@ -112,6 +115,9 @@ gnugo						install
 gnupg						install
 gnupg-agent					install
 gnupg2						install
+golang-go					install
+golang-go-linux-amd64				install
+golang-src					install
 gpgv						install
 grep						install
 groff-base					install
@@ -131,6 +137,8 @@ iamerican					install
 ibritish					install
 ienglish-common					install
 ifupdown					install
+imagemagick					install
+imagemagick-6.q16				install
 imagemagick-common				install
 info						install
 init						install
@@ -177,6 +185,7 @@ libapt-pkg-perl					install
 libapt-pkg4.12:amd64				install
 libarchive13:amd64				install
 libasan1:amd64					install
+libasm4-java					install
 libasn1-8-heimdal:amd64				install
 libaspell15:amd64				install
 libasprintf-dev:amd64				install
@@ -320,6 +329,7 @@ libjs-node-uuid					install
 libjs-sphinxdoc					install
 libjs-underscore				install
 libjson-c2:amd64				install
+libjsr166y-java					install
 libk5crypto3:amd64				install
 libkeyutils1:amd64				install
 libklibc					install
@@ -634,6 +644,7 @@ nscd						install
 nslcd						install
 nslcd-utils					install
 oidentd						install
+openjdk-7-jre-headless:amd64			install
 openssh-client					install
 openssh-server					install
 openssh-sftp-server				install
@@ -643,6 +654,7 @@ pandoc						install
 pandoc-data					install
 parallel					install
 parted						install
+pass						install
 passwd						install
 patch						install
 pciutils					install
@@ -659,6 +671,7 @@ postfix-ldap					install
 procmail					install
 procps						install
 psmisc						install
+pwgen						install
 python						install
 python-apt					install
 python-apt-common				install
@@ -807,7 +820,9 @@ telnet						install
 tig						install
 tmux						install
 traceroute					install
+tree						install
 tzdata						install
+tzdata-java					install
 ucf						install
 udev						install
 unattended-upgrades				install
