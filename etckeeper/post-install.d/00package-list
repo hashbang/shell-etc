@@ -1,0 +1,3 @@
+#!/bin/sh -e
+
+dpkg --get-selections > /etc/packages.txt
