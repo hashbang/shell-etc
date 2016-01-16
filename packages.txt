@@ -926,6 +926,7 @@ stow						install
 strace						install
 subversion					install
 sudo						install
+swaks						install
 systemd						install
 systemd-sysv					install
 sysv-rc						install
