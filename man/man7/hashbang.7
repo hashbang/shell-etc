@@ -38,7 +38,7 @@ code readability.
 
 ruby - A dynamic, object-oriented general-purpose programming language.
 
-haskell - A standardized, general-purpose programming language with non-strict
+haskell [ghc] - A standardized, general-purpose programming language with non-strict
 semantics and strong static typing.
 
 lua - A lightweight multi-paradigm programming language designed as a scripting
@@ -64,8 +64,6 @@ various other programming languages.
 
 smlnj -(Standard ML of New Jersey) a compiler and programming environment for
 Standard ML
-
-spidermonkey - JavaScript engine maintained by the Mozilla Foundation.
 .SS Text Editors
 vim - A popular vi clone and the IDE of choice of most of the #! regulars.
 Ships by default on all operating systems that matter.
@@ -83,20 +81,9 @@ pico - (Pine Composer) a text editor originally integrated with the pine e-mail
 client and designed at the Office of Computing and Communications at the
 University of Washington.
 
-e3 - A full-featured text editor with choosable syntax including Pico, Emacs,
-and VI.
-
-ne - (nice editor) A text editor created at the University of Milan intended to
-be an alternative to VI for beginners.
-
 mcedit - Internal text editor for the Midnight Commander file manager.
 
 zile - An Emacs like text editor that is less resource intensive.
-
-mg - (originally MicroGnuEmacs) An editor similar to Emacs with a smaller
-memory footprint and faster speed.
-
-jed - A text editor that makes use of the S-Lang library.
 .SS Password Management
 pass - A shell based password manager.
 .SS Cryptography / Hashing
@@ -111,21 +98,13 @@ md5sum - Calculates and verifies 128-bit MD5 hashes as described in RFC 1321.
 shasum - Calculates and verifies SHA hashes.
 
 bcrypt - A key derivation function for passwords based on the Blowfish cipher.
-
-ccrypt - A utility for the secure encryption and decryption of files and
-streams.
 .SS Time Management
-calcurse - A calendar and scheduling application used to keep track of events,
-appointments, and everyday tasks.
-
 calendar - Checks current directory or CALENDAR_DIR environment variable for a
 file named calendar and displays appointments and reminders.
 
 remind - A sophisticated reminder service.
 
 wyrd - A text-based front-end to the Remind program.
-
-taskwarrior - a CLI time and task management tool.
 
 tudu - A command-line tool to manage TODO lists hierarchically.
 .SS Shells
@@ -144,20 +123,7 @@ includes many features of the C shell.
 .SS Email
 mutt - A text-based email client. "All mail clients suck. This one just sucks
 less."
-
-alpine - (Alternatively Licensed Program for Internet News and Email) A
-text-based email client developed at the University of Washington.
-
-slrn - A text-based news client that uses the S-Lang library.
-
-offlineimap - An IMAP synchronization utility software, capable of
-synchronizing mail on IMAP server with local Maildir folder or another server.
-
-mu - A set of tools that enable you to quickly find e-mails you are looking
-for in Maildir.
 .SS Math
-ledger - A double-entry accounting system accessed from the command line.
-
 units - Unit conversion utility.
 
 dc - A reverse-polish desk calculator which supports arbitrary-precision
@@ -171,10 +137,6 @@ bc - An arbitrary precision calculator language
 weechat-curses - Wee Enhanced Environment for Chat (Curses version)
 
 irssi - A text-based IRC client written in the C programming language.
-
-centerim - A text based menu and window-driven instant messaging interface that
-supports ICQ, Yahoo!, AIM, MSN, IRC, XMPP, LiveJournal, and Gadu-Gadu
-protocols.
 
 finch - A console-based instant messaging client based on the libpurple
 library.
@@ -200,33 +162,7 @@ channel. If you are interested in using Google Talk follow this guide
 http://wiki.bitlbee.org/HowtoGtalk
 .RE
 
-barnowl - A curses-based instant messaging client forked from the ktools owl
-project that supports Zephyr, AIM, Jabber, IRC, and Twitter.
-
-pork - An ncurses-based AOL instant messenger and IRC client.
-
-scrollz - An advanced ircII-based IRC client.
-
-ii - A minimalistic FIFO and filesystem based IRC client.
-
-sic - A fast, simple IRC client that reads from standard input and prints
-server output to standard output.
-
-erc - An IRC client integrated into GNU Emacs.
-.SS News Reader
-newsbeuter - A text-based news aggregator that supports RSS and Atom.
-
-rsstail - An RSS news reader which works similar to the tail command.
-
-canto - An ncurses RSS reader built to be flexible on top of python.
-
-rawdog - (RSS Aggregator Without Delusions Of Grandeur) An RSS aggregator that
-uses the Python feedparser module to retrieve articles from feeds in RSS, Atom
-and other formats.
 .SS Web Browsing
-links - A menu-driven text mode web browser with ncurses interface supporting colors, table
-rendering and background downloading.
-
 elinks - Similar to links, but also supports Form Input, Password Management,
 and Tabbed Browsing
 
@@ -236,19 +172,7 @@ w3m - A text based web browser and pager.
 
 html2text - Reads an HTML document and outputs plain text characters.
 .SS Database
-sqlite3 - A relational database management system contained in a C programming
-library.
-
-mariadb - A fork of the MySQL relational database management system led by the
-original developer of MySQL.
-
-postgresql - An Object-relational database management system that emphasises
-extensibility and standards-compliance.
-
-mongodb - A document-oriented NoSQL database that uses JSON-like documents with
-dynamic schemas.
-
-redis - A networked, in-memory, key-value data store with optional durability
+redis [redis-*] - A networked, in-memory, key-value data store with optional durability
 written in ANSI C.
 .SS File Management
 mc - (Midnight Commander) A text-based file manager similar to Norton
@@ -260,13 +184,8 @@ transfer files between hosts.
 rsync - A file synchronization and file transfer program that minimizes network
 data transfer by using a form of delta encoding called the rsync algorithm.
 
-rsynccrypto - A utility that encrypts a file or directory structure that is
-rsync friendly.
-
 duplicity - A software suite that provides encrypted, digitally signed,
 versioned, remote backups of files.
-
-vifm - An ncurses based file manager with vi like keybindings.
 
 ranger - A text-based file manager written in Python.
 
@@ -293,46 +212,19 @@ p7zip - A program for compressing and uncompressing 7-zip compressed files.
 
 tar - Utility used for compressing and uncompressing tar files.
 
-dar - (disc archive) A command-line archiving tool intended as a replacement
-for tar.
-
 gzip - An application used to create gzip compressed files.
 
 zpaq - A program for creating journaling or append-only compression files.
 .SS Network
 iperf - A bandwidth measurement utility.
 
-iptraf - A console-based network statistics utility.
-
-nethogs - A tool for monitoring processes by bandwidth usage.
-
-slurm - (Simple Linux Utility for Resource Management) A job scheduler used on
-supercomputers and computer clusters.
-
 nmap - (Network Mapper) A security scanner used to discover hosts and services
 on a computer network.
-
-ngrep - (Network Grep) A network packet analyzer that relies upon the pcap
-library and GNU regex.
-
-tcpdump - A common packet analyzer that allows the user to intercept and
-display TCP/IP and other packets being transmitted or received over the
-network.
-
-trickle - A portable lightweight userspace bandwidth shaper.
-
-ifstat - A tool for reporting network interface bandwidth.
-
-iftop - Displays bandwidth usage on an interface.
 
 mtr - (Matt's TraceRoute) Combines the functionality of the traceroute and ping
 programs in a single network diagnostic tool.
 
 telnet - Used to communicate with another host using the telnet protocol.
-
-netpipes - (Network Protocol Independent Performance Evaluator) Uses a series
-of ping-pong tests over a range of message sizes to provide a complete measure
-of the performance of a network.
 
 ssh - A client used to connect to a host using the Secure Shell protocol.
 
@@ -344,9 +236,7 @@ connections to other hosts.
 curl - A tool used to transfer data from or to a server using HTTP, HTTPS, FTP,
 FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE).
 
-rtorrent - A BitTorrent client for ncurses using the libtorrent library.
-
-aria2 - A utility for downloading files via HTTP(S), FTP, BitTorrent, and
+aria2 [aria2c] - A utility for downloading files via HTTP(S), FTP, BitTorrent, and
 Metalink.
 
 ipcalc - A program that calculates IP information for a host.
@@ -359,19 +249,8 @@ the command line.
 
 ssh-copy-id - A script that uses SSH to copy a public key to a remote machine's
 authorized_keys.
-
-zeromq - A high-performance asynchronous messaging library aimed at use in a
-scalable distributed or concurrent application.
-
-rabbitmq - A message broker that implements the Advanced Message Queuing
-Protocol (AMQP)
 .SS Image Tools
-optipng - Attempts to optimize PNG files by reducing their size to a minimum
-without losing any information.
-
-imagemagick - A software suits used to create, edit, and compose bitmap images.
-
-gd - A perl interface for the gd graphics library.
+imagemagick [convert, mogrify, ...] - A software suits used to create, edit, and compose bitmap images.
 
 .SS Code Management
 cvs - (Concurrent Versions System) A revision control system using
@@ -380,7 +259,7 @@ client-server architecture.
 svn - (Subversion) A software versioning and revision control system
 maintained by apache and designed as a successor to CVS
 
-mercurial - A distributed revision control system designed for high
+mercurial [hg] - A distributed revision control system designed for high
 performance, scalability, and decentralization.
 
 git - A distributed version control system with an emphasis on speed, data
@@ -393,10 +272,6 @@ cloc - Counts and computes differences of lines of source code and comments.
 diff - Compares files line by line.
 
 vimdiff - Edits 2 - 4 versions of a file with vim while showing differences.
-
-vimpager - Allows vim to be used as a pager for things like man pages.
-
-hub - Wrapper around git(1) that allows better integration with Github.
 
 ctags - A programming tool that generates an index file of names found in
 source and header files of various programming languages.
@@ -415,52 +290,19 @@ nethack - A roguelike game descended from the game Hack and Rogue.
 slashem - (Super Lotsa Added Stuff Hack - Extended Magic) is a variant of the
 roguelike game NetHack that offers extra features, monsters, and items.
 
-cmatrix - CMatrix simulates the display from "The Matrix".
-
 frotz - An interpreter for Infocom games and other z-machine games.
 
-bsdgames - A collection of text games from BSD systems.
-
-bb - An ASCII-art demo that uses AAlib
-
-sl - Displays a choo-choo when peopl mistype the 'ls' command.
+bsdgames [adventure, ...] - A collection of text games from BSD systems.
 
 bastet - (Bastard Tetris) A Tetris clone.
-
-greed - A puzzle game with numbers.
 
 gnugo - Open source implementation of the game Go.
 
 gnuchess - Chess
-
-moon-buggy - Drive a buggy across the moon.
-
-typespeed - Tests typing speed and gets your fingers' CPS.
-.SS MUSH/MOO/MUD Clients
-
-tinyfugue - A MUD client sucessor to TinyTalk.
-
-tintin++ - A mud client on unix that succeeds TINTIN (The kIckiN Ticking
-dIkumud clieNt")
-
-kbtin - Another heavily extended clone of the TinTin++ MUD client.
-
-pennmush - A successor to TinyMud.
 .SS System Management Utilities
-bonnie++ - A filesystem benchmarking tool aimed at performing a number of
-simple tests of hard drive and file system performance.
-
 htop - An interactive system-monitor process-viewer.
 
-dstat - A versatile tool for generating system resource statistics.
-
-iotop - A simple top-like tool for monitoring I/O.
-
-sysdig - System-level exploration and troubleshooting tool.
-
 strace - Application for tracing system calls and signals.
-
-cpulimit - A program that attempts to limit the cpu usage of a process.
 
 cgroups - (Control Groups) A kernel feature to limit, account, and isolate
 resource usage of process groups.
@@ -476,17 +318,11 @@ user to access multiple separate terminal sessions inside a single terminal.
 screen - Application used to multiplex several virtual consoles, allowing a
 user to access multiple separate terminal sessions in a single terminal.
 
-dtach - A program that emulates the detach feature of screen.
-
 byobu - An enhancement for the terminal multiplexers Screen or Tmux that can be
 used to provide on screen notification or status as well as tabbed multi-window
 management.
-
 .SS Misc. / Unsorted (Sort these!)
 pv - Monitors the progress of data through a pipe.
-
-ttyrec - Records the TTY output of a text-mode program together with timestamps
-and then replaying it.
 
 tsung - Used to stress test HTTP, WebDAV, LDAP, MySQL, PostgreSQL, SOAP, and
 XMPP servers.
@@ -496,14 +332,7 @@ xargs - Used to build and execute command lines from standard input.
 parallel - Shell tool for executing jobs in parallel using one or more
 computers.
 
-tpp - (Text Presentation Program) an ncurses-based presentation tool.
-
-ack - A grep-like text finder.
-
 ag - A significantly faster replacement to ACK with a built in VCS.
-
-repl - Wraps a non-interactive command in an interactive read-eval-print-loop
-prompt.
 
 watch - Executes a program periodically, showing the output fullscreen.
 
@@ -512,15 +341,12 @@ libev - A high-performance event loop for C.
 libevent - Provides a mechanism to execute a callback function when a specific
 event occurs on a file descriptor or after a timeout has been reached.
 
-lame - An MP3 encoder.
-
 cowsay - Generates ASCII pictures of a cow with a message.
 
 dos2unix - Converts line breaks in a text file from DOS format to Unix format.
 
 unix2dos - Converts line breaks in a text file from Unix format to DOS format.
 .SH HISTORY
-
 2004 - lrvick secured free-for-all usage of a dedicated server, hosted at
 "The Planet" datacenter in Austin, TX, in exchange for providing free system
 administration services to an educational web application provider. He
