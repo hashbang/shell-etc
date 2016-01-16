@@ -1,0 +1,33 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          slashem-common
+# Required-Start:    $local_fs $remote_fs
+# Should-Start:
+# Required-Stop:     $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Should-Stop:
+# Short-Description: Slashem save-file recovery script for Debian
+# Description:       Recovers Slashem save-files on start
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+set -e
+
+case "$1" in
+  start)
+    # Has the nethack package been removed?
+    test -x /usr/lib/games/slashem/recover-all || exit 0
+    exec /usr/lib/games/slashem/recover-all
+    ;;
+  stop|reload|restart|force-reload|status)
+    ;;
+  *)
+    N=/etc/init.d/slashem-common 
+    echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+    exit 1
+    ;;
+esac
