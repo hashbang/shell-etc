@@ -92,6 +92,11 @@ e2fsprogs					install
 eject						install
 elinks						install
 elinks-data					install
+emacs-nox					install
+emacs24-bin-common				install
+emacs24-common					install
+emacs24-common-non-dfsg				install
+emacs24-nox					install
 emacsen-common					install
 etckeeper					install
 euca2ools					install
@@ -412,6 +417,8 @@ libldb1:amd64					install
 libldns1					install
 liblist-moreutils-perl				install
 liblocale-gettext-perl				install
+liblockfile-bin					install
+liblockfile1:amd64				install
 liblogging-stdlog0:amd64			install
 liblognorm1:amd64				install
 liblqr-1-0:amd64				install
