@@ -5,7 +5,8 @@ readme_directory    = no
 
 # We serve mail for hashbang.sh only
 mydomain      = hashbang.sh
-mydestination = $mydomain $myhostname
+myorigin      = $mydomain
+mydestination = $myhostname
 alias_maps    = hash:/etc/aliases
 
 # Restrict reception to localhost and mail.#!.sh
