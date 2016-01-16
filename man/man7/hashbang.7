@@ -38,6 +38,9 @@ code readability.
 
 ruby - A dynamic, object-oriented general-purpose programming language.
 
+haskell [ghc] - A standardized, general-purpose programming language with non-strict
+semantics and strong static typing.
+
 lua - A lightweight multi-paradigm programming language designed as a scripting
 language.
 
@@ -53,6 +56,9 @@ applications written in javascript.
 sbcl - (Steel Bank Common Lisp) A Lisp implementation that features a high
 performance native compiler, Unicode support, and threading.
 
+ghc - (The Glorious Glasgow Haskell Compilation System) a native code compiler
+for Haskell.
+
 gcc - (GNU Compiler Collection) A compiler system that supports C, C++ and
 various other programming languages.
 
@@ -61,6 +67,10 @@ Standard ML
 .SS Text Editors
 vim - A popular vi clone and the IDE of choice of most of the #! regulars.
 Ships by default on all operating systems that matter.
+
+emacs - A very capable scriptable text editor also capable of being a full IDE
+with all the power of vim implemented in different ways. Not in as wide of
+use as it once was but plenty of skilled hackers still swear by it.
 
 nano - A text editor that emulates the Pico text editor and is part of the GNU
 Project.
@@ -83,6 +93,8 @@ cryptographic software compliant with RFC 4880.
 md5sum - Calculates and verifies 128-bit MD5 hashes as described in RFC 1321.
 
 shasum - Calculates and verifies SHA hashes.
+
+bcrypt - A key derivation function for passwords based on the Blowfish cipher.
 .SS Time Management
 calendar - Checks current directory or CALENDAR_DIR environment variable for a
 file named calendar and displays appointments and reminders.
@@ -111,6 +123,31 @@ bc - An arbitrary precision calculator language
 weechat-curses - Wee Enhanced Environment for Chat (Curses version)
 
 irssi - A text-based IRC client written in the C programming language.
+
+finch - A console-based instant messaging client based on the libpurple
+library.
+
+bitlbee - Bitlbee brings Instant Messaging to IRC clients. It has support for 
+multiple IM networks/protocols including Google Talk.
+
+.RS
+To use bitlbee in weechat enter
+.RS
+.B
+/server add bitlbee irc.hashbang.sh/6610
+.RE
+then
+.RS
+.B
+/connect bitlbee 
+.RE
+this will force join you into the 
+.B
+&bitlbee
+channel. If you are interested in using Google Talk follow this guide 
+http://wiki.bitlbee.org/HowtoGtalk
+.RE
+
 .SS Web Browsing
 elinks - Similar to links, but also supports Form Input, Password Management,
 and Tabbed Browsing
@@ -118,6 +155,11 @@ and Tabbed Browsing
 lynx - A general purpose distributed information web browser.
 
 w3m - A text based web browser and pager.
+
+html2text - Reads an HTML document and outputs plain text characters.
+.SS Database
+redis [redis-*] - A networked, in-memory, key-value data store with optional durability
+written in ANSI C.
 .SS File Management
 mc - (Midnight Commander) A text-based file manager similar to Norton
 Commander.
@@ -158,11 +200,22 @@ siege - A multi-threaded http load testing and benchmarking utility.
 curl - A tool used to transfer data from or to a server using HTTP, HTTPS, FTP,
 FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE).
 
+aria2 [aria2c] - A utility for downloading files via HTTP(S), FTP, BitTorrent, and
+Metalink.
+
+ipcalc - A program that calculates IP information for a host.
+
+socat - (SOcket CAT) A command line based utility that establishes two
+bidirectional byte streams and transfers data between them.
+
 netcat - A networking utility which reads and writes data across networks from
 the command line.
 
 ssh-copy-id - A script that uses SSH to copy a public key to a remote machine's
 authorized_keys.
+.SS Image Tools
+imagemagick [convert, mogrify, ...] - A software suits used to create, edit, and compose bitmap images.
+
 .SS Code Management
 cvs - (Concurrent Versions System) A revision control system using
 client-server architecture.
@@ -170,13 +223,15 @@ client-server architecture.
 svn - (Subversion) A software versioning and revision control system
 maintained by apache and designed as a successor to CVS
 
-hg - A distributed revision control system designed for high
+mercurial [hg] - A distributed revision control system designed for high
 performance, scalability, and decentralization.
 
 git - A distributed version control system with an emphasis on speed, data
 integrity, and support for distributed, non-linear workflows.
 
 tig - A text-mode interface for git.
+
+cloc - Counts and computes differences of lines of source code and comments.
 
 diff - Compares files line by line.
 
@@ -191,6 +246,8 @@ compiler-independent method.
 
 nethack - A roguelike game descended from the game Hack and Rogue.
 
+bsdgames [adventure, ...] - A collection of text games from BSD systems.
+
 bastet - (Bastard Tetris) A Tetris clone.
 
 gnugo - Open source implementation of the game Go.
@@ -200,6 +257,9 @@ gnuchess - Chess
 htop - An interactive system-monitor process-viewer.
 
 strace - Application for tracing system calls and signals.
+
+cgroups - (Control Groups) A kernel feature to limit, account, and isolate
+resource usage of process groups.
 
 command-not-found - (Debian) Suggest a package when the user calls a command
 that could not be found.
@@ -213,12 +273,25 @@ screen - Application used to multiplex several virtual consoles, allowing a
 user to access multiple separate terminal sessions in a single terminal.
 
 .SS Misc. / Unsorted (Sort these!)
+pv - Monitors the progress of data through a pipe.
+
 xargs - Used to build and execute command lines from standard input.
 
 parallel - Shell tool for executing jobs in parallel using one or more
 computers.
 
 watch - Executes a program periodically, showing the output fullscreen.
+
+libev - A high-performance event loop for C.
+
+libevent - Provides a mechanism to execute a callback function when a specific
+event occurs on a file descriptor or after a timeout has been reached.
+
+cowsay - Generates ASCII pictures of a cow with a message.
+
+dos2unix - Converts line breaks in a text file from DOS format to Unix format.
+
+unix2dos - Converts line breaks in a text file from Unix format to DOS format.
 .SH HISTORY
 2004 - lrvick secured free-for-all usage of a dedicated server, hosted at
 "The Planet" datacenter in Austin, TX, in exchange for providing free system
