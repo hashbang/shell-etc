@@ -1,22 +1,40 @@
-smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
-biff = no
+smtpd_banner        = $myhostname ESMTP $mail_name (Debian/GNU)
+biff                = no
 append_dot_mydomain = no
-readme_directory = no
-smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-smtpd_use_tls=yes
+readme_directory    = no
+
+# We serve mail for hashbang.sh only
+mydomain      = hashbang.sh
+mydestination = $mydomain $myhostname
+alias_maps    = hash:/etc/aliases
+
+# Restrict reception to localhost and mail.#!.sh
+mynetworks                = 127.0.0.0/8 [::1]/128 mail.$mydomain
+inet_interfaces           = all
+smtpd_client_restrictions = permit_mynetworks reject
+
+# Relay settings
+relayhost                       = mail.$mydomain
+smtp_tls_security_level         = fingerprint
+smtp_tls_fingerprint_digest     = sha1
+smtp_tls_fingerprint_cert_match = 73:E7:EC:E1:53:7F:D6:09:C9:3A:B3:62:84:64:7B:1D:D3:85:DF:D6
+smtp_tls_mandatory_protocols    = !SSLv2, !SSLv3, !TLSv1
+smtp_tls_exclude_ciphers        = NULL, MD5, DES, RC4
+smtp_tls_mandatory_ciphers      = high
+
+# TLS Settings
+smtpd_use_tls                    = yes
+smtpd_tls_cert_file              = /etc/ssl/certs/ssl-cert-snakeoil.pem
+smtpd_tls_key_file               = /etc/ssl/private/ssl-cert-snakeoil.key
+
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
-smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
-smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-myhostname = hashbang.sh
-alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
-myorigin = hashbang.sh
-mydestination = va1.hashbang.sh, hashbang.sh, localhost.hashbang.sh, localhost
-relayhost = 
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
-mailbox_command = procmail -a "$EXTENSION"
-mailbox_size_limit = 0
+smtp_tls_session_cache_database  = btree:${data_directory}/smtp_scache
+
+# Delivery configuration
+mailbox_command     = procmail -a "$EXTENSION"
+mailbox_size_limit  = 0
 recipient_delimiter = +
-inet_interfaces = all
-#relay_domains = hashbang.sh
+
+# Access restrictions
+authorized_flush_users = root
+authorized_mailq_users = root
