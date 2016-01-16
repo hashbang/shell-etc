@@ -922,6 +922,7 @@ sensible-utils					install
 setools						install
 sgml-base					install
 shared-mime-info				install
+shellcheck					install
 siege						install
 socat						install
 ssl-cert					install
