@@ -87,6 +87,9 @@ zile - An Emacs like text editor that is less resource intensive.
 .SS Password Management
 pass - A shell based password manager.
 .SS Cryptography / Hashing
+encfs - A FUSE-based cryptographic filesystem that transparently encrypts files
+using an arbitrary directory as storage for the encrypted files.
+
 gpg - (GNU Privacy Guard) A GPL Licensed alternative to the PGP suite of
 cryptographic software compliant with RFC 4880.
 
@@ -98,6 +101,12 @@ bcrypt - A key derivation function for passwords based on the Blowfish cipher.
 .SS Time Management
 calendar - Checks current directory or CALENDAR_DIR environment variable for a
 file named calendar and displays appointments and reminders.
+
+remind - A sophisticated reminder service.
+
+wyrd - A text-based front-end to the Remind program.
+
+tudu - A command-line tool to manage TODO lists hierarchically.
 .SS Shells
 bash - (Bourne Again Shell) The standard shell on most Linux and unix-like
 systems which is a GNU replacement for the Unix Bourne shell. A linux classic
@@ -116,6 +125,11 @@ mutt - A text-based email client. "All mail clients suck. This one just sucks
 less."
 .SS Math
 units - Unit conversion utility.
+
+dc - A reverse-polish desk calculator which supports arbitrary-precision
+arithmetic.
+
+qalc - A small simple to use command-line calculator.
 
 bc - An arbitrary precision calculator language
 
@@ -170,6 +184,11 @@ transfer files between hosts.
 rsync - A file synchronization and file transfer program that minimizes network
 data transfer by using a form of delta encoding called the rsync algorithm.
 
+duplicity - A software suite that provides encrypted, digitally signed,
+versioned, remote backups of files.
+
+ranger - A text-based file manager written in Python.
+
 du - (disc usage) Estimates file space usage on a filesystem.
 
 ncdu - A simple ncurses disk usage analyzer.
@@ -183,19 +202,34 @@ locate - Searches a prebuilt database for files on a filesystem.
 tree - A recursive directory listing program that produces a depth-indented
 listing of files.
 .SS Archiving
+atool - A script for managing file archives of various types.
+
 zip - A PKZIP compatible compression and file packaging utility.
 
 unzip - Utility for uncompressing PKZIP compressed files.
 
+p7zip - A program for compressing and uncompressing 7-zip compressed files.
+
 tar - Utility used for compressing and uncompressing tar files.
 
 gzip - An application used to create gzip compressed files.
+
+zpaq - A program for creating journaling or append-only compression files.
 .SS Network
+nmap - (Network Mapper) A security scanner used to discover hosts and services
+on a computer network.
+
+mtr - (Matt's TraceRoute) Combines the functionality of the traceroute and ping
+programs in a single network diagnostic tool.
+
 telnet - Used to communicate with another host using the telnet protocol.
 
 ssh - A client used to connect to a host using the Secure Shell protocol.
 
 siege - A multi-threaded http load testing and benchmarking utility.
+
+lftp - A file transfer program that allows sophisticated ftp, http and other
+connections to other hosts.
 
 curl - A tool used to transfer data from or to a server using HTTP, HTTPS, FTP,
 FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE).
@@ -244,7 +278,15 @@ cmake - Software for managing the build process of software using a
 compiler-independent method.
 .SS Games/Toys
 
+zangband - A dungeon-crawling roguelike game derived from Angband and based on
+Roger Zelazny's The Chronicles of Amber.
+
 nethack - A roguelike game descended from the game Hack and Rogue.
+
+slashem - (Super Lotsa Added Stuff Hack - Extended Magic) is a variant of the
+roguelike game NetHack that offers extra features, monsters, and items.
+
+frotz - An interpreter for Infocom games and other z-machine games.
 
 bsdgames [adventure, ...] - A collection of text games from BSD systems.
 
@@ -272,13 +314,21 @@ user to access multiple separate terminal sessions inside a single terminal.
 screen - Application used to multiplex several virtual consoles, allowing a
 user to access multiple separate terminal sessions in a single terminal.
 
+byobu - An enhancement for the terminal multiplexers Screen or Tmux that can be
+used to provide on screen notification or status as well as tabbed multi-window
+management.
 .SS Misc. / Unsorted (Sort these!)
 pv - Monitors the progress of data through a pipe.
+
+tsung - Used to stress test HTTP, WebDAV, LDAP, MySQL, PostgreSQL, SOAP, and
+XMPP servers.
 
 xargs - Used to build and execute command lines from standard input.
 
 parallel - Shell tool for executing jobs in parallel using one or more
 computers.
+
+ag - A significantly faster replacement to ACK with a built in VCS.
 
 watch - Executes a program periodically, showing the output fullscreen.
 
