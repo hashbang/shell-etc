@@ -280,6 +280,7 @@ libdconf1:amd64					install
 libdebconfclient0:amd64				install
 libdevmapper1.02.1:amd64			install
 libdhash1:amd64					install
+libdigest-hmac-perl				install
 libdirac-encoder0:amd64				install
 libdirectfb-1.2-9:amd64				install
 libdiscover2					install
@@ -372,6 +373,7 @@ libiec61883-0:amd64				install
 libijs-0.35:amd64				install
 libilmbase6:amd64				install
 libini-config5:amd64				install
+libio-socket-inet6-perl				install
 libipa-hbac0					install
 libirs-export91					install
 libisc-export95					install
@@ -443,6 +445,9 @@ libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
 libncursesw5-dev:amd64				install
+libnet-dns-perl					install
+libnet-ip-perl					install
+libnet-ssleay-perl				install
 libnetfilter-acct1:amd64			install
 libnetpbm10					install
 libnettle4:amd64				install
@@ -552,6 +557,7 @@ libslv2-9					install
 libsm6:amd64					install
 libsmartcols1:amd64				install
 libsndfile1:amd64				install
+libsocket6-perl					install
 libsoundtouch0:amd64				install
 libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
