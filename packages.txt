@@ -915,6 +915,7 @@ python-pip					install
 python-pip-whl					install
 python-pkg-resources				install
 python-ply					install
+python-potr					install
 python-prettytable				install
 python-pyasn1					install
 python-pycparser				install
