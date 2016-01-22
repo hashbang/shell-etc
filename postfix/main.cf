@@ -9,11 +9,6 @@ myorigin      = $mydomain
 mydestination = $myhostname
 alias_maps    = hash:/etc/aliases
 
-# Restrict reception to localhost and mail.#!.sh
-mynetworks                = 127.0.0.0/8 [::1]/128 mail.$mydomain
-inet_interfaces           = all
-smtpd_client_restrictions = permit_mynetworks reject
-
 # Relay settings
 relayhost                       = mail.$mydomain
 smtp_tls_security_level         = fingerprint
