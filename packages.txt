@@ -1041,6 +1041,8 @@ telnet						install
 tig						install
 tk8.5						install
 tmux						install
+toilet						install
+toilet-fonts					install
 traceroute					install
 tree						install
 tsung						install
