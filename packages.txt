@@ -121,6 +121,7 @@ etckeeper					install
 euca2ools					install
 exuberant-ctags					install
 fakeroot					install
+figlet						install
 file						install
 finch						install
 findutils					install
