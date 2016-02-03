@@ -7,16 +7,7 @@
 # (e.g., /etc/shadow, LDAP, Kerberos, etc.).  The default is to use the
 # traditional Unix authentication mechanisms.
 #
-# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.
-# To take advantage of this, it is recommended that you configure any
-# local modules either before or after the default block, and use
-# pam-auth-update to manage selection of other modules.  See
-# pam-auth-update(8) for details.
 
-# here are the per-package modules (the "Primary" block)
-auth	sufficient                      pam_unix.so nullok_secure
-auth	sufficient                      pam_sss.so use_first_pass
+auth	sufficient                      pam_sss.so
+auth	sufficient                      pam_unix.so use_first_pass
 auth	required			pam_deny.so
-# prime the stack with a positive return value if there isn't one already;
-# this avoids us returning an error just because nothing sets a success code
-# since the modules above will each just jump around

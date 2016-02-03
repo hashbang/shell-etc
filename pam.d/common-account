@@ -13,6 +13,7 @@
 # pam-auth-update(8) for details.
 #
 
-account	sufficient                      pam_unix.so 
-account	sufficient			pam_localuser.so 
-account	required			pam_sss.so
+account	sufficient	pam_sss.so
+account	sufficient	pam_unix.so
+account	sufficient	pam_localuser.so
+account	required	pam_deny.so
