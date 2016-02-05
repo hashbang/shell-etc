@@ -885,6 +885,7 @@ python-configobj				install
 python-crypto					install
 python-cryptography				install
 python-dateutil					install
+python-decorator				install
 python-dev					install
 python-distlib					install
 python-distlib-whl				install
@@ -907,6 +908,7 @@ python-matplotlib-data				install
 python-minimal					install
 python-mock					install
 python-ndg-httpsclient				install
+python-networkx					install
 python-newt					install
 python-nose					install
 python-numpy					install
