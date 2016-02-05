@@ -908,6 +908,7 @@ python-minimal					install
 python-mock					install
 python-ndg-httpsclient				install
 python-newt					install
+python-networkx					install
 python-nose					install
 python-numpy					install
 python-oauth					install
