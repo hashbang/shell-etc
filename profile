@@ -33,4 +33,4 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
-export MAIL=~/Mail
+umask 700
