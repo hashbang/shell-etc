@@ -88,6 +88,7 @@ distro-info-data				install
 dmidecode					install
 dmsetup						install
 dnsutils					install
+docutils-common					install
 dos2unix					install
 dpkg						install
 dpkg-dev					install
@@ -885,11 +886,15 @@ python-configobj				install
 python-crypto					install
 python-cryptography				install
 python-dateutil					install
+python-debian					install
+python-debianbts				install
 python-decorator				install
+python-defusedxml				install
 python-dev					install
 python-distlib					install
 python-distlib-whl				install
 python-distro-info				install
+python-docutils					install
 python-ecdsa					install
 python-gdbm					install
 python-html5lib					install
@@ -924,9 +929,11 @@ python-prettytable				install
 python-pyasn1					install
 python-pycparser				install
 python-pyparsing				install
+python-reportbug				install
 python-requestbuilder				install
 python-requests					install
 python-requests-whl				install
+python-roman					install
 python-selinux					install
 python-semanage					install
 python-sepolgen					install
@@ -937,6 +944,7 @@ python-setuptools				install
 python-setuptools-whl				install
 python-six					install
 python-six-whl					install
+python-soappy					install
 python-software-properties			install
 python-sss					install
 python-stevedore				install
@@ -947,6 +955,7 @@ python-urllib3					install
 python-urllib3-whl				install
 python-virtualenv				install
 python-wheel					install
+python-wstools					install
 python-yaml					install
 python2.7					install
 python2.7-dev					install
@@ -984,6 +993,7 @@ readline-common					install
 redis-server					install
 redis-tools					install
 remind						install
+reportbug					install
 reptyr						install
 resolvconf					install
 rsync						install
