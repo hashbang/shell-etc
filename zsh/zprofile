@@ -5,4 +5,4 @@
 # shells invoked with the -l flag.)
 #
 # Global Order: zshenv, zprofile, zshrc, zlogin
-umask 700
+umask 077
