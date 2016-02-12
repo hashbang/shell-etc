@@ -33,4 +33,4 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
-umask 700
+umask 077
