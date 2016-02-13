@@ -1067,6 +1067,7 @@ udev						install
 unattended-upgrades				install
 units						install
 unzip						install
+urlview						install
 usbutils					install
 util-linux					install
 util-linux-locales				install

@@ -1,0 +1,12 @@
+#
+# Sample urlview(1) configuration file
+# 
+
+# regular expression to use to match URLs
+REGEXP (((http|https|ftp|gopher)|mailto):(//)?[^ <>"\t]*|(www|ftp)[0-9]?\.[-a-z0-9.]+)[^ .,;\t\n\r<">\):]?[^, <>"\t]*[^ .,;\t\n\r<">\):]
+
+# command to invoke for selected URL
+COMMAND /etc/urlview/url_handler.sh
+
+# set to yes to enable menu wrapping
+#WRAP Yes
