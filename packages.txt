@@ -841,6 +841,8 @@ nslcd						install
 nslcd-utils					install
 oidentd						install
 openjdk-7-jre-headless:amd64			install
+openssh-blacklist				install
+openssh-blacklist-extra				install
 openssh-client					install
 openssh-server					install
 openssh-sftp-server				install
