@@ -1058,6 +1058,7 @@ tk8.5						install
 tmux						install
 toilet						install
 toilet-fonts					install
+topgit						install
 traceroute					install
 tree						install
 tsung						install
