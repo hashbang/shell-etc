@@ -1,0 +1,3 @@
+# Allow all users to call hashbangctl(1) without
+#   password.
+ALL ALL=NOPASSWD: /usr/local/bin/hashbangctl
