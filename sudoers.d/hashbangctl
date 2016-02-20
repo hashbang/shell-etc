@@ -1,0 +1,3 @@
+# Allow all users to call hashbangctl(1) without
+#   password.
+ALL ALL = NOEXEC: NOPASSWD: /usr/local/bin/hashbangctl
