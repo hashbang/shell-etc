@@ -8,6 +8,7 @@
 #
 
 session	required	pam_env.so
+session	required	pam_namespace.so  unmnt_remnt
 session	sufficient	pam_sss.so
 session	sufficient	pam_unix.so
 session	required	pam_deny.so
