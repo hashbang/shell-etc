@@ -37,6 +37,11 @@ if [ "$3" = 1 ]; then
 	# Recommended symlinks
 	ln -s /run/systemd/journal/dev-log /dev/log
     fi
+else
+    # If we are reusing /dev
+    if [ "$1" = "/dev" ]; then
+	mount -t devpts -o gid=5,mode=620 devpts /dev/pts
+    fi
 fi
 
 exit 0
