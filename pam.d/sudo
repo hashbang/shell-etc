@@ -2,4 +2,4 @@
 
 @include common-auth
 @include common-account
-@include common-session-noninteractive
+session substack common-session-noninteractive
