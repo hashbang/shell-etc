@@ -1,0 +1,5 @@
+#Type Path              Mode UID  GID  Age Argument
+d     /dev/inst         0000 root root -   -
+d     /tmp/inst         0000 root root -   -
+d     /var/tmp/inst     0000 root root -   -
+d     /run/lock/inst    0000 root root -   -

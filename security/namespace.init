@@ -1,25 +1,42 @@
-#!/bin/sh -p
+#!/bin/sh -e
 # It receives polydir path as $1, the instance path as $2,
 # a flag whether the instance dir was newly created (0 - no, 1 - yes) in $3,
 # and user name in $4.
-#
-# The following section will copy the contents of /etc/skel if this is a
-# newly created home directory.
+
+# If the directory is newly created
 if [ "$3" = 1 ]; then
-        # This line will fix the labeling on all newly created directories
-        [ -x /sbin/restorecon ] && /sbin/restorecon "$1"
-        user="$4"
-        passwd=$(getent passwd "$user")
-        homedir=$(echo "$passwd" | cut -f6 -d":")
-        if [ "$1" = "$homedir" ]; then
-                gid=$(echo "$passwd" | cut -f4 -d":")
-                cp -rT /etc/skel "$homedir"
-                chown -R "$user":"$gid" "$homedir"
-                mask=$(awk '/^UMASK/{gsub("#.*$", "", $2); print $2; exit}' /etc/login.defs)
-                mode=$(printf "%o" $((0777 & ~$mask)))
-                chmod ${mode:-700} "$homedir"
-                [ -x /sbin/restorecon ] && /sbin/restorecon -R "$homedir"
-        fi
+    # If we are creating /dev
+    if [ "$1" = "/dev" ]; then
+	# Major and minor number for devices come from
+	# https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/devices.txt
+	mknod -m 666 /dev/null      char  1   3
+	mknod -m 666 /dev/zero      char  1   5
+	mknod -m 666 /dev/full      char  1   7
+	mknod -m 666 /dev/random    char  1   8
+	mknod -m 666 /dev/urandom   char  1   9
+	mknod -m 666 /dev/fuse      char 10 229
+
+	mknod -m 666 /dev/ptmx      char  5   2
+	mknod -m 666 /dev/tty       char  5   0
+	chown root:tty /dev/ptmx /dev/tty
+
+	# Mount devpts
+	mkdir -m 755 /dev/pts
+	mount -t devpts devpts /dev/pts
+
+	# Create the shm directory
+	mkdir -m 1777 /dev/shm
+
+	# Mandatory symlinks
+	ln -s /proc/self/fd  /dev/fd
+	ln -s fd/0           /dev/stdin
+	ln -s fd/1           /dev/stdout
+	ln -s fd/2           /dev/stderr
+	ln -s null           /dev/X0R
+
+	# Recommended symlinks
+	ln -s /run/systemd/journal/dev-log /dev/log
+    fi
 fi
 
 exit 0
