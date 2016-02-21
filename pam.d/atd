@@ -6,5 +6,5 @@ auth	required	pam_env.so
 @include common-auth
 @include common-account
 session    required   pam_loginuid.so
-@include common-session-noninteractive
+session    substack   common-session-noninteractive
 session    required   pam_limits.so
