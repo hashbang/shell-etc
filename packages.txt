@@ -550,6 +550,9 @@ libperl5.20					install
 libpipeline1:amd64				install
 libpixman-1-0:amd64				install
 libpng12-0:amd64				install
+libpolkit-agent-1-0:amd64			install
+libpolkit-backend-1-0:amd64			install
+libpolkit-gobject-1-0:amd64			install
 libpopt0:amd64					install
 libprocps3:amd64				install
 libprotobuf-c1					install
@@ -865,6 +868,7 @@ pinentry-gtk2					install
 pkg-config					install
 po-debconf					install
 policycoreutils					install
+policykit-1					install
 poppler-data					install
 postfix						install
 postfix-ldap					install
