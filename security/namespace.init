@@ -16,13 +16,13 @@ if [ "$3" = 1 ]; then
 	mknod -m 666 /dev/urandom   char  1   9
 	mknod -m 666 /dev/fuse      char 10 229
 
-	mknod -m 666 /dev/ptmx      char  5   2
 	mknod -m 666 /dev/tty       char  5   0
-	chown root:tty /dev/ptmx /dev/tty
+	chown root:tty /dev/tty
 
 	# Mount devpts
 	mkdir -m 755 /dev/pts
-	mount -t devpts -o gid=5,mode=620 devpts /dev/pts
+	mount -t devpts -o gid=5,mode=620,newinstance devpts /dev/pts
+	ln -s pts/ptmx       /dev/ptmx
 
 	# Create the shm directory
 	mkdir -m 1777 /dev/shm
@@ -40,7 +40,7 @@ if [ "$3" = 1 ]; then
 else
     # If we are reusing /dev
     if [ "$1" = "/dev" ]; then
-	mount -t devpts -o gid=5,mode=620 devpts /dev/pts
+        mount -t devpts -o gid=5,mode=620,newinstance devpts /dev/pts
     fi
 fi
 
