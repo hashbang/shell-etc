@@ -3,10 +3,9 @@
 # a flag whether the instance dir was newly created (0 - no, 1 - yes) in $3,
 # and user name in $4.
 
-# If the directory is newly created
-if [ "$3" = 1 ]; then
+if [ "$1" = "/dev" ]; then
     # If we are creating /dev
-    if [ "$1" = "/dev" ]; then
+    if [ "$3" = 1 ]; then
 	# Major and minor number for devices come from
 	# https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/devices.txt
 	mknod -m 666 /dev/null      char  1   3
@@ -19,11 +18,8 @@ if [ "$3" = 1 ]; then
 	mknod -m 666 /dev/tty       char  5   0
 	chown root:tty /dev/tty
 
-	# Mount devpts
+	# Create devpts mountpoint
 	mkdir -m 755 /dev/pts
-	mount -o gid=5,mode=620,ptmxmode=0666,newinstance \
-	      -t devpts devpts /dev/pts
-	ln -s pts/ptmx       /dev/ptmx
 
 	# Create the shm directory
 	mkdir -m 1777 /dev/shm
@@ -38,12 +34,11 @@ if [ "$3" = 1 ]; then
 	# Recommended symlinks
 	ln -s /run/systemd/journal/dev-log /dev/log
     fi
-else
-    # If we are reusing /dev
-    if [ "$1" = "/dev" ]; then
-	mount -o gid=5,mode=620,ptmxmode=0666,newinstance \
-	      -t devpts devpts /dev/pts
-    fi
+
+    mount -o gid=5,mode=620,ptmxmode=0666,newinstance \
+	  -t devpts devpts /dev/pts
+
+    ln -sf pts/ptmx /dev/ptmx
 fi
 
 exit 0
