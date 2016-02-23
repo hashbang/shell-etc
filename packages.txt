@@ -183,6 +183,8 @@ gstreamer0.10-nice:amd64			install
 gstreamer0.10-plugins-bad:amd64			install
 gstreamer0.10-plugins-base:amd64		install
 gstreamer0.10-plugins-good:amd64		install
+guile-2.0					install
+guile-2.0-dev					install
 guile-2.0-libs:amd64				install
 gyp						install
 gzip						install
@@ -365,6 +367,7 @@ libfribidi0:amd64				install
 libfsplib0					install
 libfuse2:amd64					install
 libgadu3					install
+libgc-dev:amd64					install
 libgc1c2:amd64					install
 libgcc-4.9-dev:amd64				install
 libgcc1:amd64					install
