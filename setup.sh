@@ -3,6 +3,11 @@
 # Make apt-get be fully non-interactive
 export DEBIAN_FRONTEND=noninteractive
 
+# Turn on logging to disk
+mkdir -p /var/log/journal
+systemd-tmpfiles --create --prefix /var/log/journal
+pkill -USR1 systemd-journal # use 'journalctl --flush' once available
+
 # Full system update/upgrade according to shell-etc settings
 apt-get update
 apt-get install -y -q --force-yes apt-transport-https
