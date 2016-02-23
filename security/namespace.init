@@ -21,7 +21,8 @@ if [ "$3" = 1 ]; then
 
 	# Mount devpts
 	mkdir -m 755 /dev/pts
-	mount -t devpts -o gid=5,mode=620,newinstance devpts /dev/pts
+	mount -o gid=5,mode=620,ptmxmode=0666,newinstance \
+	      -t devpts devpts /dev/pts
 	ln -s pts/ptmx       /dev/ptmx
 
 	# Create the shm directory
@@ -40,7 +41,8 @@ if [ "$3" = 1 ]; then
 else
     # If we are reusing /dev
     if [ "$1" = "/dev" ]; then
-        mount -t devpts -o gid=5,mode=620,newinstance devpts /dev/pts
+	mount -o gid=5,mode=620,ptmxmode=0666,newinstance \
+	      -t devpts devpts /dev/pts
     fi
 fi
 
