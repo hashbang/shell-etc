@@ -215,6 +215,7 @@ iproute						install
 iproute2					install
 iptables					install
 iputils-ping					install
+ipxe-qemu					install
 irssi						install
 isc-dhcp-client					install
 isc-dhcp-common					install
@@ -238,6 +239,7 @@ less						install
 lftp						install
 libaa1:amd64					install
 libacl1:amd64					install
+libaio1:amd64					install
 libalgorithm-diff-perl				install
 libalgorithm-diff-xs-perl			install
 libalgorithm-merge-perl				install
@@ -278,11 +280,14 @@ libbind9-90					install
 libblas-common					install
 libblas3					install
 libblkid1:amd64					install
+libbluetooth3:amd64				install
 libboost-filesystem1.55.0:amd64			install
 libboost-iostreams1.55.0:amd64			install
 libboost-program-options1.55.0:amd64		install
 libboost-serialization1.55.0:amd64		install
 libboost-system1.55.0:amd64			install
+libboost-thread1.55.0:amd64			install
+libbrlapi0.6:amd64				install
 libbsd-dev:amd64				install
 libbsd0:amd64					install
 libbz2-1.0:amd64				install
@@ -333,6 +338,7 @@ libdiscover2					install
 libdns-export100				install
 libdns100					install
 libdpkg-perl					install
+libdrm2:amd64					install
 libdv4:amd64					install
 libdvdnav4:amd64				install
 libdvdread4:amd64				install
@@ -354,6 +360,7 @@ libexpat1-dev:amd64				install
 libfaad2:amd64					install
 libfakeroot:amd64				install
 libfarstream-0.1-0:amd64			install
+libfdt1:amd64					install
 libffi-dev:amd64				install
 libffi6:amd64					install
 libfftw3-double3:amd64				install
@@ -381,6 +388,8 @@ libgeoip1:amd64					install
 libgettextpo-dev:amd64				install
 libgettextpo0:amd64				install
 libgfortran3:amd64				install
+libgl1-mesa-glx:amd64				install
+libglapi-mesa:amd64				install
 libglib2.0-0:amd64				install
 libglib2.0-data					install
 libgme0						install
@@ -430,6 +439,7 @@ libisc95					install
 libisccc90					install
 libisccfg-export90				install
 libisccfg90					install
+libiscsi2:amd64					install
 libisl10:amd64					install
 libitm1:amd64					install
 libjack-jackd2-0:amd64				install
@@ -589,9 +599,11 @@ libqtcore4:amd64				install
 libqtdbus4:amd64				install
 libqtgui4:amd64					install
 libquadmath0:amd64				install
+librados2					install
 libraptor2-0:amd64				install
 librasqal3:amd64				install
 libraw1394-11:amd64				install
+librbd1						install
 librdf0:amd64					install
 libreadline-dev:amd64				install
 libreadline6:amd64				install
@@ -614,6 +626,8 @@ libsasl2-modules-db:amd64			install
 libsasl2-modules-gssapi-mit:amd64		install
 libschroedinger-1.0-0:amd64			install
 libsctp1:amd64					install
+libsdl1.2debian:amd64				install
+libseccomp2:amd64				install
 libselinux1:amd64				install
 libsemanage-common				install
 libsemanage1:amd64				install
@@ -634,6 +648,7 @@ libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
 libspandsp2:amd64				install
 libspeex1:amd64					install
+libspice-server1:amd64				install
 libsqlite3-0:amd64				install
 libss2:amd64					install
 libssh2-1:amd64					install
@@ -681,6 +696,7 @@ libudev1:amd64					install
 libunistring0:amd64				install
 libusb-0.1-4:amd64				install
 libusb-1.0-0:amd64				install
+libusbredirparser1:amd64			install
 libustr-1.0-1:amd64				install
 libutempter0					install
 libuuid-perl					install
@@ -690,6 +706,7 @@ libv4lconvert0:amd64				install
 libv8-3.14-dev					install
 libv8-3.14.5					install
 libval14:amd64					install
+libvdeplug2					install
 libvisual-0.4-0:amd64				install
 libvo-aacenc0:amd64				install
 libvo-amrwbenc0:amd64				install
@@ -709,13 +726,20 @@ libx11-xcb1:amd64				install
 libxapian22					install
 libxau6:amd64					install
 libxaw7:amd64					install
+libxcb-dri2-0:amd64				install
+libxcb-dri3-0:amd64				install
+libxcb-glx0:amd64				install
+libxcb-present0:amd64				install
 libxcb-render0:amd64				install
 libxcb-shm0:amd64				install
+libxcb-sync1:amd64				install
 libxcb1:amd64					install
 libxcomposite1:amd64				install
 libxcursor1:amd64				install
 libxdamage1:amd64				install
 libxdmcp6:amd64					install
+libxen-4.4:amd64				install
+libxenstore3.0:amd64				install
 libxext6:amd64					install
 libxfixes3:amd64				install
 libxft2:amd64					install
@@ -729,6 +753,7 @@ libxmuu1:amd64					install
 libxpm4:amd64					install
 libxrandr2:amd64				install
 libxrender1:amd64				install
+libxshmfence1:amd64				install
 libxslt1-dev:amd64				install
 libxslt1.1:amd64				install
 libxss1:amd64					install
@@ -737,6 +762,7 @@ libxtables10					install
 libxtst6:amd64					install
 libxv1:amd64					install
 libxvidcore4:amd64				install
+libxxf86vm1:amd64				install
 libyajl2:amd64					install
 libyaml-0-2:amd64				install
 libzbar0					install
@@ -846,6 +872,9 @@ nscd						install
 nslcd						install
 nslcd-utils					install
 oidentd						install
+openbios-ppc					install
+openbios-sparc					install
+openhackware					install
 openjdk-7-jre-headless:amd64			install
 openssh-blacklist				install
 openssh-blacklist-extra				install
@@ -996,6 +1025,18 @@ python3.4					install
 python3.4-dev					install
 python3.4-minimal				install
 qalc						install
+qemu						install
+qemu-slof					install
+qemu-system					install
+qemu-system-arm					install
+qemu-system-common				install
+qemu-system-mips				install
+qemu-system-misc				install
+qemu-system-ppc					install
+qemu-system-sparc				install
+qemu-system-x86					install
+qemu-user					install
+qemu-utils					install
 qtcore4-l10n					install
 ranger						install
 readline-common					install
@@ -1017,6 +1058,7 @@ rubygems-integration				install
 samba-libs:amd64				install
 sbcl						install
 screen						install
+seabios						install
 sed						install
 selinux-basics					install
 selinux-policy-default				install
