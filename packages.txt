@@ -486,6 +486,8 @@ liblua5.1-0:amd64				install
 liblua5.1-0-dev:amd64				install
 liblua5.2-0:amd64				install
 liblua5.2-dev:amd64				install
+liblua5.3-0:amd64				install
+liblua5.3-dev:amd64				install
 libluajit-5.1-common				install
 liblwres90					install
 liblzma5:amd64					install
@@ -785,6 +787,7 @@ lsof						install
 ltrace						install
 lua5.1						install
 lua5.2						install
+lua5.3						install
 luajit						install
 luarocks					install
 lynx						install
