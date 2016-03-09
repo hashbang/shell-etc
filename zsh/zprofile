@@ -6,3 +6,4 @@
 #
 # Global Order: zshenv, zprofile, zshrc, zlogin
 umask 077
+emulate sh -c 'source /etc/profile'
