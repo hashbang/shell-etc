@@ -68,7 +68,6 @@ ssh/ssh_host_*_key
 ssh/ssh_host_*_key.pub
 *-
 *.gz
-alternatives
 network/interfaces
 networks
 fstab
