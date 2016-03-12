@@ -189,6 +189,7 @@ html2text					install
 htop						install
 iamerican					install
 ibritish					install
+ieee-data					install
 ienglish-common					install
 ifupdown					install
 imagemagick					install
@@ -929,6 +930,7 @@ python-matplotlib-data				install
 python-minimal					install
 python-mock					install
 python-ndg-httpsclient				install
+python-netaddr					install
 python-networkx					install
 python-newt					install
 python-nose					install
