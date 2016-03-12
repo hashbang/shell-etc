@@ -1,0 +1,3 @@
+#!/bin/sh
+test -x /usr/bin/update-oui || exit 0
+BASEDIR=/var/lib/ieee-data/ /usr/bin/update-oui -f -q
