@@ -146,6 +146,9 @@ gdb						install
 geoip-database					install
 gettext						install
 gettext-base					install
+gforth						install
+gforth-common					install
+gforth-lib:amd64				install
 ghc						install
 git						install
 git-man						install
@@ -354,6 +357,7 @@ libexpat1-dev:amd64				install
 libfaad2:amd64					install
 libfakeroot:amd64				install
 libfdt1:amd64					install
+libffcall1					install
 libffi-dev:amd64				install
 libffi6:amd64					install
 libfftw3-double3:amd64				install
