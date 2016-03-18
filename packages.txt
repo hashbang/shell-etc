@@ -106,7 +106,6 @@ encfs						install
 erlang-asn1					install
 erlang-base					install
 erlang-crypto					install
-erlang-eunit					install
 erlang-inets					install
 erlang-mnesia					install
 erlang-os-mon					install
@@ -114,7 +113,6 @@ erlang-public-key				install
 erlang-runtime-tools				install
 erlang-snmp					install
 erlang-ssl					install
-erlang-xmerl					install
 etckeeper					install
 euca2ools					install
 exuberant-ctags					install
