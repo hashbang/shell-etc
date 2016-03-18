@@ -89,7 +89,6 @@ docutils-common					install
 dos2unix					install
 dpkg						install
 dpkg-dev					install
-dselect						install
 duplicity					install
 e2fslibs:amd64					install
 e2fsprogs					install
