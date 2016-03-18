@@ -883,7 +883,6 @@ pidgin-data					install
 pinentry-gtk2					install
 pkg-config					install
 po-debconf					install
-policycoreutils					install
 policykit-1					install
 poppler-data					install
 postfix						install
@@ -956,12 +955,7 @@ python-requestbuilder				install
 python-requests					install
 python-requests-whl				install
 python-roman					install
-python-selinux					install
-python-semanage					install
-python-sepolgen					install
-python-sepolicy					install
 python-serial					install
-python-setools					install
 python-setuptools				install
 python-setuptools-whl				install
 python-six					install
@@ -1036,11 +1030,7 @@ sbcl						install
 screen						install
 seabios						install
 sed						install
-selinux-basics					install
-selinux-policy-default				install
-selinux-utils					install
 sensible-utils					install
-setools						install
 sgml-base					install
 shared-mime-info				install
 shellcheck					install
