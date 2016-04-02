@@ -793,6 +793,7 @@ nano						install
 ncdu						install
 ncurses-base					install
 ncurses-bin					install
+ncurses-doc					install
 ncurses-term					install
 net-tools					install
 netbase						install
