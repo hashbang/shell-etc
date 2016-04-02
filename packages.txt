@@ -222,6 +222,7 @@ joe						install
 john						install
 john-data					install
 kbd						install
+kexec-tools					install
 keyboard-configuration				install
 klibc-utils					install
 kmod						install
