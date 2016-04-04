@@ -41,10 +41,4 @@ chmod o-r /var/log/wtmp # Used by last(1)
 chmod o-r /var/log/lastlog # Used by lastlog(8)
 chmod o-r /home # prevent listing of all home dirs.
 
-# Install grub to all devices (overkill, but safe)
-grub-install /dev/sda
-
-# Update initramfs to include repartioning logic
-update-initramfs -u
-
 reboot
