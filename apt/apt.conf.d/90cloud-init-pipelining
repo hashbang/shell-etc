@@ -1,2 +1,0 @@
-//Written by cloud-init per 'apt_pipelining'
-Acquire::http::Pipeline-Depth "0";
