@@ -35,6 +35,10 @@ git reset --hard origin/master
 git clean -d -f
 etckeeper init # Apply the correct file permissions
 
+# Take /etc/default/grub into account
+update-grub
+
+
 # Disable users knowing about other users
 chmod o-r /var/run/utmp # Used by who(1)
 chmod o-r /var/log/wtmp # Used by last(1)
