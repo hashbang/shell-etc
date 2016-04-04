@@ -30,7 +30,7 @@ cd /etc
 rm -rf .git
 git init
 git remote add origin https://github.com/hashbang/shell-etc.git
-git fetch --all
+git fetch origin master
 git reset --hard origin/master
 git clean -d -f
 etckeeper init # Apply the correct file permissions
