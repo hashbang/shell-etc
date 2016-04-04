@@ -43,7 +43,6 @@ bzip2						install
 ca-certificates					install
 checkpolicy					install
 cloc						install
-cloud-init					install
 cloud-initramfs-dyn-netconf			install
 cloud-initramfs-growroot			install
 cloud-utils					install
