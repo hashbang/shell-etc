@@ -221,6 +221,7 @@ javascript-common				install
 joe						install
 john						install
 john-data					install
+jq						install
 kbd						install
 kexec-tools					install
 keyboard-configuration				install
