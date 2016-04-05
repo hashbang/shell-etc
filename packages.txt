@@ -969,6 +969,7 @@ python-sss					install
 python-stevedore				install
 python-support					install
 python-talloc					install
+python-tox					install
 python-tz					install
 python-urllib3					install
 python-urllib3-whl				install
@@ -994,6 +995,7 @@ python3-minimal					install
 python3-pip					install
 python3-pkg-resources				install
 python3-psutil					install
+python3-py					install
 python3-pyasn1					install
 python3-pysnmp4					install
 python3-requests				install
