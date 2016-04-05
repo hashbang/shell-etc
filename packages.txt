@@ -875,6 +875,7 @@ pass						install
 passwd						install
 patch						install
 pciutils					install
+pep8						install
 perl						install
 perl-base					install
 perl-modules					install
@@ -891,6 +892,7 @@ procps						install
 psmisc						install
 pv						install
 pwgen						install
+pyflakes					install
 python						install
 python-apt					install
 python-apt-common				install
@@ -916,6 +918,7 @@ python-distlib-whl				install
 python-distro-info				install
 python-docutils					install
 python-ecdsa					install
+python-flake8					install
 python-gdbm					install
 python-html5lib					install
 python-html5lib-whl				install
@@ -929,6 +932,7 @@ python-lockfile					install
 python-lxml					install
 python-markupsafe				install
 python-matplotlib-data				install
+python-mccabe					install
 python-minimal					install
 python-mock					install
 python-ndg-httpsclient				install
