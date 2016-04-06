@@ -29,6 +29,7 @@ smtp_tls_session_cache_database  = btree:${data_directory}/smtp_scache
 # Delivery configuration
 mailbox_command     = procmail -a "$EXTENSION"
 mailbox_size_limit  = 0
+message_size_limit  = 52428800  # 50 MiB
 recipient_delimiter = +
 
 # Access restrictions
