@@ -40,9 +40,8 @@ update-grub
 
 
 # Disable users knowing about other users
-chmod o-r /var/run/utmp # Used by who(1)
-chmod o-r /var/log/wtmp # Used by last(1)
-chmod o-r /var/log/lastlog # Used by lastlog(8)
-chmod o-r /home # prevent listing of all home dirs.
+chmod 0660 /var/run/utmp    # Used by who(1)
+chmod 0660 /var/log/wtmp    # Used by last(1)
+chmod 0660 /var/log/lastlog # Used by lastlog(8)
 
 reboot
