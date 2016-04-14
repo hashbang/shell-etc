@@ -40,8 +40,9 @@ update-grub
 
 
 # Disable users knowing about other users
-chmod 0660 /var/run/utmp    # Used by who(1)
-chmod 0660 /var/log/wtmp    # Used by last(1)
-chmod 0660 /var/log/lastlog # Used by lastlog(8)
+for f in /var/run/utmp /var/log/wtmp /var/log/lastlog; do
+    chmod 0660 "$f"               # Not readable by default users
+    setfacl -m 'group:adm:r' "$f" # Readable by the adm group
+done
 
 reboot
