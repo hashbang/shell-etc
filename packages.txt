@@ -1056,6 +1056,7 @@ sssd-krb5					install
 sssd-krb5-common				install
 sssd-ldap					install
 sssd-proxy					install
+sssd-tools					install
 startpar					install
 stow						install
 strace						install
