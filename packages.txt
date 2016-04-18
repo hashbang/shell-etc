@@ -204,6 +204,7 @@ insserv						install
 install-info					install
 installation-report				install
 intltool-debian					install
+iotop						install
 ipcalc						install
 iperf						install
 iproute						install
