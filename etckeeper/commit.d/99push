@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/sh -e
 if [ -n "$PUSH_REMOTE" ]; then
 	if [ "$VCS" = git ] && [ -d .git ]; then
 		for REMOTE in $PUSH_REMOTE; do
-			git push "$REMOTE" master || true
+			GIT_SSH_COMMAND="ssh -o PasswordAuthentication=no" git push "$REMOTE" master
 		done
 	elif [ "$VCS" = hg ] && [ -d .hg ]; then
 		for REMOTE in $PUSH_REMOTE; do
