@@ -118,7 +118,6 @@ fakeroot					install
 figlet						install
 file						install
 findutils					install
-firejail					install
 fish						install
 fish-common					install
 fontconfig					install
