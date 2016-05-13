@@ -148,6 +148,7 @@ gforth-common					install
 gforth-lib:amd64				install
 ghc						install
 git						install
+git-email					install
 git-man						install
 glances						install
 glib-networking:amd64				install
