@@ -83,6 +83,7 @@ distro-info					install
 distro-info-data				install
 dmidecode					install
 dmsetup						install
+dns-root-data					install
 dnsutils					install
 docutils-common					install
 dos2unix					install
@@ -684,6 +685,7 @@ libtre5:amd64					install
 libtsan0:amd64					install
 libubsan0:amd64					install
 libudev1:amd64					install
+libunbound2:amd64				install
 libunistring0:amd64				install
 libusb-0.1-4:amd64				install
 libusb-1.0-0:amd64				install
@@ -1090,6 +1092,8 @@ tzdata-java					install
 ucf						install
 udev						install
 unattended-upgrades				install
+unbound						install
+unbound-anchor					install
 units						install
 unzip						install
 urlview						install
