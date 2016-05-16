@@ -3,7 +3,7 @@ Package: *
 Pin: release n=jessie
 Pin-Priority: 900
 
-# Give stretch priority over unstable (which has the default 500 priority)
+# Give backports priority over stretch (which has the default 500 priority)
 Package: *
-Pin: release n=stretch
+Pin: release n=jessie-backports
 Pin-Priority: 800
