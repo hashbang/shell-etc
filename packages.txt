@@ -1067,6 +1067,7 @@ strace						install
 subversion					install
 sudo						install
 swaks						install
+sysstat						install
 systemd						install
 systemd-sysv					install
 sysv-rc						install
