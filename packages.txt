@@ -904,6 +904,7 @@ python-apt-common				install
 python-audit					install
 python-boto					install
 python-cffi					install
+python-characteristic				install
 python-chardet					install
 python-chardet-whl				install
 python-cheetah					install
@@ -956,6 +957,7 @@ python-ply					install
 python-potr					install
 python-prettytable				install
 python-pyasn1					install
+python-pyasn1-modules				install
 python-pycparser				install
 python-pyparsing				install
 python-reportbug				install
@@ -964,6 +966,7 @@ python-requests					install
 python-requests-whl				install
 python-roman					install
 python-serial					install
+python-service-identity				install
 python-setuptools				install
 python-setuptools-whl				install
 python-six					install
@@ -975,6 +978,17 @@ python-stevedore				install
 python-support					install
 python-talloc					install
 python-tox					install
+python-twisted					install
+python-twisted-bin				install
+python-twisted-conch				install
+python-twisted-core				install
+python-twisted-lore				install
+python-twisted-mail				install
+python-twisted-names				install
+python-twisted-news				install
+python-twisted-runner				install
+python-twisted-web				install
+python-twisted-words				install
 python-tz					install
 python-urllib3					install
 python-urllib3-whl				install
@@ -982,6 +996,7 @@ python-virtualenv				install
 python-wheel					install
 python-wstools					install
 python-yaml					install
+python-zope.interface				install
 python2.7					install
 python2.7-dev					install
 python2.7-minimal				install
