@@ -712,6 +712,7 @@ libubsan0:amd64					install
 libudev1:amd64					install
 libunbound2:amd64				install
 libunistring0:amd64				install
+liburi-perl					install
 libusb-0.1-4:amd64				install
 libusb-1.0-0:amd64				install
 libusbredirparser1:amd64			install
