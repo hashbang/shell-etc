@@ -160,7 +160,7 @@ glib-networking-services			install
 gnuchess					install
 gnugo						install
 gnupg						install
-gnupg-agent					install
+gnupg-agent					deinstall
 gnuplot-data					install
 gnuplot-nox					install
 gnuplot-tex					install
@@ -407,7 +407,6 @@ libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
 libgomp1:amd64					install
 libgpg-error0:amd64				install
-libgpgme11:amd64				deinstall
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgsm1:amd64					install
@@ -540,7 +539,6 @@ libnfnetlink0:amd64				install
 libnice10:amd64					install
 libnl-3-200:amd64				install
 libnl-route-3-200:amd64				install
-libnpth0:amd64					install
 libnspr4:amd64					install
 libnss-ldapd:amd64				install
 libnss-sss:amd64				install
@@ -703,7 +701,7 @@ libtiff5:amd64					install
 libtimedate-perl				install
 libtinfo-dev:amd64				install
 libtinfo5:amd64					install
-libtokyocabinet9:amd64				install
+libtokyocabinet9:amd64				deinstall
 libtool						install
 libtool-bin					install
 libtorrent14:amd64				install
@@ -820,8 +818,6 @@ mosh						install
 mount						install
 mtr						install
 multiarch-support				install
-mutt						deinstall
-mutt-patched					deinstall
 nano						install
 ncdu						install
 ncurses-base					install
@@ -913,7 +909,6 @@ perl						install
 perl-base					install
 perl-modules					install
 pidgin-data					install
-pinentry-gtk2					install
 pkg-config					install
 po-debconf					install
 policykit-1					install
