@@ -78,6 +78,7 @@ dh-lua						install
 dh-python					install
 dictionaries-common				install
 diffutils					install
+dirmngr						install
 discover					install
 discover-data					install
 distro-info					install
@@ -160,7 +161,6 @@ gnuchess					install
 gnugo						install
 gnupg						install
 gnupg-agent					install
-gnupg2						install
 gnuplot-data					install
 gnuplot-nox					install
 gnuplot-tex					install
@@ -407,7 +407,7 @@ libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
 libgomp1:amd64					install
 libgpg-error0:amd64				install
-libgpgme11:amd64				install
+libgpgme11:amd64				deinstall
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgsm1:amd64					install
@@ -593,6 +593,7 @@ libprotobuf-c1					install
 libprotobuf9:amd64				install
 libproxy1:amd64					install
 libpsl0:amd64					install
+libpth20:amd64					install
 libpwquality-common				install
 libpwquality1:amd64				install
 libpython-dev:amd64				install
@@ -819,8 +820,8 @@ mosh						install
 mount						install
 mtr						install
 multiarch-support				install
-mutt						install
-mutt-patched					install
+mutt						deinstall
+mutt-patched					deinstall
 nano						install
 ncdu						install
 ncurses-base					install
