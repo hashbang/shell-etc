@@ -539,6 +539,7 @@ libnfnetlink0:amd64				install
 libnice10:amd64					install
 libnl-3-200:amd64				install
 libnl-route-3-200:amd64				install
+libnpth0:amd64					install
 libnspr4:amd64					install
 libnss-ldapd:amd64				install
 libnss-sss:amd64				install
