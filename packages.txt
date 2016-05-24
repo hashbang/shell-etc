@@ -73,6 +73,7 @@ debconf-utils					install
 debhelper					install
 debian-archive-keyring				install
 debianutils					install
+devscripts					install
 dh-lua						install
 dh-python					install
 dictionaries-common				install
