@@ -505,6 +505,7 @@ libmagickcore-6.q16-2:amd64			install
 libmagickwand-6.q16-2:amd64			install
 libmail-sendmail-perl				install
 libmailtools-perl				install
+libmd0:amd64					install
 libmeanwhile1					install
 libmhash2:amd64					install
 libmime-tools-perl				install
