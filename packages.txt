@@ -306,11 +306,14 @@ libcap2-bin					install
 libcdaudio1					install
 libcdparanoia0:amd64				install
 libcilkrts5:amd64				install
+libclass-method-modifiers-perl			install
+libclass-methodmaker-perl			install
 libcln6						install
 libcloog-isl4:amd64				install
 libcollection4:amd64				install
 libcomerr2:amd64				install
 libconfig-file-perl				install
+libconvert-binhex-perl				install
 libcrack2:amd64					install
 libcroco3:amd64					install
 libcryptsetup4:amd64				install
@@ -320,6 +323,7 @@ libcupsimage2:amd64				install
 libcurl3:amd64					install
 libcurl3-gnutls:amd64				install
 libcwidget3:amd64				install
+libdata-perl-perl				install
 libdatrie1:amd64				install
 libdb5.3:amd64					install
 libdbus-1-3:amd64				install
@@ -328,6 +332,7 @@ libdc1394-22:amd64				install
 libdca0:amd64					install
 libdconf1:amd64					install
 libdebconfclient0:amd64				install
+libdevel-globaldestruction-perl			install
 libdevmapper1.02.1:amd64			install
 libdhash1:amd64					install
 libdigest-hmac-perl				install
@@ -356,6 +361,7 @@ libevent-openssl-2.0-5:amd64			install
 libevent-pthreads-2.0-5:amd64			install
 libexpat1:amd64					install
 libexpat1-dev:amd64				install
+libexporter-tiny-perl				install
 libfaad2:amd64					install
 libfakeroot:amd64				install
 libfdt1:amd64					install
@@ -395,6 +401,7 @@ libgme0						install
 libgmp-dev:amd64				install
 libgmp10:amd64					install
 libgmpxx4ldbl:amd64				install
+libgnupg-interface-perl				install
 libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
 libgomp1:amd64					install
@@ -428,8 +435,10 @@ libidn11:amd64					install
 libiec61883-0:amd64				install
 libijs-0.35:amd64				install
 libilmbase6:amd64				install
+libimport-into-perl				install
 libini-config5:amd64				install
 libio-socket-inet6-perl				install
+libio-socket-ssl-perl				install
 libipa-hbac0					install
 libirs-export91					install
 libisc-export95					install
@@ -494,13 +503,19 @@ libmagic1:amd64					install
 libmagickcore-6.q16-2:amd64			install
 libmagickwand-6.q16-2:amd64			install
 libmail-sendmail-perl				install
+libmailtools-perl				install
 libmeanwhile1					install
 libmhash2:amd64					install
+libmime-tools-perl				install
 libmimic0					install
 libmms0:amd64					install
 libmng1:amd64					install
 libmnl0:amd64					install
 libmodplug1					install
+libmodule-runtime-perl				install
+libmoo-perl					install
+libmoox-handlesvia-perl				install
+libmoox-late-perl				install
 libmount1:amd64					install
 libmpc3:amd64					install
 libmpcdec6:amd64				install
@@ -511,7 +526,9 @@ libncurses5-dev:amd64				install
 libncursesw5:amd64				install
 libncursesw5-dev:amd64				install
 libnet-dns-perl					install
+libnet-idn-encode-perl				install
 libnet-ip-perl					install
+libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
 libnetfilter-acct1:amd64			install
 libnetpbm10					install
@@ -550,6 +567,7 @@ libpangoft2-1.0-0:amd64				install
 libpangox-1.0-0:amd64				install
 libpangoxft-1.0-0:amd64				install
 libpaper1:amd64					install
+libparams-classify-perl				install
 libparted2:amd64				install
 libpath-utils1:amd64				install
 libpcap0.8:amd64				install
@@ -609,6 +627,7 @@ libregexp-assemble-perl				install
 libregexp-common-perl				install
 librlog5					install
 libroken18-heimdal:amd64			install
+librole-tiny-perl				install
 librsvg2-2:amd64				install
 librsync1:amd64					install
 librtmp1:amd64					install
@@ -654,6 +673,8 @@ libsss-idmap0					install
 libsss-sudo					install
 libstdc++-4.9-dev:amd64				install
 libstdc++6:amd64				install
+libstrictures-perl				install
+libsub-exporter-progressive-perl		install
 libsvn1:amd64					install
 libsys-hostname-long-perl			install
 libsystemd0:amd64				install
@@ -665,10 +686,12 @@ libtcl8.5:amd64					install
 libtcl8.6:amd64					install
 libtdb1:amd64					install
 libtemplate-perl				install
+libterm-readkey-perl				install
 libtevent0:amd64				install
 libtext-charwidth-perl				install
 libtext-glob-perl				install
 libtext-iconv-perl				install
+libtext-template-perl				install
 libtext-wrapi18n-perl				install
 libthai-data					install
 libthai0:amd64					install
@@ -683,6 +706,7 @@ libtool-bin					install
 libtorrent14:amd64				install
 libtre5:amd64					install
 libtsan0:amd64					install
+libtype-tiny-perl				install
 libubsan0:amd64					install
 libudev1:amd64					install
 libunbound2:amd64				install
@@ -1032,6 +1056,7 @@ qemu-slof					install
 qemu-system-common				install
 qemu-user					install
 qemu-utils					install
+qprint						install
 qtcore4-l10n					install
 ranger						install
 readline-common					install
@@ -1060,6 +1085,7 @@ sgml-base					install
 shared-mime-info				install
 shellcheck					install
 siege						install
+signing-party					install
 silversearcher-ag				install
 silversearcher-ag-el				install
 slashem						install
