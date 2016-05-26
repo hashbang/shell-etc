@@ -949,6 +949,7 @@ python-docutils					install
 python-ecdsa					install
 python-flake8					install
 python-gdbm					install
+python-geoip					install
 python-html5lib					install
 python-html5lib-whl				install
 python-httplib2					install
@@ -1000,6 +1001,7 @@ python-sss					install
 python-stevedore				install
 python-support					install
 python-talloc					install
+python-torctl					install
 python-tox					install
 python-twisted					install
 python-twisted-bin				install
@@ -1125,6 +1127,9 @@ tmux						install
 toilet						install
 toilet-fonts					install
 topgit						install
+tor						install
+tor-arm						install
+torsocks					install
 traceroute					install
 tree						install
 tudu						install
