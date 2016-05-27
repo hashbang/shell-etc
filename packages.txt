@@ -67,6 +67,7 @@ dc						install
 dconf-gsettings-backend:amd64			install
 dconf-service					install
 dctrl-tools					install
+deb.torproject.org-keyring			install
 debconf						install
 debconf-i18n					install
 debconf-utils					install
