@@ -8,6 +8,10 @@ mkdir -p /var/log/journal
 systemd-tmpfiles --create --prefix /var/log/journal
 pkill -USR1 systemd-journal # use 'journalctl --flush' once available
 
+# Use msmtp as sendmail(1) implementation, Postfix's is silly
+dpkg-divert /usr/sbin/sendmail
+ln -sf /usr/bin/msmtp /usr/sbin/sendmail
+
 # Full system update/upgrade according to shell-etc settings
 apt update
 apt install -y -q --force-yes apt-transport-https
