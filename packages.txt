@@ -411,6 +411,7 @@ libgpg-error0:amd64				install
 libgpgme11:amd64				install
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
+libgsasl7					install
 libgsm1:amd64					install
 libgssapi-krb5-2:amd64				install
 libgssapi3-heimdal:amd64			install
@@ -547,6 +548,7 @@ libnss-ldapd:amd64				install
 libnss-sss:amd64				install
 libnss3:amd64					install
 libntdb1:amd64					install
+libntlm0:amd64					install
 libnumber-compare-perl				install
 libofa0						install
 libogg0:amd64					install
@@ -818,6 +820,7 @@ mercurial-common				install
 mime-support					install
 mosh						install
 mount						install
+msmtp						install
 mtr						install
 multiarch-support				install
 mutt						install
