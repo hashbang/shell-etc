@@ -78,7 +78,6 @@ dh-lua						install
 dh-python					install
 dictionaries-common				install
 diffutils					install
-dirmngr						deinstall
 discover					install
 discover-data					install
 distro-info					install
@@ -594,7 +593,7 @@ libprotobuf-c1					install
 libprotobuf9:amd64				install
 libproxy1:amd64					install
 libpsl0:amd64					install
-libpth20:amd64					install
+libpth20:amd64					deinstall
 libpwquality-common				install
 libpwquality1:amd64				install
 libpython-dev:amd64				install
