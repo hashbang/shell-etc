@@ -1,8 +1,0 @@
-# Defaults for dirmngr init script
-# sourced by /etc/init.d/dirmngr
-
-# This variable contols the access mode of the dirmngr socket.  Set it
-# to 0770 to allow only users in the "dirmngr" group to access the
-# socket and thus use the daemon.  Set it to 0777 to allow everyone to
-# use the daemon.  The default is 0777.
-DIRMNGR_SOCKET_MODE=0777
