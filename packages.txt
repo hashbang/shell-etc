@@ -578,6 +578,7 @@ libparted2:amd64				install
 libpath-utils1:amd64				install
 libpcap0.8:amd64				install
 libpci3:amd64					install
+libpcre2-32-0:amd64				install
 libpcre3:amd64					install
 libpcre3-dev:amd64				install
 libpcrecpp0:amd64				install
