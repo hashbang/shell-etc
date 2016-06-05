@@ -73,6 +73,7 @@ debconf-i18n					install
 debconf-utils					install
 debhelper					install
 debian-archive-keyring				install
+debian-keyring					install
 debianutils					install
 devscripts					install
 dh-lua						install
