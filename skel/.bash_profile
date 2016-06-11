@@ -30,6 +30,7 @@ date=$(date | awk '{print $1",", $3, $2, $6, $4, $5}')
 user=$(whoami)
 
 # write mail
+mkdir -p ~/Mail/{cur,new,tmp}
 echo "$mail" | sed "s/{date}/$date/g" | sed "s/{username}/$user/g" > Mail/new/msg.welcome
 
 source .bash_profile
