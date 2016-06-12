@@ -192,6 +192,7 @@ hicolor-icon-theme				install
 hostname					install
 html2text					install
 htop						install
+httpie						install
 iamerican					install
 ibritish					install
 ieee-data					install
@@ -993,6 +994,7 @@ python-prettytable				install
 python-pyasn1					install
 python-pyasn1-modules				install
 python-pycparser				install
+python-pygments					install
 python-pyparsing				install
 python-reportbug				install
 python-requestbuilder				install
