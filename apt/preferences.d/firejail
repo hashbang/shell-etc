@@ -1,0 +1,3 @@
+Package: firejail
+Pin: release n=stretch
+Pin-Priority: 990
