@@ -2,7 +2,10 @@
 # it allows /sbin and /usr/sbin directories - this is where servers are installed
 noblacklist /sbin
 noblacklist /usr/sbin
-include /etc/firejail/disable-mgmt.inc
+include /etc/firejail/disable-common.inc
+include /etc/firejail/disable-programs.inc
+include /etc/firejail/disable-passwdmgr.inc
+
 private
 private-dev
 private-tmp
