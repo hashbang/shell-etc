@@ -9,6 +9,8 @@ blacklist /usr/bin/c8*
 blacklist /usr/bin/c++*
 blacklist /usr/bin/ld
 blacklist /usr/bin/gdb
+blacklist /usr/bin/g++*
+blacklist /usr/bin/x86_64-linux-gnu-g++*
 
 # clang/llvm
 blacklist /usr/bin/clang*
@@ -34,3 +36,20 @@ blacklist /usr/lib/php*
 # Ruby
 blacklist /usr/bin/ruby
 blacklist /usr/lib/ruby
+
+# disabled temporarily pending globbing implementation
+# in noblacklist command and firefox profile fix
+# Python 2
+#blacklist /usr/bin/python2*
+#blacklist /usr/lib/python2*
+#blacklist /usr/local/lib/python2*
+#blacklist /usr/include/python2*
+#blacklist /usr/share/python2*
+#
+# Python 3
+#blacklist /usr/bin/python3*
+#blacklist /usr/lib/python3*
+#blacklist /usr/local/lib/python3*
+#blacklist /usr/share/python3*
+#blacklist /usr/include/python3*
+

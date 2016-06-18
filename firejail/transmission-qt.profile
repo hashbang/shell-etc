@@ -1,17 +1,17 @@
 # transmission-qt profile
-include /etc/firejail/disable-mgmt.inc
-include /etc/firejail/disable-secret.inc
+noblacklist ${HOME}/.config/transmission
+noblacklist ${HOME}/.cache/transmission
+
 include /etc/firejail/disable-common.inc
+include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-devel.inc
-blacklist ${HOME}/.pki/nssdb
-blacklist ${HOME}/.lastpass
-blacklist ${HOME}/.keepassx
-blacklist ${HOME}/.password-store
-blacklist ${HOME}/.wine
+include /etc/firejail/disable-passwdmgr.inc
+
 caps.drop all
 seccomp
 protocol unix,inet,inet6
 netfilter
+nonewprivs
 noroot
 tracelog
-
+nosound
