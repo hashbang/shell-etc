@@ -1,47 +1,10 @@
 # History files in $HOME
 blacklist-nolog ${HOME}/.history
 blacklist-nolog ${HOME}/.*_history
-
-# HTTP / FTP / Mail
+blacklist ${HOME}/.local/share/systemd
 blacklist-nolog ${HOME}/.adobe
 blacklist-nolog ${HOME}/.macromedia
-blacklist ${HOME}/.mozilla
-blacklist ${HOME}/.icedove
-blacklist ${HOME}/.thunderbird
-blacklist ${HOME}/.sylpheed-2.0
-blacklist ${HOME}/.config/midori
-blacklist ${HOME}/.config/opera
-blacklist ${HOME}/.config/opera-beta
-blacklist ${HOME}/.config/chromium
-blacklist ${HOME}/.config/google-chrome
-blacklist ${HOME}/.config/google-chrome-beta
-blacklist ${HOME}/.config/google-chrome-unstable
-blacklist ${HOME}/.filezilla
-blacklist ${HOME}/.config/filezilla
-blacklist ${HOME}/.local/share/systemd
-
-# Instant Messaging
-blacklist ${HOME}/.config/hexchat
-blacklist ${HOME}/.mcabber
-blacklist ${HOME}/.purple
-blacklist ${HOME}/.config/psi+
-blacklist ${HOME}/.retroshare
-blacklist ${HOME}/.weechat
-blacklist ${HOME}/.config/xchat
-blacklist ${HOME}/.Skype
-
-# Cryptocoins
-blacklist ${HOME}/.*coin
-blacklist ${HOME}/.electrum*
-blacklist ${HOME}/wallet.dat
-
-# VNC
-blacklist ${HOME}/.remmina
-
-# Other
-blacklist ${HOME}/.tconn
-blacklist ${HOME}/.FBReader
-blacklist ${HOME}/.wine
+read-only ${HOME}/.local/share/applications
 
 # X11 session autostart
 blacklist ${HOME}/.xinitrc
@@ -63,10 +26,13 @@ blacklist ${HOME}/.VirtualBox
 blacklist ${HOME}/VirtualBox VMs
 blacklist ${HOME}/.config/VirtualBox
 
-# git, subversion
-blacklist ${HOME}/.subversion
-blacklist ${HOME}/.gitconfig
-blacklist ${HOME}/.git-credential-cache
+# VeraCrypt
+blacklist ${PATH}/veracrypt
+blacklist ${PATH}/veracrypt-uninstall.sh
+blacklist /usr/share/veracrypt
+blacklist /usr/share/applications/veracrypt.*
+blacklist /usr/share/pixmaps/veracrypt.*
+blacklist ${HOME}/.VeraCrypt
 
 # var
 blacklist /var/spool/cron
@@ -125,10 +91,63 @@ read-only ${HOME}/.xscreensaver
 # The user ~/bin directory can override commands such as ls
 read-only ${HOME}/bin
 
+# top secret
+blacklist ${HOME}/.ssh
+blacklist ${HOME}/.cert
+blacklist ${HOME}/.gnome2/keyrings
+blacklist ${HOME}/kde4/share/apps/kwallet
+blacklist ${HOME}/kde/share/apps/kwallet
+blacklist ${HOME}/.local/share/kwalletd
+blacklist ${HOME}/.netrc
+blacklist ${HOME}/.gnupg
+blacklist ${HOME}/*.kdbx
+blacklist ${HOME}/*.kdb
+blacklist ${HOME}/*.key
+blacklist /etc/shadow
+blacklist /etc/gshadow
+blacklist /etc/passwd-
+blacklist /etc/group-
+blacklist /etc/shadow-
+blacklist /etc/gshadow-
+blacklist /etc/passwd+
+blacklist /etc/group+
+blacklist /etc/shadow+
+blacklist /etc/gshadow+
+blacklist /etc/ssh
+blacklist /var/backup
+
+# system management
+blacklist ${PATH}/umount
+blacklist ${PATH}/mount
+blacklist ${PATH}/fusermount
+blacklist ${PATH}/su
+blacklist ${PATH}/sudo
+blacklist ${PATH}/xinput
+blacklist ${PATH}/evtest
+blacklist ${PATH}/xev
+blacklist ${PATH}/strace
+blacklist ${PATH}/nc
+blacklist ${PATH}/ncat
+
+# system directories	
+blacklist /sbin
+blacklist /usr/sbin
+blacklist /usr/local/sbin
+
+# prevent lxterminal connecting to an existing lxterminal session
+blacklist /tmp/.lxterminal-socket*
+
 # disable terminals running as server
-blacklist ${PATH}/lxterminal
 blacklist ${PATH}/gnome-terminal
 blacklist ${PATH}/gnome-terminal.wrapper
 blacklist ${PATH}/xfce4-terminal
 blacklist ${PATH}/xfce4-terminal.wrapper
-blacklist ${PATH}/konsole
+blacklist ${PATH}/mate-terminal
+blacklist ${PATH}/mate-terminal.wrapper
+blacklist ${PATH}/lilyterm
+blacklist ${PATH}/pantheon-terminal
+blacklist ${PATH}/roxterm
+blacklist ${PATH}/roxterm-config
+blacklist ${PATH}/terminix
+blacklist ${PATH}/urxvtc
+blacklist ${PATH}/urxvtcd
