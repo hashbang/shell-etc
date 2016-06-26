@@ -24,7 +24,6 @@ A command like the following can get you going with a local development server:
 
 ```
 docker run -d \
-  --rm \
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
   -v $PWD:/etc-git \
   -v $HOME/.gitconfig:/root/.gitconfig:ro \
