@@ -27,19 +27,10 @@ docker run -d \
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
   -v $PWD:/etc-git \
   -v $HOME/.gitconfig:/root/.gitconfig:ro \
-  -v $HOME/.gnupg:/root/.gnupg \
-  -v $SSH_AUTH_SOCK:/root/.ssh-agent \
-  -e SSH_AUTH_SOCK=/root/.ssh-agent \
   --name shell-server \
   --cap-add SYS_ADMIN \
   hashbang/shell-server
 ```
-
-Note: The .gitconfig mount allows for git attribution to work properly. The
-.gnupg/ssh mounts allow commit/sign/pushing to your branch directly from inside
-the container. You could also opt to just let it commit/push to your mounted
-local branch and do ```git commit -S --amend``` on the host system prior to
-pushing upstream.
 
 From here you can enter this environment with:
 
@@ -57,6 +48,43 @@ place, which should be reflected in your local checkout as well.
 
 When you are ready to contribute your changes upstream, please push to a fork
 and make a pull request.
+
+### GPG signing ###
+
+If you prefer to GPG sign your commits, a couple of options exist.
+
+#### Manual ####
+
+One, is you can simply use the above workflow as-is and just sign your last
+commit before pushing with:
+```
+git commit -S --amend
+```
+
+For multiple commits you could do a rebase and change "pick" to "edit":
+```
+git rebase -i --root
+```
+
+Then for each commit you want to sign:
+```
+git commit -S --amend --no-edit && git rebase --continue 
+```
+
+#### Automatic ####
+
+Assuming you use git auto-signing and have ssh-agents set up properly,
+you can opt to expose your gpg/ssh sockets by adding the following arguments
+to your docker run command:
+
+```
+...
+  -v $HOME/.gitconfig:/root/.gitconfig:ro \
+  -v $HOME/.gnupg:/root/.gnupg \
+  -v $SSH_AUTH_SOCK:/root/.ssh-agent \
+  -e SSH_AUTH_SOCK=/root/.ssh-agent \
+...
+```
 
 ## Notes ##
 
