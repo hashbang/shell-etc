@@ -1105,6 +1105,7 @@ silversearcher-ag-el				install
 slashem						install
 slashem-common					install
 socat						install
+ssh						install
 ssl-cert					install
 sssd						install
 sssd-ad						install
