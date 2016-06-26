@@ -49,6 +49,11 @@ place, which should be reflected in your local checkout as well.
 When you are ready to contribute your changes upstream, please push to a branch
 or a fork and make a pull request.
 
+Note: the above workflow is only suitable for making very basic changes like
+new package installations etc. If you want to do something more complex that
+requires interaction with a user database, etc, please consider using our
+end-to-end local development setup, documented here: [hashbang/hashbang](https://github.com/hashbang/hashbang)
+
 ### GPG signing ###
 
 If you prefer to GPG sign your commits, a couple of options exist.
