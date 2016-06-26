@@ -9,69 +9,48 @@ Git management is handled via [etckeeper](http://etckeeper.branchable.com/)
 
 New servers added to the pool will also have this configuration to give users an equal experience.
 
-## Contribution ##
-
-You can "Fork" and "Pull Request" any changes you would like to see on our
-servers.
-
-If you would like to have particular package installed in #! shell servers, add it to packages.txt and send a pull request.
-While we accept most pull requests, packages that require X11 as dependency will not be merged.
-
 ## Requirements ##
 
   * Debian 7+
 
-## Installation ##
+## Contribution ##
 
-1. Adjust partitions to match fstab.sample
+Making changes to this repo will require a running #! [shell server](https://github.com/hashbang/shell-server).
 
-    To do this on a VPS (Super hacky but works):
-    
-    1. Go to the "Virtual Console" feature in your provider.
-    2. Reboot to Grub bootloader screen
-    3. Hit <Enter> on first boot option
-    4. Add ```break=premount``` to the end of the kernel line
-    5. <Ctrl-X> to boot
-    6. Copy rootfs files into ram
-      ```
-      mkdir /mnt
-      modprobe ext4
-      mount /dev/sda1 /mnt
-      cp -R /mnt/* /
-      umount /dev/sda1
-      ```
-    7. Shrink rootfs and create /home partition
-      ```
-      e2fsck -f /dev/sda1
-      resize2fs /dev/sda1 20G
-      echo "d
-      1
-      n
-      p
-      1
+An easy way to set this up locally is by running our latest shell-server 
+[Docker image](https://hub.docker.com/r/hashbang/shell-server/).
 
-      +20G
-      w
-      n
-      p
-      2
+A command like the following can get you going with a local development server:
 
+```
+docker run -d \
+  --rm \
+  -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+  -v $PWD:/etc-git \
+  -v $HOME/.gitconfig:/root/.gitconfig:ro \
+  -v $HOME/.gnupg:/root/.gnupg
+  --name shell-server \
+  --cap-add SYS_ADMIN \
+  hashbang/shell-server
+```
 
-      " | fdisk /dev/sda1
-      ```
-    8. Reboot
+From here you can enter this environment with:
 
-    9. Adjust fstab to match: [fstab.sample](https://raw.githubusercontent.com/hashbang/shell-etc/master/fstab.sample)
+```
+docker exec -it shell-server bash
+```
 
-    10. Reboot
+In this environment you can make updates and install packages with ```apt-get```.
+Changes will automatically be committed and pushed to your working shell-etc
+checkout by etckeeper. Assuming you chose to mount your .gitconfig above, the
+changes should be attributed correctly as you, and signed by you if you use gpg
+with automatic signing enabled.
 
-2. Run setup script
+Any changes made to /etc without apt-get will need to be committed/pushed in
+place, which should be reflected in your local checkout as well.
 
-    ```bash
-    ssh $INSTANCE_IP
-    wget https://raw.githubusercontent.com/hashbang/shell-etc/master/setup.sh
-    bash setup.sh
-    ```
+When you are ready to contribute your changes upstream, please push to a fork
+and make a pull request.
 
 ## Notes ##
 
