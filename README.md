@@ -46,8 +46,8 @@ changes should be attributed correctly as you.
 Any changes made to /etc without apt-get will need to be committed/pushed in
 place, which should be reflected in your local checkout as well.
 
-When you are ready to contribute your changes upstream, please push to a fork
-and make a pull request.
+When you are ready to contribute your changes upstream, please push to a branch
+or a fork and make a pull request.
 
 ### GPG signing ###
 
