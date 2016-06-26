@@ -28,7 +28,9 @@ docker run -d \
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
   -v $PWD:/etc-git \
   -v $HOME/.gitconfig:/root/.gitconfig:ro \
-  -v $HOME/.gnupg:/root/.gnupg
+  -v $HOME/.gnupg:/root/.gnupg \
+  -v $SSH_AUTH_SOCK:/root/.ssh-agent \
+  -e SSH_AUTH_SOCK=/root/.ssh-agent \
   --name shell-server \
   --cap-add SYS_ADMIN \
   hashbang/shell-server
