@@ -35,6 +35,12 @@ docker run -d \
   hashbang/shell-server
 ```
 
+Note: The .gitconfig mount allows for git attribution to work properly. The
+.gnupg/ssh mounts allow commit/sign/pushing to your branch directly from inside
+the container. You could also opt to just let it commit/push to your mounted
+local branch and do ```git commit -S --amend``` on the host system prior to
+pushing upstream.
+
 From here you can enter this environment with:
 
 ```
@@ -44,8 +50,7 @@ docker exec -it shell-server bash
 In this environment you can make updates and install packages with ```apt-get```.
 Changes will automatically be committed and pushed to your working shell-etc
 checkout by etckeeper. Assuming you chose to mount your .gitconfig above, the
-changes should be attributed correctly as you, and signed by you if you use gpg
-with automatic signing enabled.
+changes should be attributed correctly as you.
 
 Any changes made to /etc without apt-get will need to be committed/pushed in
 place, which should be reflected in your local checkout as well.
