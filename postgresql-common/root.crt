@@ -1,0 +1,11 @@
+This is a dummy root certificate file for PostgreSQL. To enable client side
+authentication, add some certificates to it. Client certificates must be signed
+with any certificate in this file to be accepted.
+
+A reasonable choice is to just symlink this file to
+/etc/ssl/certs/ssl-cert-snakeoil.pem; in this case, client certificates need to
+be signed by the postgresql server certificate, which might be desirable in
+many cases. See chapter "Server Setup and Operation" in the PostgreSQL
+documentation for details (in package postgresql-doc-9.2).
+
+  file:///usr/share/doc/postgresql-doc-9.2/html/ssl-tcp.html
