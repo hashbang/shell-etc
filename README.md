@@ -60,20 +60,10 @@ If you prefer to GPG sign your commits, a couple of options exist.
 
 #### Manual ####
 
-One, is you can simply use the above workflow as-is and just sign your last
-commit before pushing with:
+You can manually sign your most recent commit before pushing with:
+
 ```
 git commit -S --amend
-```
-
-For multiple commits you could do a rebase and change "pick" to "edit":
-```
-git rebase -i --root
-```
-
-Then for each commit you want to sign:
-```
-git commit -S --amend --no-edit && git rebase --continue 
 ```
 
 #### Automatic ####
