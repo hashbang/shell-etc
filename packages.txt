@@ -152,6 +152,7 @@ gforth						install
 gforth-common					install
 gforth-lib:amd64				install
 ghc						install
+gir1.2-glib-2.0:amd64				install
 git						install
 git-email					install
 git-man						install
@@ -398,6 +399,7 @@ libgeoip1:amd64					install
 libgettextpo-dev:amd64				install
 libgettextpo0:amd64				install
 libgfortran3:amd64				install
+libgirepository-1.0-1:amd64			install
 libgl1-mesa-glx:amd64				install
 libglapi-mesa:amd64				install
 libglib2.0-0:amd64				install
@@ -441,6 +443,7 @@ libidn11:amd64					install
 libiec61883-0:amd64				install
 libijs-0.35:amd64				install
 libilmbase6:amd64				install
+libimage-exiftool-perl				install
 libimport-into-perl				install
 libini-config5:amd64				install
 libio-socket-inet6-perl				install
@@ -816,6 +819,7 @@ make						install
 man-db						install
 manpages					install
 manpages-dev					install
+mat						install
 mawk						install
 mc						install
 mc-data						install
@@ -962,6 +966,9 @@ python-ecdsa					install
 python-flake8					install
 python-gdbm					install
 python-geoip					install
+python-gi					install
+python-hachoir-core				install
+python-hachoir-parser				install
 python-html5lib					install
 python-html5lib-whl				install
 python-httplib2					install
@@ -977,6 +984,7 @@ python-matplotlib-data				install
 python-mccabe					install
 python-minimal					install
 python-mock					install
+python-mutagen					install
 python-ndg-httpsclient				install
 python-netaddr					install
 python-networkx					install
@@ -986,6 +994,7 @@ python-numpy					install
 python-oauth					install
 python-openssl					install
 python-paramiko					install
+python-pdfrw					install
 python-pip					install
 python-pip-whl					install
 python-pkg-resources				install
@@ -998,6 +1007,8 @@ python-pycparser				install
 python-pygments					install
 python-pyparsing				install
 python-reportbug				install
+python-reportlab				install
+python-reportlab-accel:amd64			install
 python-requestbuilder				install
 python-requests					install
 python-requests-whl				install
