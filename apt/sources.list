@@ -11,3 +11,6 @@ deb-src http://deb.debian.org/debian/          jessie-backports main contrib non
 # Newer releases.  Use with care and pin.
 deb     http://deb.debian.org/debian/          stretch          main contrib non-free
 deb-src http://deb.debian.org/debian/          stretch          main contrib non-free
+
+deb     http://deb.debian.org/debian-security/ stretch/updates  main contrib non-free
+deb-src http://deb.debian.org/debian-security/ stretch/updates  main contrib non-free
