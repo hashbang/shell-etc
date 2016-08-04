@@ -8,6 +8,10 @@ profile system_tor flags=(attach_disconnected) {
   owner /var/lib/tor/ r,
   owner /var/log/tor/* w,
 
+  # During startup, tor (as root) tries to open various things such as
+  # directories via check_private_dir().  Let it.
+  /var/lib/tor/** r,
+
   /{,var/}run/tor/ r,
   /{,var/}run/tor/control w,
   /{,var/}run/tor/socks w,

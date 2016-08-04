@@ -99,7 +99,7 @@ wait_for_deaddaemon () {
 
 check_torpiddir () {
 	if test ! -d $TORPIDDIR; then
-		mkdir -m 02750 "$TORPIDDIR"
+		mkdir -m 02755 "$TORPIDDIR"
 		chown debian-tor:debian-tor "$TORPIDDIR"
 		! [ -x /sbin/restorecon ] || /sbin/restorecon "$TORPIDDIR"
 	fi
