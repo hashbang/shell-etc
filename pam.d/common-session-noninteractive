@@ -13,6 +13,7 @@ session	required	pam_env.so
 # User restrictions
 session	required	pam_namespace.so  unmnt_remnt
 session	required	pam_limits.so
+session required	pam_exec.so type=session /etc/network/namespace.sh
 
 # Passwd database handling
 session	sufficient	pam_sss.so
