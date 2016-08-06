@@ -66,6 +66,8 @@ ssl/certs
 ssl/private
 ssh/ssh_host_*_key
 ssh/ssh_host_*_key.pub
+unbound/unbound_*.key
+unbound/unbound_*.pem
 *-
 *.gz
 network/interfaces
