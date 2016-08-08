@@ -123,8 +123,8 @@ figlet						install
 file						install
 findutils					install
 firejail					install
-fish						deinstall
-fish-common					deinstall
+fish						install
+fish-common					install
 fontconfig					install
 fontconfig-config				install
 fonts-dejavu-core				install
@@ -1054,12 +1054,14 @@ python3-bottle					install
 python3-chardet					install
 python3-colorama				install
 python3-crypto					install
+python3-decorator				install
 python3-dev					install
 python3-distlib					install
 python3-html5lib				install
 python3-jinja2					install
 python3-markupsafe				install
 python3-minimal					install
+python3-numpy					install
 python3-pip					install
 python3-pkg-resources				install
 python3-psutil					install
@@ -1067,6 +1069,7 @@ python3-py					install
 python3-pyasn1					install
 python3-pysnmp4					install
 python3-requests				install
+python3-scipy					install
 python3-setuptools				install
 python3-six					install
 python3-urllib3					install
