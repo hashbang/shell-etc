@@ -123,7 +123,7 @@ figlet						install
 file						install
 findutils					install
 firejail					install
-fish						install
+fish						deinstall
 fish-common					install
 fontconfig					install
 fontconfig-config				install
