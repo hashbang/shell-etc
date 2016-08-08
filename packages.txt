@@ -124,7 +124,7 @@ file						install
 findutils					install
 firejail					install
 fish						deinstall
-fish-common					install
+fish-common					deinstall
 fontconfig					install
 fontconfig-config				install
 fonts-dejavu-core				install
