@@ -3,7 +3,12 @@ Package: *
 Pin: release n=jessie
 Pin-Priority: 900
 
-# Give backports priority over stretch (which has the default 500 priority)
+# Give backports priority over stretch
 Package: *
 Pin: release n=jessie-backports
 Pin-Priority: 800
+
+# Never silently install from testing
+Package: *
+Pin: release n=stretch
+Pin-Priority: -1
