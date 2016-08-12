@@ -1158,6 +1158,7 @@ tor						install
 tor-arm						install
 torsocks					install
 traceroute					install
+travis						install
 tree						install
 tudu						install
 tzdata						install
