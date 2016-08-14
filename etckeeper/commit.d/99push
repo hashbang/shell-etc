@@ -2,7 +2,7 @@
 if [ -n "$PUSH_REMOTE" ]; then
 	if [ "$VCS" = git ] && [ -d .git ]; then
 		for REMOTE in $PUSH_REMOTE; do
-			GIT_SSH_COMMAND="ssh -o PasswordAuthentication=no" git push "$REMOTE" master
+			GIT_SSH_COMMAND="ssh -o PasswordAuthentication=no" git push "$REMOTE" "master:$PUSH_BRANCH"
 		done
 	elif [ "$VCS" = hg ] && [ -d .hg ]; then
 		for REMOTE in $PUSH_REMOTE; do
