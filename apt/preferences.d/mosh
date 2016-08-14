@@ -1,0 +1,4 @@
+# v1.2.5 (jessie-backports) is required for mouse support
+Package: mosh
+Pin: release n=jessie-backports
+Pin-Priority: 990
