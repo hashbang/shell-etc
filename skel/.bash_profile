@@ -2,12 +2,9 @@
 # pre-clone
 ###
 
-# get mail file
-mail=$(cat msg.welcome)
-
 # Prepare GnuPG homedir
 export GNUPGHOME=$(mktemp -d --tmpdir gpg.XXXXXX)
-trap "rm -rf -- '${GNUPGHOME}'" EXIT
+trap "rm -rf -- '${GNUPGHOME}'; unset GNUPGHOME" EXIT
 
 cat > "${GNUPGHOME}/gpg.conf" <<EOF
 # Never, ever, ever do this in your personal gpg.conf
@@ -20,40 +17,52 @@ EOF
 # cloning
 ###
 
-# remove all the stuff (hence why cat earlier) and clone repository, set up folders
-git init
-git clean -f
-git remote add origin https://github.com/hashbang/dotfiles
-git fetch
-git reset --hard origin/master
-
-local err=0
-git verify-commit HEAD || err=$?
-if [ $err -ne 0 ]; then
+if ! git clone --recursive https://github.com/hashbang/dotfiles .dotfiles; then
     cat >&2 <<EOF
-CRITICAL: Failed to verify signature on
+CRITICAL: Failed to clone your dotfiles from
           https://github.com/hashbang/dotfiles
 EOF
-    rm -rf ~/.* ~/*
+    rm -rf ~/.dotfiles
     return
 fi
 
-# Setup submodules
-git submodule update --init --recursive
+if ! git -C .dotfiles verify-commit HEAD; then
+    echo "CRITICAL: Failed to verify signature on dotfiles" >&2
+    rm -rf ~/.dotfiles
+    return
+fi
+
+rm -rf -- "${GNUPGHOME}"
+unset GNUPGHOME
+trap - EXIT
 
 ###
-# write to mail file section
+# stowing
 ###
 
-# grab date
-date=$(date | awk '{print $1",", $3, $2, $6, $4, $5}')
+rm .bash_profile
+mkdir -p .config .local/bin
+cd .dotfiles
+stow bash git gnupg hashbang ssh tmux weechat zsh
+cd
 
-# since this is the .bashrc we can use $(whoami) for user
-user=$(whoami)
+###
+# Make sure a proper maildir is in place
+###
 
-# write mail
 mkdir -p ~/Mail/{cur,new,tmp}
-echo "$mail" | sed "s/{date}/$date/g" | sed "s/{username}/$user/g" > Mail/new/msg.welcome
+
+###
+# Edit the welcome message
+###
+
+sed -i "s/{date}/$(date '+%a, %-d %b %Y %T %Z')/g" Mail/new/msg.welcome
+sed -i "s/{username}/$(whoami)/g"                  Mail/new/msg.welcome
+
+
+###
+# Hand over control to the actual dotfiles
+###
 
 source .bash_profile
 source .bashrc
