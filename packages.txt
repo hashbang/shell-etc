@@ -1073,11 +1073,13 @@ python3-scipy					install
 python3-setuptools				install
 python3-six					install
 python3-urllib3					install
+python3-venv					install
 python3-virtualenv				install
 python3-wheel					install
 python3.4					install
 python3.4-dev					install
 python3.4-minimal				install
+python3.4-venv					install
 qalc						install
 qemu-slof					install
 qemu-system-common				install
