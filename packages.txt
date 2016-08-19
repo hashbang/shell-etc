@@ -189,6 +189,7 @@ guile-2.0-dev					install
 guile-2.0-libs:amd64				install
 gyp						install
 gzip						install
+haveged						install
 hddtemp						install
 hicolor-icon-theme				install
 hostname					install
@@ -433,6 +434,7 @@ libgumbo1:amd64					install
 libgupnp-1.0-4					install
 libgupnp-igd-1.0-4:amd64			install
 libharfbuzz0b:amd64				install
+libhavege1:amd64				install
 libhcrypto4-heimdal:amd64			install
 libheimbase1-heimdal:amd64			install
 libheimntlm0-heimdal:amd64			install
