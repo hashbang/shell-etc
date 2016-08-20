@@ -942,6 +942,7 @@ python						install
 python-apt					install
 python-apt-common				install
 python-audit					install
+python-backports.ssl-match-hostname		install
 python-boto					install
 python-cffi					install
 python-characteristic				install
@@ -1043,6 +1044,7 @@ python-tz					install
 python-urllib3					install
 python-urllib3-whl				install
 python-virtualenv				install
+python-websocket				install
 python-wheel					install
 python-wstools					install
 python-yaml					install
