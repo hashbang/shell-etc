@@ -680,7 +680,6 @@ libssh2-1:amd64					install
 libssl-dev:amd64				install
 libssl-doc					install
 libssl1.0.0:amd64				install
-libssl1.0.2:amd64				deinstall
 libsss-idmap0					install
 libsss-sudo					install
 libstdc++-4.9-dev:amd64				install
@@ -1102,8 +1101,6 @@ rsync						install
 rsyslog						install
 rtorrent					install
 ruby						install
-ruby-power-assert				install
-ruby-test-unit					install
 ruby2.1						install
 rubygems-integration				install
 samba-libs:amd64				install
