@@ -1101,8 +1101,6 @@ rsync						install
 rsyslog						install
 rtorrent					install
 ruby						install
-ruby-power-assert				install
-ruby-test-unit					install
 ruby2.1						install
 rubygems-integration				install
 samba-libs:amd64				install
