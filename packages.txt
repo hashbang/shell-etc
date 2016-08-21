@@ -645,7 +645,6 @@ librsvg2-2:amd64				install
 librsync1:amd64					install
 librtmp1:amd64					install
 libruby2.1:amd64				install
-libruby2.2:amd64				install
 libsamplerate0:amd64				install
 libsasl2-2:amd64				install
 libsasl2-dev					install
@@ -681,7 +680,7 @@ libssh2-1:amd64					install
 libssl-dev:amd64				install
 libssl-doc					install
 libssl1.0.0:amd64				install
-libssl1.0.2:amd64				install
+libssl1.0.2:amd64				deinstall
 libsss-idmap0					install
 libsss-sudo					install
 libstdc++-4.9-dev:amd64				install
@@ -1103,7 +1102,6 @@ rsync						install
 rsyslog						install
 rtorrent					install
 ruby						install
-ruby-minitest					install
 ruby-power-assert				install
 ruby-test-unit					install
 ruby2.1						install
