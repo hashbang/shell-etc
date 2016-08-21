@@ -680,7 +680,6 @@ libssh2-1:amd64					install
 libssl-dev:amd64				install
 libssl-doc					install
 libssl1.0.0:amd64				install
-libssl1.0.2:amd64				deinstall
 libsss-idmap0					install
 libsss-sudo					install
 libstdc++-4.9-dev:amd64				install
@@ -930,7 +929,6 @@ po-debconf					install
 policykit-1					install
 poppler-data					install
 postfix						install
-postfix-ldap					install
 procmail					install
 procps						install
 psmisc						install
