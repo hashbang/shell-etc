@@ -929,7 +929,6 @@ po-debconf					install
 policykit-1					install
 poppler-data					install
 postfix						install
-postfix-ldap					install
 procmail					install
 procps						install
 psmisc						install
