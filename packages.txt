@@ -466,6 +466,7 @@ libjbig0:amd64					install
 libjbig2dec0					install
 libjemalloc1					install
 libjpeg62-turbo:amd64				install
+libjs-excanvas					deinstall
 libjs-jquery					install
 libjs-jquery-ui					install
 libjs-node-uuid					install
