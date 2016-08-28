@@ -10,6 +10,11 @@ whitelist ~/Mail
 whitelist ~/sent
 whitelist ~/postponed
 
+# Allow access to mutt and msmtp config
+whitelist ~/.muttrc
+whitelist ~/.mutt/
+whitelist ~/.msmtprc
+
 # Allow executing /usr/sbin/sendmail
 noblacklist /usr/sbin
 
