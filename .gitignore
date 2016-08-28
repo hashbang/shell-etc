@@ -79,6 +79,7 @@ hostname
 machine-id
 provisor.ini
 hashbangctl.conf
+xml/catalog.legacy
 
 src/*
 
