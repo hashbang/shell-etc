@@ -1,4 +1,8 @@
 #!/bin/sh -e
+if [ -n "$ETCKEEPER_NO_PUSH" ]; then
+    exit 0
+fi
+
 if [ -n "$PUSH_REMOTE" ]; then
 	if [ "$VCS" = git ] && [ -d .git ]; then
 		for REMOTE in $PUSH_REMOTE; do
