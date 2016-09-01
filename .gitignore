@@ -56,11 +56,9 @@ DEADJOE
 shadow
 shadow.org
 gshadow
-passwd
 passwd.org
 subgid
 subuid
-group
 group.org
 ssl/certs
 ssl/private
@@ -81,6 +79,7 @@ hostname
 machine-id
 provisor.ini
 hashbangctl.conf
+xml/catalog.legacy
 
 src/*
 
