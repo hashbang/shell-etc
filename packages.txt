@@ -41,6 +41,7 @@ busybox						install
 byobu						install
 bzip2						install
 ca-certificates					install
+cgroup-tools					install
 checkpolicy					install
 cloc						install
 cloud-initramfs-dyn-netconf			install
@@ -312,6 +313,7 @@ libcap2:amd64					install
 libcap2-bin					install
 libcdaudio1					install
 libcdparanoia0:amd64				install
+libcgroup1:amd64				install
 libcilkrts5:amd64				install
 libclass-method-modifiers-perl			install
 libclass-methodmaker-perl			install
@@ -466,6 +468,7 @@ libjbig0:amd64					install
 libjbig2dec0					install
 libjemalloc1					install
 libjpeg62-turbo:amd64				install
+libjs-excanvas					deinstall
 libjs-jquery					install
 libjs-jquery-ui					install
 libjs-node-uuid					install
