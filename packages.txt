@@ -41,6 +41,7 @@ busybox						install
 byobu						install
 bzip2						install
 ca-certificates					install
+cgroup-tools					install
 checkpolicy					install
 cloc						install
 cloud-initramfs-dyn-netconf			install
@@ -312,6 +313,7 @@ libcap2:amd64					install
 libcap2-bin					install
 libcdaudio1					install
 libcdparanoia0:amd64				install
+libcgroup1:amd64				install
 libcilkrts5:amd64				install
 libclass-method-modifiers-perl			install
 libclass-methodmaker-perl			install
@@ -821,8 +823,8 @@ mat						install
 mawk						install
 mc						install
 mc-data						install
-mercurial					install
-mercurial-common				install
+mercurial					deinstall
+mercurial-common				deinstall
 mime-support					install
 mosh						install
 mount						install
