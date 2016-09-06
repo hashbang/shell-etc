@@ -1,0 +1,129 @@
+#!/bin/sh
+#
+# ferm          Configure ferm firewall rules from /etc/ferm.conf
+#
+#               Written by Max Kellermann <max@duempel.org>
+#
+# Version:      $Revision: 325 $
+### BEGIN INIT INFO
+# Provides:          ferm
+# Required-Start:    $network $remote_fs
+# Required-Stop:     $network $remote_fs
+# Default-Start:     S
+# Default-Stop:	      
+# Description: Starts ferm firewall configuration 
+# short-description: ferm firewall configuration
+### END INIT INFO
+
+#includes lsb functions 
+. /lib/lsb/init-functions
+
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+FERM=/usr/sbin/ferm
+CONFIG=/etc/ferm/ferm.conf
+NAME=ferm
+DESC="Firewall"
+CACHE_DIR=/var/cache/ferm
+
+test -x $FERM || exit 0
+
+umask 0077
+
+unset ENABLED
+FAST=yes
+CACHE=no
+OPTIONS=
+unset DOMAINS
+[ -r /etc/default/ferm ] && . /etc/default/ferm
+
+test -f "$CONFIG" || exit 0
+
+if [ -n "$DOMAINS" ]; then
+    echo "Warning: the DOMAINS setting in /etc/default/ferm is deprecated." >&2
+fi
+
+if [ "$ENABLED" != "yes"  ]; then
+    if [ "$VERBOSE" != no ]; then
+        if [ -z "$ENABLED" ]; then
+            echo "Not starting ferm - run 'dpkg-reconfigure ferm' to enable it"
+        else
+            echo "Not starting ferm - edit /etc/default/ferm to enable it"
+        fi
+    fi
+    exit 0
+fi
+
+[ "$CACHE" = "yes" -a ! -d $CACHE_DIR ] && CACHE=no
+
+set -e
+
+configure_ferm() {
+    local CACHE_NAME=${1:-start}
+
+    if [ "$CACHE" = "yes" ]; then
+        local CACHE_FILE=$CACHE_DIR/$CACHE_NAME.sh
+
+        # The .kernel file saves the kernel version number (copy of
+        # /proc/version).  It is used to ensure that ferm is re-run
+        # after a kernel upgrade.
+
+        if ! diff /proc/version $CACHE_FILE.kernel >/dev/null 2>&1 || \
+            ! [ -f $CACHE_FILE -a \
+            $CACHE_FILE -nt $CONFIG -a \
+            -z "`find /etc/ferm -maxdepth 2 -newer $CACHE_FILE 2>/dev/null`" -a \
+            $CACHE_FILE -nt /etc/default/ferm -a \
+            $CACHE_FILE -nt /etc/init.d/ferm -a \
+            $CACHE_FILE -nt $FERM ]; then
+            rm -f "$CACHE_FILE" "$CACHE_FILE".tmp "$CACHE_FILE".kernel || return $?
+            if [ "$FAST" = "yes" ]; then
+                $FERM $OPTIONS --shell $CONFIG >$CACHE_FILE.tmp || return $?
+            else
+                $FERM $OPTIONS --shell --slow $CONFIG >$CACHE_FILE.tmp || return $?
+            fi
+            cp /proc/version $CACHE_FILE.kernel
+            mv $CACHE_FILE.tmp $CACHE_FILE || return $?
+        else
+            . $CACHE_FILE || return $?
+        fi
+    else
+        if [ "$FAST" = "yes" ]; then
+            $FERM $OPTIONS $CONFIG || return $?
+        else
+            $FERM $OPTIONS --slow $CONFIG || return $?
+        fi
+    fi
+}
+
+case "$1" in
+    start)
+        log_daemon_msg "Starting $DESC" "$NAME"
+        if configure_ferm; then
+		log_end_msg $?
+	else
+		log_end_msg $?
+
+		if ! test "$VERBOSE" = no -o -f /proc/net/ip_tables_names; then
+			log_warning_msg "Looks like the ip_tables module is not loaded, see /etc/modules"
+		fi
+	fi
+        ;;
+    stop)
+        log_daemon_msg "Stopping $DESC" "$NAME"
+        OPTIONS="$OPTIONS --flush"
+        configure_ferm stop
+        log_end_msg $?
+        ;;
+    reload|restart|force-reload)
+        log_begin_msg "Reloading $DESC configuration..."
+        configure_ferm
+        log_end_msg $?
+        ;;
+    *)
+        N=/etc/init.d/$NAME
+        log_action_msg "Usage: $N {start|stop|restart|reload|force-reload}"
+        exit 1
+        ;;
+esac
+
+exit 0
