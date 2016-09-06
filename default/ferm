@@ -10,4 +10,4 @@ CACHE=yes
 OPTIONS=
 
 # Enable the ferm init script? (i.e. run on bootup)
-ENABLED="no"
+ENABLED="yes"
