@@ -824,8 +824,6 @@ mat						install
 mawk						install
 mc						install
 mc-data						install
-mercurial					deinstall
-mercurial-common				deinstall
 mime-support					install
 mosh						install
 mount						install
