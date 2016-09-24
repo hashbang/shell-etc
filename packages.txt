@@ -253,6 +253,7 @@ libalgorithm-diff-perl				install
 libalgorithm-diff-xs-perl			install
 libalgorithm-merge-perl				install
 libapol4:amd64					install
+libapparmor1:amd64				install
 libappconfig-perl				install
 libapr1:amd64					install
 libaprutil1:amd64				install
