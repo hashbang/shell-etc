@@ -805,7 +805,6 @@ locales-all					install
 locate						install
 login						install
 logrotate					install
-lolcat						install
 lsb-base					install
 lsb-release					install
 lsof						install
@@ -1102,8 +1101,6 @@ rsync						install
 rsyslog						install
 rtorrent					install
 ruby						install
-ruby-paint					install
-ruby-trollop					install
 ruby2.1						install
 rubygems-integration				install
 samba-libs:amd64				install
