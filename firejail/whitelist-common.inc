@@ -20,10 +20,12 @@ whitelist ~/.cache/fontconfig
 # gtk
 whitelist ~/.gtkrc
 whitelist ~/.gtkrc-2.0
+whitelist ~/.config/gtk-2.0
 whitelist ~/.config/gtk-3.0
 whitelist ~/.themes
+whitelist ~/.kde/share/config/gtkrc
+whitelist ~/.kde/share/config/gtkrc-2.0
 
 # dconf
-mkdir ~/.config
 mkdir ~/.config/dconf
 whitelist ~/.config/dconf
