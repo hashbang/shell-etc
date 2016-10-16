@@ -5,9 +5,16 @@ include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
-seccomp
-protocol unix,inet,inet6
 netfilter
 nonewprivs
 noroot
+nosound
+protocol unix,inet,inet6
+seccomp
+
+# there are some problems with "Open destination folder", see bug #536
+#shell none
+#private-bin qbittorrent
+whitelist /tmp/.X11-unix
+private-dev
 nosound
