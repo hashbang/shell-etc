@@ -8,9 +8,15 @@ include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
-seccomp
-protocol unix,inet,inet6
-nonewprivs
-noroot
-tracelog
 netfilter
+nonewprivs
+nogroups
+noroot
+protocol unix,inet,inet6
+seccomp
+shell none
+tracelog
+
+private-bin xplayer,xplayer-audio-preview,xplayer-video-thumbnailer
+private-dev
+private-tmp

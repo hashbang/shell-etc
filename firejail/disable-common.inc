@@ -14,12 +14,15 @@ blacklist /etc/xdg/autostart
 blacklist ${HOME}/.kde4/Autostart
 blacklist ${HOME}/.kde4/share/autostart
 blacklist ${HOME}/.kde/Autostart
+blacklist ${HOME}/.kde/share/autostart
 blacklist ${HOME}/.config/plasma-workspace/shutdown
 blacklist ${HOME}/.config/plasma-workspace/env
 blacklist ${HOME}/.config/lxsession/LXDE/autostart
 blacklist ${HOME}/.fluxbox/startup
 blacklist ${HOME}/.config/openbox/autostart
 blacklist ${HOME}/.config/openbox/environment
+blacklist ${HOME}/.gnomerc
+blacklist /etc/X11/Xsession.d/
 
 # VirtualBox
 blacklist ${HOME}/.VirtualBox
@@ -58,11 +61,15 @@ read-only ${HOME}/.xserverrc
 read-only ${HOME}/.profile
 
 # Shell startup files
+read-only ${HOME}/.antigen
 read-only ${HOME}/.bash_login
 read-only ${HOME}/.bashrc
 read-only ${HOME}/.bash_profile
 read-only ${HOME}/.bash_logout
+read-only ${HOME}/.zsh.d
+read-only ${HOME}/.zshenv
 read-only ${HOME}/.zshrc
+read-only ${HOME}/.zshrc.local
 read-only ${HOME}/.zlogin
 read-only ${HOME}/.zprofile
 read-only ${HOME}/.zlogout
@@ -70,8 +77,12 @@ read-only ${HOME}/.zsh_files
 read-only ${HOME}/.tcshrc
 read-only ${HOME}/.cshrc
 read-only ${HOME}/.csh_files
+read-only ${HOME}/.profile
 
 # Initialization files that allow arbitrary command execution
+read-only ${HOME}/.caffrc
+read-only ${HOME}/.dotfiles
+read-only ${HOME}/dotfiles
 read-only ${HOME}/.mailcap
 read-only ${HOME}/.exrc
 read-only ${HOME}/_exrc
@@ -81,10 +92,14 @@ read-only ${HOME}/.gvimrc
 read-only ${HOME}/_gvimrc
 read-only ${HOME}/.vim
 read-only ${HOME}/.emacs
+read-only ${HOME}/.emacs.d
+read-only ${HOME}/.nano
 read-only ${HOME}/.tmux.conf
 read-only ${HOME}/.iscreenrc
 read-only ${HOME}/.muttrc
 read-only ${HOME}/.mutt/muttrc
+read-only ${HOME}/.msmtprc
+read-only ${HOME}/.reportbugrc
 read-only ${HOME}/.xmonad
 read-only ${HOME}/.xscreensaver
 
@@ -95,11 +110,14 @@ read-only ${HOME}/bin
 blacklist ${HOME}/.ssh
 blacklist ${HOME}/.cert
 blacklist ${HOME}/.gnome2/keyrings
-blacklist ${HOME}/kde4/share/apps/kwallet
-blacklist ${HOME}/kde/share/apps/kwallet
+blacklist ${HOME}/.kde4/share/apps/kwallet
+blacklist ${HOME}/.kde/share/apps/kwallet
 blacklist ${HOME}/.local/share/kwalletd
+blacklist ${HOME}/.config/keybase
 blacklist ${HOME}/.netrc
 blacklist ${HOME}/.gnupg
+blacklist ${HOME}/.caff
+blacklist ${HOME}/.smbcredentials
 blacklist ${HOME}/*.kdbx
 blacklist ${HOME}/*.kdb
 blacklist ${HOME}/*.key
@@ -137,7 +155,7 @@ blacklist /usr/local/sbin
 # prevent lxterminal connecting to an existing lxterminal session
 blacklist /tmp/.lxterminal-socket*
 
-# disable terminals running as server
+# disable terminals running as server resulting in sandbox escape
 blacklist ${PATH}/gnome-terminal
 blacklist ${PATH}/gnome-terminal.wrapper
 blacklist ${PATH}/xfce4-terminal
