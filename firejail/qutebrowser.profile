@@ -7,17 +7,16 @@ include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-devel.inc
 
 caps.drop all
-seccomp
-protocol unix,inet,inet6,netlink
 netfilter
-tracelog
 nonewprivs
 noroot
+protocol unix,inet,inet6,netlink
+seccomp
+tracelog
 
 whitelist ${DOWNLOADS}
 mkdir ~/.config/qutebrowser
 whitelist ~/.config/qutebrowser
-mkdir ~/.cache
 mkdir ~/.cache/qutebrowser
 whitelist ~/.cache/qutebrowser
 include /etc/firejail/whitelist-common.inc
