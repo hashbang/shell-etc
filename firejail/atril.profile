@@ -7,10 +7,15 @@ include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
-seccomp
-protocol unix,inet,inet6
 nonewprivs
+nogroups
 noroot
-tracelog
-netfilter
 nosound
+protocol unix
+seccomp
+shell none
+tracelog
+
+private-bin atril, atril-previewer, atril-thumbnailer
+private-dev
+private-tmp
