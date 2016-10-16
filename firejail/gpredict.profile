@@ -1,24 +1,25 @@
 # Firejail profile for gpredict.
-
-# Noblacklist
 noblacklist ~/.config/Gpredict
-
-# Include
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 include /etc/firejail/disable-programs.inc
 
-# Call these options
+# Whitelist
+mkdir ~/.config/Gpredict
+whitelist ~/.config/Gpredict
+
 caps.drop all
 netfilter
 nonewprivs
+nogroups
 noroot
-protocol unix,inet,inet6,netlink
+nosound
+protocol unix,inet,inet6
 seccomp
+shell none
 tracelog
 
-# Whitelist
-mkdir ~/.config
-mkdir ~/.config/Gpredict
-whitelist ~/.config/Gpredict
+private-bin gpredict
+private-dev
+private-tmp
