@@ -79,6 +79,7 @@ debianutils					install
 devscripts					install
 dh-lua						install
 dh-python					install
+dialog						install
 dictionaries-common				install
 diffutils					install
 discover					install
