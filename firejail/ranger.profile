@@ -1,5 +1,8 @@
-# VLC media player profile
-noblacklist ${HOME}/.config/vlc
+# ranger file manager profile
+noblacklist /usr/bin/perl
+#noblacklist /usr/bin/cpan*
+noblacklist /usr/share/perl*
+noblacklist /usr/lib/perl*
 
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
@@ -8,13 +11,14 @@ include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
 netfilter
-nogroups
+net none
 nonewprivs
 noroot
-protocol unix,inet,inet6
+nogroups
+protocol unix
 seccomp
-shell none
+nosound
 
-private-bin vlc,cvlc,nvlc,rvlc,qvlc,svlc
-private-dev
 private-tmp
+private-dev
+

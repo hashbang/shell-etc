@@ -1,17 +1,18 @@
-# dnsmasq profile
-noblacklist /sbin
-noblacklist /usr/sbin
+# inkscape
+noblacklist ${HOME}/.inkscape
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-passwdmgr.inc
-include /etc/firejail/disable-devel.inc
 
-caps
+caps.drop all
 netfilter
 nonewprivs
-private
-private-dev
-nosound
-no3d
-protocol unix,inet,inet6,netlink
+noroot
+protocol unix
 seccomp
+private-dev
+private-tmp
+noexec ${HOME}
+noexec /tmp
+nogroups
+nosound

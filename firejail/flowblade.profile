@@ -1,17 +1,13 @@
-# dnsmasq profile
-noblacklist /sbin
-noblacklist /usr/sbin
+# OpenShot profile
+noblacklist ${HOME}/.flowblade
+noblacklist ${HOME}/.config/flowblade
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-passwdmgr.inc
-include /etc/firejail/disable-devel.inc
 
-caps
+caps.drop all
 netfilter
 nonewprivs
-private
-private-dev
-nosound
-no3d
+noroot
 protocol unix,inet,inet6,netlink
 seccomp
