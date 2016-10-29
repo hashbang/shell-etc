@@ -5,6 +5,8 @@ include /etc/firejail/default.profile
 tracelog
 net none
 shell none
+blacklist /tmp/.X11-unix
 private-dev
-private-tmp
 nosound
+no3d
+

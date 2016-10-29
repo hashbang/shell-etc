@@ -7,7 +7,10 @@ tracelog
 net none
 shell none
 private-bin unzip
-private-dev
 private-etc passwd,group,localtime
 hostname unzip
+private-dev
 nosound
+no3d
+blacklist /tmp/.X11-unix
+
