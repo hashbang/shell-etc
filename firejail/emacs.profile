@@ -1,20 +1,17 @@
-# VLC media player profile
-noblacklist ${HOME}/.config/vlc
+# emacs profile
+
+noblacklist ~/.emacs
+noblacklist ~/.emacs.d
 
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
-include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
+
 
 caps.drop all
 netfilter
-nogroups
 nonewprivs
 noroot
+nogroups
 protocol unix,inet,inet6
 seccomp
-shell none
-
-private-bin vlc,cvlc,nvlc,rvlc,qvlc,svlc
-private-dev
-private-tmp
