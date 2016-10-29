@@ -10,6 +10,9 @@ shell none
 # support compressed archives
 private-bin sh,tar,gtar,compress,gzip,lzma,xz,bzip2,lbzip2,lzip,lzop
 private-dev
+nosound
+no3d
 private-etc passwd,group,localtime
 hostname tar
-nosound
+blacklist /tmp/.X11-unix
+
