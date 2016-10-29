@@ -26,6 +26,21 @@ blacklist ${HOME}/.kde/share/config/okularrc
 blacklist ${HOME}/.kde/share/config/okularpartrc
 blacklist ${HOME}/.kde/share/apps/gwenview
 blacklist ${HOME}/.kde/share/config/gwenviewrc
+blacklist ${HOME}/.config/qpdfview
+blacklist ${HOME}/.config/Luminance
+blacklist ${HOME}/.config/synfig
+blacklist ${HOME}/.synfig
+blacklist ${HOME}/.inkscape
+blacklist ${HOME}/.gimp*
+blacklist ${HOME}/.config/zathura
+blacklist ${HOME}/.config/cherrytree
+blacklist ${HOME}/.xpdfrc
+blacklist ${HOME}/.openshot
+blacklist ${HOME}/.openshot_qt
+blacklist ${HOME}/.flowblade
+blacklist ${HOME}/.config/flowblade
+blacklist ${HOME}/.config/eog
+
 
 # Media players
 blacklist ${HOME}/.config/cmus
@@ -61,6 +76,13 @@ blacklist ${HOME}/.config/qutebrowser
 blacklist ${HOME}/.8pecxstudios
 blacklist ${HOME}/.config/brave
 blacklist ${HOME}/.config/inox
+blacklist ${HOME}/.muttrc
+blacklist ${HOME}/.mutt
+blacklist ${HOME}/.mutt/muttrc
+blacklist ${HOME}/.msmtprc
+blacklist ${HOME}/.config/evolution
+blacklist ${HOME}/.local/share/evolution
+blacklist ${HOME}/.cache/evolution
 
 # Instant Messaging
 blacklist ${HOME}/.config/hexchat
@@ -135,6 +157,8 @@ blacklist ${HOME}/.local/share/totem
 blacklist ${HOME}/.local/share/psi+
 blacklist ${HOME}/.local/share/pix
 blacklist ${HOME}/.local/share/gnome-chess
+blacklist ${HOME}/.local/share/qpdfview
+blacklist ${HOME}/.local/share/zathura
 
 # ssh
 blacklist /tmp/ssh-*

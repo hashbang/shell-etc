@@ -2,7 +2,7 @@
 
 # GCC
 blacklist /usr/include
-blacklist /usr/lib/gcc
+#blacklist /usr/lib/gcc	- seems to create problems on Gentoo
 blacklist /usr/bin/gcc*
 blacklist /usr/bin/cpp*
 blacklist /usr/bin/c9*
@@ -20,7 +20,7 @@ blacklist /usr/bin/x86_64-unknown-linux-gnu-gcc*
 # clang/llvm
 blacklist /usr/bin/clang*
 blacklist /usr/bin/llvm*
-blacklist /usb/bin/lldb*
+blacklist /usr/bin/lldb*
 blacklist /usr/lib/llvm*
 
 # tcc - Tiny C Compiler
