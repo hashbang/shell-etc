@@ -31,6 +31,9 @@ profile firejail-default {
 /{,var/}run/user/**/pulse/ rw,
 /{,var/}run/user/**/pulse/** rw,
 /{,var/}run/firejail/mnt/fslogger r,
+/{,var/}run/firejail/appimage r,
+/{,var/}run/firejail/appimage/** r,
+/{,var/}run/firejail/appimage/** ix,
 /{run,dev}/shm/ r,
 /{run,dev}/shm/** rmwk,
 
@@ -82,6 +85,8 @@ profile firejail-default {
 /usr/local/** ix,
 /usr/lib/** ix,
 /usr/games/** ix,
+/opt/ r,
+/opt/** r,
 /opt/** ix,
 #/home/** ix,
 
