@@ -1,20 +1,20 @@
-# VLC media player profile
-noblacklist ${HOME}/.config/vlc
-
+# zathura document viewer profile
+noblacklist ~/.config/zathura
+noblacklist ~/.local/share/zathura
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
+seccomp
+protocol unix
 netfilter
-nogroups
 nonewprivs
 noroot
-protocol unix,inet,inet6
-seccomp
+nogroups
+nosound
 shell none
 
-private-bin vlc,cvlc,nvlc,rvlc,qvlc,svlc
+private-bin zathura
 private-dev
-private-tmp
