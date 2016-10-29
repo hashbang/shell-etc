@@ -1,5 +1,8 @@
-# VLC media player profile
-noblacklist ${HOME}/.config/vlc
+# claws-mail profile
+
+noblacklist ~/.claws-mail
+noblacklist ~/.signature
+noblacklist ~/.gnupg
 
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
@@ -8,13 +11,14 @@ include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
 netfilter
-nogroups
 nonewprivs
 noroot
+nogroups
+nosound
 protocol unix,inet,inet6
 seccomp
 shell none
 
-private-bin vlc,cvlc,nvlc,rvlc,qvlc,svlc
 private-dev
 private-tmp
+

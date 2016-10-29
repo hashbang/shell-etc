@@ -1,20 +1,21 @@
-# VLC media player profile
-noblacklist ${HOME}/.config/vlc
-
+# feh image viewer profile
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
+seccomp
+protocol unix
 netfilter
-nogroups
+net none
 nonewprivs
 noroot
-protocol unix,inet,inet6
-seccomp
+nogroups
+nosound
 shell none
 
-private-bin vlc,cvlc,nvlc,rvlc,qvlc,svlc
+private-bin feh
+whitelist /tmp/.X11-unix
 private-dev
-private-tmp
+private-etc feh
