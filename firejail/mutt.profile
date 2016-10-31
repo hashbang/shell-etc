@@ -2,18 +2,14 @@
 
 # In case GnuPG is called
 noblacklist ~/.gnupg
-mkdir ~/.gnupg
-whitelist ~/.gnupg
 
-# Allow access to mailboxes
-whitelist ~/Mail
-whitelist ~/sent
-whitelist ~/postponed
+# Only allow R/O access to the home directory
+read-only ~/
 
-# Allow access to mutt and msmtp config
-whitelist ~/.muttrc
-whitelist ~/.mutt/
-whitelist ~/.msmtprc
+# Allow write access to mailboxes
+read-write ~/Mail
+read-write ~/sent
+read-write ~/postponed
 
 # Allow executing /usr/sbin/sendmail
 noblacklist /usr/sbin
