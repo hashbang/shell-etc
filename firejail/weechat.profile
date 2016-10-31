@@ -1,9 +1,11 @@
 # Weechat IRC profile
+whitelist   ${HOME}/.dotfiles/weechat
+noblacklist ${HOME}/.dotfiles/weechat
+whitelist   ${HOME}/.weechat
+noblacklist ${HOME}/.weechat
+
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
-
-whitelist ${HOME}/.dotfiles/weechat
-whitelist ${HOME}/.weechat
 
 caps.drop all
 netfilter
