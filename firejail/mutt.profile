@@ -1,10 +1,16 @@
 # Firejail profile for mutt
 
-# In case GnuPG is called
-noblacklist ~/.gnupg
-
 # Only allow R/O access to the home directory
 read-only ~/
+
+# In case GnuPG is called
+noblacklist ~/.gnupg
+read-write  ~/.gnupg
+
+# Permit access to the config files
+noblacklist ~/.mutt
+noblacklist ~/.muttrc
+noblacklist ~/.msmtprc
 
 # Allow write access to mailboxes
 read-write ~/Mail
