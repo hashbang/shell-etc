@@ -1103,9 +1103,11 @@ rsync						install
 rsyslog						install
 rtorrent					install
 ruby						install
+ruby-dev					install
 ruby-paint					install
 ruby-trollop					install
 ruby2.1						install
+ruby2.1-dev:amd64				install
 rubygems-integration				install
 samba-libs:amd64				install
 sbcl						install
