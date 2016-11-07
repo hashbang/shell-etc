@@ -905,6 +905,7 @@ oidentd						install
 openbios-ppc					install
 openbios-sparc					install
 openhackware					install
+openntpd					install
 openssh-blacklist				install
 openssh-blacklist-extra				install
 openssh-client					install
