@@ -67,6 +67,7 @@ ssh/ssh_host_*_key.pub
 unbound/unbound_*.key
 unbound/unbound_*.pem
 *-
+*+
 *.gz
 network/interfaces
 networks
