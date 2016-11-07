@@ -63,3 +63,4 @@ epmd:x:123:
 kvm:x:124:
 unbound:x:125:
 debian-tor:x:127:
+ntpd:x:126:
