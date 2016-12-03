@@ -16,9 +16,9 @@ install_node_version() {
 
 npm() {
   echo "Use yarn instead!" >&2
-  command -v yarn >/dev/null || (
+  if ! command -v yarn >/dev/null; then
     echo 'Run `install_node_version latest` to update Node and install Yarn' >&2
     echo 'You can also specify an alias, such as `lts`, `latest`, etc.' >&2
-  )
+  fi
   return 1
 }
