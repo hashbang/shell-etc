@@ -105,6 +105,7 @@ read-only ${HOME}/.xscreensaver
 
 # The user ~/bin directory can override commands such as ls
 read-only ${HOME}/bin
+read-only ${HOME}/.npm-packages
 
 # top secret
 blacklist ${HOME}/.ssh
