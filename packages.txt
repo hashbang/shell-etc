@@ -539,6 +539,7 @@ libmpc3:amd64					install
 libmpcdec6:amd64				install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
+libmysqlclient18:amd64				install
 libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
@@ -566,6 +567,7 @@ libntlm0:amd64					install
 libnumber-compare-perl				install
 libofa0						install
 libogg0:amd64					install
+libonig2:amd64					install
 libopenal-data					install
 libopenal1:amd64				install
 libopenexr6:amd64				install
@@ -626,6 +628,7 @@ libpython3.4-minimal:amd64			install
 libpython3.4-stdlib:amd64			install
 libqalculate5:amd64				install
 libqalculate5-data				install
+libqdbm14					install
 libqpol1:amd64					install
 libqt4-network:amd64				install
 libqt4-xml:amd64				install
@@ -837,6 +840,7 @@ mtr						install
 multiarch-support				install
 mutt						install
 mutt-patched					install
+mysql-common					install
 nano						install
 ncdu						install
 ncurses-base					install
@@ -928,6 +932,14 @@ pep8						install
 perl						install
 perl-base					install
 perl-modules					install
+php5-cgi					install
+php5-cli					install
+php5-common					install
+php5-curl					install
+php5-fpm					install
+php5-json					install
+php5-mysql					install
+php5-sqlite					install
 pidgin-data					install
 pinentry-curses					install
 pkg-config					install
@@ -1160,6 +1172,7 @@ tcl8.5						install
 tcpd						install
 telnet						install
 tig						install
+time						install
 tmux						install
 toilet						install
 toilet-fonts					install
