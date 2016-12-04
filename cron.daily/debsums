@@ -1,0 +1,23 @@
+#!/bin/sh
+
+debsums="/usr/bin/debsums"
+ignorefile="/etc/debsums-ignore"
+
+[ -x $debsums ] || exit 0
+
+# source our config
+. /etc/default/debsums
+[ "z$CRON_CHECK" = "zdaily" ] || exit 0
+
+# See ionice(1)
+if [ -x /usr/bin/ionice ] &&
+    /usr/bin/ionice -c3 true 2>/dev/null; then
+    IONICE="/usr/bin/ionice -c3"
+fi
+
+exec 3>&1
+
+$IONICE $debsums -cs 2>&1 | egrep -vf "$ignorefile" | tee /proc/self/fd/3 | sed 's/^debsums: //' | logger -t debsums
+
+# Exit with a normal status code even if errors (which could be ignored) were found
+exit 0
