@@ -1172,6 +1172,7 @@ tcl8.5						install
 tcpd						install
 telnet						install
 tig						install
+time						install
 tmux						install
 toilet						install
 toilet-fonts					install
