@@ -40,8 +40,8 @@ iface he-ipv6 inet6 v4tunnel
 #  It is used for providing IPv4 networking to users
 # The network 2001:DB8:f00:b1a::/64 is reserved for documentation (RFC3849)
 #  and stands for the server's globally-reachable IPv6 subnet
-auto br0
-iface br0 inet static
+auto br-users
+iface br-users inet static
 	address 172.19.42.1
 	netmask 255.255.255.0
 	# disable Spanning Tree Protocol
@@ -51,6 +51,6 @@ iface br0 inet static
 	# no forwarding delay
 	bridge_fd 0
 
-iface br0 inet6 static
+iface br-users inet6 static
 	address 2001:DB8:f00:b1a::
 	netmask 64

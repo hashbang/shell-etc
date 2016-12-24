@@ -45,7 +45,7 @@ function get_user_ipv6() {
 #  and is attached to the br0 bridge
 #  (configurable as USER_BR in /etc/default/user_netns)
 
-USER_BR="br0"
+USER_BR="br-users"
 if [ -f "/etc/default/user_netns" ]; then
     source /etc/default/user_netns
 fi
