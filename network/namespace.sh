@@ -25,6 +25,13 @@ function die() {
     exit 1
 }
 
+# Construct the user's IPv6, as {server_prefix}::{uid}
+function get_user_ipv6() {
+    HEX_UID=$(echo "obase=16; ${UID}" | bc)
+    IPV6_SUFFIX=$(echo "$HEX_UID" | rev | fold -w4 | paste -sd: | rev)
+    return "${IPV6_PREFIX}::${IPV6_SUFFIX}"
+}
+
 # SYNOPSIS: This script constructs and configures a user namespace
 #           for the user currently logging in.
 #
@@ -43,6 +50,9 @@ if [ -f "/etc/default/user_netns" ]; then
     source /etc/default/user_netns
 fi
 
+if [ -z "${IPV6_PREFIX}" ]; then
+    die "No IPv6 prefix defined in configuration"
+fi
 
 # If the user's netns exists, nothing to do
 if [ -f "/var/run/netns/user-${PAM_USER}" ]; then
@@ -93,7 +103,6 @@ if ! ip netns exec "user-${PAM_USER}" \
     die "Failed to configure IPv4 for ${PAM_USER}"
 fi
 
-# TODO: Construct the user's IPv6 from userdb info
 if ! ip netns exec "user-${PAM_USER}" \
      ip addr add dev "veth" get_user_ip()/64; then
     die "Failed to configure IPv6 for ${PAM_USER}"
