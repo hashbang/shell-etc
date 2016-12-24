@@ -36,9 +36,11 @@ if [ -f "/etc/default/user_netns" ]; then
     source /etc/default/user_netns
 fi
 
+
 # If the user's netns exists, nothing to do
 if [ -f "/var/run/netns/user-${PAM_USER}" ]; then
     log info "User ${PAM_USER} already has a netns"
+    exit 0
 fi
 
 
