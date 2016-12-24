@@ -3,7 +3,7 @@
 #          Read the pam_exec(8) manpage before editing this script.
 
 # root has no network namespace
-if [ "$PAM_USER" == root ]; then
+if [ "$PAM_USER" = root ]; then
     exit 0
 fi
 
@@ -11,30 +11,33 @@ fi
 # UID ranges defined by the Debian policy manual:
 #  https://www.debian.org/doc/debian-policy/ch-opersys.html#s9.2.2
 UID=$(getent passwd "$PAM_USER" | cut -d: -f3)
-if [ $UID -lt 1000 ] || [ $UID -ge 60000 -a $UID -lt 65536 ]; then
+if [ "$UID" -lt 1000 ]; then
+    exit 0
+fi
+if [ "$UID" -ge 60000 ] && [ "$UID" -lt 65536 ]; then
     exit 0
 fi
 
 # Check the logger manpage for valid priority levels
-function log() {
+log() {
     logger --id=$$ --priority auth."$1" "$2"
 }
 
-function die() {
+die() {
     log crit "$@"
     exit 1
 }
 
 # Construct the user's IPv6, as {server_prefix}::{uid}
-function get_user_ipv6() {
+get_user_ipv6() {
     HEX_UID=$(echo "obase=16; ${UID}" | bc)
     IPV6_SUFFIX=$(echo "$HEX_UID" | rev | fold -w4 | paste -sd: | rev)
-    return "${IPV6_PREFIX}::${IPV6_SUFFIX}"
+    echo "${IPV6_PREFIX}::${IPV6_SUFFIX}"
 }
 
 # Execute some command in the user's netns
-function in_ns() {
-    return ip netns exec "user-${PAM_USER}" $@
+in_ns() {
+    ip netns exec "user-${PAM_USER}" "$@"
 }
 
 # SYNOPSIS: This script constructs and configures a user namespace
@@ -52,7 +55,7 @@ function in_ns() {
 
 USER_BR="br-users"
 if [ -f "/etc/default/user_netns" ]; then
-    source /etc/default/user_netns
+    . /etc/default/user_netns
 fi
 
 if [ -z "${IPV6_PREFIX}" ]; then
@@ -100,7 +103,7 @@ if ! in_ns dhclient "veth"; then
     die "Failed to configure IPv4 for ${PAM_USER}"
 fi
 
-if ! in_ns ip addr add dev "veth" "get_user_ip()/64"; then
+if ! in_ns ip addr add dev "veth" "$(get_user_ip)/64"; then
     die "Failed to configure IPv6 for ${PAM_USER}"
 fi
 
