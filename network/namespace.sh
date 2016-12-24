@@ -32,6 +32,11 @@ function get_user_ipv6() {
     return "${IPV6_PREFIX}::${IPV6_SUFFIX}"
 }
 
+# Execute some command in the user's netns
+function in_ns() {
+    return ip netns exec "user-${PAM_USER}" $@
+}
+
 # SYNOPSIS: This script constructs and configures a user namespace
 #           for the user currently logging in.
 #
@@ -68,8 +73,7 @@ if ! ip netns add "user-${PAM_USER}"; then
     die "Failed to create netns for ${PAM_USER}"
 fi
 
-if ! ip netns exec "user-${PAM_USER}" \
-     ip link set dev lo up; then
+if ! in_ns ip link set dev lo up; then
     die "Failed to create a loopback interface for ${PAM_USER}"
 fi
 
@@ -84,8 +88,7 @@ if ! ip link set "userbr-${PAM_USER}-peer" netns "user-${PAM_USER}"; then
 fi
 
 # Renaming the interface should happen before any configuration occurs
-if ! ip netns exec "user-${PAM_USER}" \
-     ip link set dev "userbr-${PAM_USER}-peer" name "veth"; then
+if ! in_ns ip link set dev "userbr-${PAM_USER}-peer" name "veth"; then
     die "Failed to rename interface for ${PAM_USER}"
 fi
 
@@ -93,18 +96,11 @@ if ! ip link set "userbr-${PAM_USER}" master "$USER_BR"; then
     die "Failed to add the veth for ${PAM_USER} to the bridge"
 fi
 
-if ! ip netns exec "user-${PAM_USER}" \
-     ip link set dev "userbr-${PAM_USER}" name "veth"; then
-    die "Failed to rename interface for ${PAM_USER}"
-fi
-
-if ! ip netns exec "user-${PAM_USER}" \
-     dhclient "veth"; then
+if ! in_ns dhclient "veth"; then
     die "Failed to configure IPv4 for ${PAM_USER}"
 fi
 
-if ! ip netns exec "user-${PAM_USER}" \
-     ip addr add dev "veth" get_user_ip()/64; then
+if ! in_ns ip addr add dev "veth" "get_user_ip()/64"; then
     die "Failed to configure IPv6 for ${PAM_USER}"
 fi
 
