@@ -104,12 +104,6 @@ if ! in_ns ip addr add dev "veth" "get_user_ip()/64"; then
     die "Failed to configure IPv6 for ${PAM_USER}"
 fi
 
-# TODO: Construct the server's own IPv6 from userdb info
-if ! ip netns exec "user-${PAM_USER}" \
-     ip route add dev "veth" default via get_server_ipv6(); then
-    die "Failed to configure IPv6 for ${PAM_USER}"
-fi
-
 # We reached the end without error: no cleanup on exit
 trap - QUIT
 exit 0
