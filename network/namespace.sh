@@ -7,6 +7,13 @@ if [ "$PAM_USER" == root ]; then
     exit 0
 fi
 
+# System users have no network namespace
+# UID ranges defined by the Debian policy manual:
+#  https://www.debian.org/doc/debian-policy/ch-opersys.html#s9.2.2
+UID=$(getent passwd "$PAM_USER" | cut -d: -f3)
+if [ $UID -lt 1000 ] || [ $UID -ge 60000 -a $UID -lt 65536 ]; then
+    exit 0
+fi
 
 # Check the logger manpage for valid priority levels
 function log() {
