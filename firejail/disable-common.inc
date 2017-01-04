@@ -105,6 +105,7 @@ read-only ${HOME}/.xscreensaver
 
 # Make directories that can override $PATH or libs read-only
 read-only ${HOME}/bin
+read-only ${HOME}/.gem
 read-only ${HOME}/.npm-packages
 
 # top secret
