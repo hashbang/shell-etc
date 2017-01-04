@@ -107,6 +107,7 @@ read-only ${HOME}/.xscreensaver
 read-only ${HOME}/bin
 read-only ${HOME}/.gem
 read-only ${HOME}/.local
+read-only ${HOME}/.luarocks
 read-only ${HOME}/.npm-packages
 
 # top secret
