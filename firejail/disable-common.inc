@@ -103,8 +103,11 @@ read-only ${HOME}/.reportbugrc
 read-only ${HOME}/.xmonad
 read-only ${HOME}/.xscreensaver
 
-# The user ~/bin directory can override commands such as ls
+# Make directories that can override $PATH or libs read-only
 read-only ${HOME}/bin
+read-only ${HOME}/.gem
+read-only ${HOME}/.local
+read-only ${HOME}/.luarocks
 read-only ${HOME}/.npm-packages
 
 # top secret
