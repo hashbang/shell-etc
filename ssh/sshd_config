@@ -88,3 +88,7 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
+
+# When using -R with `ssh` client, allow binding to other interfaces when
+# specified. Default is loopback only.
+GatewayPorts clientspecified
