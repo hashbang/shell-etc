@@ -6,7 +6,6 @@ include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-devel.inc
 
 netfilter
-nonewprivs
 
 whitelist ${DOWNLOADS}
 mkdir ~/.config/vivaldi
@@ -15,10 +14,10 @@ mkdir ~/.cache/vivaldi
 whitelist ~/.cache/vivaldi
 include /etc/firejail/whitelist-common.inc
 
-# lastpass, keepassx
-whitelist ~/.keepassx
-whitelist ~/.config/keepassx
-whitelist ~/keepassx.kdbx
+# lastpass, keepass
+# for keepass we additionally need to whitelist our .kdbx password database
+whitelist ~/.keepass
+whitelist ~/.config/keepass
+whitelist ~/.config/KeePass
 whitelist ~/.lastpass
 whitelist ~/.config/lastpass
-

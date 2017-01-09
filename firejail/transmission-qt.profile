@@ -14,9 +14,9 @@ noroot
 nosound
 protocol unix,inet,inet6
 seccomp
+shell none
 tracelog
 
-shell none
 private-bin transmission-qt
-whitelist /tmp/.X11-unix
 private-dev
+private-tmp
