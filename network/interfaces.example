@@ -1,0 +1,37 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+# The networks 192.0.2.0/24 (TEST-NET-1) and 203.0.113.0/24 (TEST-NET-3)
+#  are reserved for documentation, per RFC5737
+auto eth0
+iface eth0 inet static
+	address 192.0.2.42
+	netmask 255.255.255.0
+	gateway 192.0.2.254
+
+# Assuming that native IPv6 is available:
+iface eth0 inet6 static
+	address 2001:DB8:f00d:b1a::10ca1
+	netmask 64
+
+# Otherwise, using a Hurricane Electrics tunnel:
+auto he-ipv6
+iface he-ipv6 inet6 v4tunnel
+	# Our IPv6 address for routing
+	address 2001:DB8:f00d:b1a::2
+	gateway 2001:DB8:f00d:b1a::1
+	netmask 64
+	# The tunnel endpoints
+	endpoint 203.0.113.226
+	local    192.0.2.42
+	ttl 255
+	# Sad hack
+	up   ip a add dev $IFACE 2001:DB8:f00:b1a::/64
+	down ip a del dev $IFACE 2001:DB8:f00:b1a::/64
