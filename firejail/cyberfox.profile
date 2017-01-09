@@ -1,5 +1,4 @@
 # Firejail profile for Cyberfox (based on Mozilla Firefox)
-
 noblacklist ~/.8pecxstudios
 noblacklist ~/.cache/8pecxstudios
 include /etc/firejail/disable-common.inc
@@ -30,13 +29,13 @@ whitelist ~/.config/gnome-mplayer
 whitelist ~/.cache/gnome-mplayer/plugin
 whitelist ~/.pki
 
-# lastpass, keepassx
-whitelist ~/.keepassx
-whitelist ~/.config/keepassx
-whitelist ~/keepassx.kdbx
+# lastpass, keepass
+# for keepass we additionally need to whitelist our .kdbx password database
+whitelist ~/.keepass
+whitelist ~/.config/keepass
+whitelist ~/.config/KeePass
 whitelist ~/.lastpass
 whitelist ~/.config/lastpass
-
 
 #silverlight
 whitelist ~/.wine-pipelight
