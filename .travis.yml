@@ -1,0 +1,9 @@
+sudo: False
+
+addons:
+  apt:
+    packages:
+      - etckeeper
+      - git
+
+script: _tests/check.sh
