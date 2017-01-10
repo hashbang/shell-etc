@@ -16,6 +16,6 @@ git status
 # Check that only ownership changed
 if git diff HEAD | grep -E '^[+-][^+-]' | \
 	grep -q -Ev '^[+-]maybe (chgrp|chown)' ; then
-    git diff HEAD
+    git diff --word-diff HEAD
     exit 1
 fi
