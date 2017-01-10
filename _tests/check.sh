@@ -2,6 +2,7 @@
 
 pwd
 git status
+etckeeper --version || apt-cache policy etckeeper
 
 # Apply the etckeeper state
 _tests/init.sh
