@@ -7,15 +7,15 @@ git status
 _tests/init.sh
 
 # Update the etckeeper state
-# (LANG=C is required as locale influences sorting order)
+# (LANG=C is required as the locale influences sorting order)
 LANG=C etckeeper pre-commit -d .
 
-git diff --cached
+git diff HEAD
 git status
 
 # Check that only ownership changed
-if git diff --cached | grep -E '^[+-][^+-]' | \
+if git diff HEAD | grep -E '^[+-][^+-]' | \
 	grep -q -Ev '^[+-]maybe (chgrp|chown)' ; then
-    git diff --cached
+    git diff HEAD
     exit 1
 fi
