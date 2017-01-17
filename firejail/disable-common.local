@@ -1,0 +1,7 @@
+# This file is meant for local customizations of disable-common.inc
+
+# Make directories that can override $PATH or libs read-only
+read-only ${HOME}/.gem
+read-only ${HOME}/.local
+read-only ${HOME}/.luarocks
+read-only ${HOME}/.npm-packages

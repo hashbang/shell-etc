@@ -1,5 +1,5 @@
 # git profile
-
+quiet
 noblacklist ~/.gitconfig
 noblacklist ~/.ssh
 noblacklist ~/.gnupg
@@ -12,16 +12,17 @@ include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-passwdmgr.inc
 
-quiet
-
 caps.drop all
 netfilter
+nogroups
 nonewprivs
 noroot
-nogroups
 nosound
+no3d
 protocol unix,inet,inet6
 seccomp
 shell none
+
+blacklist /tmp/.X11-unix
 
 private-dev
