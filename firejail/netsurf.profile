@@ -1,5 +1,4 @@
 # Firejail profile for Mozilla Firefox (Iceweasel in Debian)
-
 noblacklist ~/.config/netsurf
 noblacklist ~/.cache/netsurf
 include /etc/firejail/disable-common.inc
@@ -20,10 +19,11 @@ whitelist ~/.config/netsurf
 mkdir ~/.cache/netsurf
 whitelist ~/.cache/netsurf
 
-# lastpass, keepassx
-whitelist ~/.keepassx
-whitelist ~/.config/keepassx
-whitelist ~/keepassx.kdbx
+# lastpass, keepass
+# for keepass we additionally need to whitelist our .kdbx password database
+whitelist ~/.keepass
+whitelist ~/.config/keepass
+whitelist ~/.config/KeePass
 whitelist ~/.lastpass
 whitelist ~/.config/lastpass
 
