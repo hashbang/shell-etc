@@ -1,1 +1,1 @@
-export MANPATH="$(manpath)"
+export MANPATH="${MANPATH:-$(manpath)}"
