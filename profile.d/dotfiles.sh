@@ -1,4 +1,14 @@
 ###
+# check if the dotfiles must be recreated
+###
+
+# Check both ~/.dotfiles and ~/.bash_profile as we
+# don't want to run if the user has “old style” dotfiles.
+if [ -d ~/.dotfiles ] || [ -f ~/.bash_profile ]; then
+    return
+fi
+
+###
 # pre-clone
 ###
 
@@ -17,7 +27,7 @@ EOF
 # cloning
 ###
 
-if ! git clone --recursive https://github.com/hashbang/dotfiles .dotfiles; then
+if ! git clone --recursive https://github.com/hashbang/dotfiles ~/.dotfiles; then
     cat >&2 <<EOF
 CRITICAL: Failed to clone your dotfiles from
           https://github.com/hashbang/dotfiles
@@ -26,7 +36,7 @@ EOF
     return
 fi
 
-if ! git -C .dotfiles verify-commit HEAD; then
+if ! git -C ~/.dotfiles verify-commit HEAD; then
     echo "CRITICAL: Failed to verify signature on dotfiles" >&2
     rm -rf ~/.dotfiles
     return
@@ -40,9 +50,7 @@ trap - EXIT
 # stowing
 ###
 
-rm .bash_profile
-mkdir -p .config .local/bin
-cd .dotfiles
+cd ~/.dotfiles
 stow bash git gnupg hashbang ssh tmux weechat zsh
 cd
 
@@ -58,11 +66,3 @@ mkdir -p ~/Mail/{cur,new,tmp}
 
 sed -i "s/{date}/$(date '+%a, %-d %b %Y %T %Z')/g" Mail/new/msg.welcome
 sed -i "s/{username}/$(whoami)/g"                  Mail/new/msg.welcome
-
-
-###
-# Hand over control to the actual dotfiles
-###
-
-source .bash_profile
-source .bashrc
