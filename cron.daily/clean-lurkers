@@ -4,8 +4,8 @@
 DAYS=30
 
 for range in 1000-59999 65536-4294967293; do
-    for user in lastlog -b "$DAYS" -t "$(($DAYS + 2))" -u "$RANGE" | \
-                  tail -n +2 | cut -d' ' -f1; do
+    for user in $(lastlog -b "$DAYS" -t "$((DAYS + 2))" -u "$range" | \
+                  tail -n +2 | cut -d' ' -f1); do
         if [ ! -f "/home/${user}/.keep-account" ]; then
             loginctl terminate-user "$user"
         fi
