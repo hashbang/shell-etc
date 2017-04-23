@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily job for /etc/cron.daily
+RefuseManualStart=yes
+RefuseManualStop=yes
+ConditionDirectoryNotEmpty=/etc/cron.daily
+
+[Service]
+Type=oneshot
+IgnoreSIGPIPE=no
+WorkingDirectory=/
+ExecStart=/bin/run-parts --report /etc/cron.daily
