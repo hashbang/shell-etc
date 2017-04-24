@@ -3,14 +3,11 @@
 
 DAYS=30
 
-USERS=`
-lastlog -b $DAYS -u 3000-65533         | \
-    tail -n +2                         | \
-    awk '{print $1}'
-`
-
-for i in $USERS; do
-    if [ ! -f /home/$i/.keep-account ]; then
-	loginctl terminate-user $i
-    fi
+for range in 1000-59999 65536-4294967293; do
+    for user in lastlog -b "$DAYS" -t "$(($DAYS + 2))" -u "$RANGE" | \
+                  tail -n +2 | cut -d' ' -f1; do
+        if [ ! -f "/home/${user}/.keep-account" ]; then
+            loginctl terminate-user "$user"
+        fi
+    done
 done
