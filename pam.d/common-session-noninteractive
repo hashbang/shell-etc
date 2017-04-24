@@ -14,6 +14,9 @@ session	required	pam_env.so
 session	required	pam_namespace.so  unmnt_remnt
 session	required	pam_limits.so
 
+# Setting up HTTP-related symlinks
+session optional	pam_exec.so	log=/dev/log /etc/nginx/symlinks.sh
+
 # Passwd database handling
 session	sufficient	pam_sss.so
 session	sufficient	pam_unix.so

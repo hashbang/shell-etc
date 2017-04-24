@@ -1,0 +1,4 @@
+# > v1.11.5 (jessie) is required for ngx_stream_ssl_preread_module
+Package: nginx
+Pin: origin nginx.org
+Pin-Priority: 990
