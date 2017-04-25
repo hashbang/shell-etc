@@ -7,20 +7,14 @@ include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
-netfilter
-net none
-nogroups
-nonewprivs
-noroot
-nosound
-shell none
 seccomp
 protocol unix
+netfilter
+nonewprivs
+noroot
+nogroups
+nosound
+shell none
 
 private-bin zathura
 private-dev
-private-etc fonts
-private-tmp
-
-read-only ~/
-read-write ~/.local/share/zathura/

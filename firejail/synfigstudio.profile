@@ -11,9 +11,7 @@ nonewprivs
 noroot
 protocol unix
 seccomp
-
-noexec ${HOME}
-noexec /tmp
-
 private-dev
 private-tmp
+noexec ${HOME}
+noexec /tmp

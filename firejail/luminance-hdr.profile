@@ -5,19 +5,17 @@ include /etc/firejail/disable-programs.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
-ipc-namespace
 netfilter
-nogroups
+protocol unix
 nonewprivs
 noroot
-nosound
-protocol unix
 seccomp
 shell none
 tracelog
-
-noexec ${HOME}
-noexec /tmp
-
 private-tmp
 private-dev
+noexec ${HOME}
+noexec /tmp
+nogroups
+nosound
+ipc-namespace
