@@ -1,4 +1,5 @@
 # keepassx password manager profile
+
 noblacklist ${HOME}/.config/keepassx
 noblacklist ${HOME}/.keepassx
 noblacklist ${HOME}/keepassx.kdbx

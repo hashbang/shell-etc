@@ -1,4 +1,4 @@
-# FlowBlade profile
+# OpenShot profile
 noblacklist ${HOME}/.flowblade
 noblacklist ${HOME}/.config/flowblade
 include /etc/firejail/disable-common.inc

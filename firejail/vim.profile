@@ -1,4 +1,5 @@
 # vim profile
+
 noblacklist ~/.vim
 noblacklist ~/.vimrc
 noblacklist ~/.viminfo
@@ -9,8 +10,8 @@ include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
 netfilter
-nogroups
 nonewprivs
 noroot
+nogroups
 protocol unix,inet,inet6
 seccomp
