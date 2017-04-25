@@ -16,5 +16,8 @@ For instance, the `hashbang-admins.gpg` keyring can be
 generated as follows, from the list of keys in the `pass(1)`
 password database:
 
-	cat ../../password-store/.gpg-id | cut -d' ' -f1 | \
-		xargs gpg --export --export-options export-minimal,export-clean -o hashbang-admins.gpg
+  export GNUPGHOME=$(mktemp -d);
+  cat ~/.password-store/Hashbang/.gpg-id | cut -d' ' -f1 | \
+    xargs gpg --keyserver pgp.mit.edu --recv-key
+  gpg --export > hashbang-admins.gpg
+  unzer GNUPGHOME
