@@ -1,4 +1,5 @@
 # claws-mail profile
+
 noblacklist ~/.claws-mail
 noblacklist ~/.signature
 noblacklist ~/.gnupg
