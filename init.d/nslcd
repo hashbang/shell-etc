@@ -96,7 +96,7 @@ k5start_stop()
   if [ "$K5START_START" = "yes" ]
   then
     log_daemon_msg "Stopping $K5START_DESC" "k5start"
-    start-stop-daemon --stop --oknodo --pidfile $K5START_PIDFILE
+    start-stop-daemon --stop --oknodo --retry 10 --pidfile $K5START_PIDFILE
     log_end_msg $?
     # remove any left behind files
     [ -n "$K5START_PIDFILE" ] && rm -f $K5START_PIDFILE
@@ -129,7 +129,7 @@ start)
 stop)
   # stop nslcd
   log_daemon_msg "Stopping $NSLCD_DESC" "$NSLCD_NAME"
-  start-stop-daemon --stop --oknodo \
+  start-stop-daemon --stop --oknodo --retry 10 \
                     --pidfile $NSLCD_PIDFILE \
                     --name "$NSLCD_NAME"
   log_end_msg $?

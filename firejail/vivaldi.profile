@@ -14,10 +14,10 @@ mkdir ~/.cache/vivaldi
 whitelist ~/.cache/vivaldi
 include /etc/firejail/whitelist-common.inc
 
-# lastpass, keepass
-# for keepass we additionally need to whitelist our .kdbx password database
-whitelist ~/.keepass
-whitelist ~/.config/keepass
-whitelist ~/.config/KeePass
+# lastpass, keepassx
+whitelist ~/.keepassx
+whitelist ~/.config/keepassx
+whitelist ~/keepassx.kdbx
 whitelist ~/.lastpass
 whitelist ~/.config/lastpass
+

@@ -42,7 +42,7 @@ case "$1" in
 
     stop)
         log_daemon_msg "Stopping $DESC" "$NAME"
-        if start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE --name $NAME; then
+        if start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE --name $NAME --retry 5; then
             $HELPER resolvconf_stop
             log_end_msg 0
         else

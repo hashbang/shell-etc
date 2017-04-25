@@ -3,16 +3,15 @@ quiet
 ignore noroot
 include /etc/firejail/default.profile
 
-blacklist /tmp/.X11-unix
-
-hostname unrar
-net none
-no3d
-nosound
-shell none
 tracelog
-
+net none
+shell none
 private-bin unrar
 private-dev
+nosound
+no3d
 private-etc passwd,group,localtime
+hostname unrar
 private-tmp
+blacklist /tmp/.X11-unix
+

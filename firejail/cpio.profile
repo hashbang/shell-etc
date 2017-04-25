@@ -16,7 +16,6 @@ shell none
 tracelog
 net none
 nosound
-no3d
 
-blacklist /tmp/.X11-unix
+
 
