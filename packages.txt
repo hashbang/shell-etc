@@ -77,6 +77,7 @@ debhelper					install
 debian-archive-keyring				install
 debian-keyring					install
 debianutils					install
+debsums						install
 devscripts					install
 dh-lua						install
 dh-python					install
@@ -383,6 +384,7 @@ libffi6:amd64					install
 libfftw3-double3:amd64				install
 libfile-fcntllock-perl				install
 libfile-find-rule-perl				install
+libfile-fnmatch-perl				install
 libflac8:amd64					install
 libflite1:amd64					install
 libfontconfig1:amd64				install
