@@ -1,7 +1,0 @@
-[Install]
-WantedBy=multi-user.target
-
-[Unit]
-Description=Simulates cron, limited to /etc/cron.* 
-Requires=crontab@hour.timer crontab@day.timer
-Requires=crontab@week.timer crontab@month.timer

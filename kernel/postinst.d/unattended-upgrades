@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if [ -d /var/run ]; then
-   touch /var/run/reboot-required
-fi
