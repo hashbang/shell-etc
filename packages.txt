@@ -1007,6 +1007,7 @@ python-ndg-httpsclient				install
 python-netaddr					install
 python-networkx					install
 python-newt					install
+python-networkx					install
 python-nose					install
 python-numpy					install
 python-oauth					install
