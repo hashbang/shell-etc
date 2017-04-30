@@ -9,16 +9,17 @@ include /etc/firejail/disable-devel.inc
 include /etc/firejail/disable-passwdmgr.inc
 
 caps.drop all
+netfilter
 nonewprivs
 nogroups
 noroot
-private-dev
+nosound
 protocol unix
 seccomp
-nosound
+shell none
+tracelog
 
-#Experimental:
-#net none
-#shell none
-#private-bin okular,kbuildsycoca4,kbuildsycoca5
-#private-etc X11
+# private-bin okular,kbuildsycoca4,kbuildsycoca5  
+# private-etc X11
+private-dev
+private-tmp
