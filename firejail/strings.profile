@@ -2,9 +2,11 @@
 quiet
 ignore noroot
 include /etc/firejail/default.profile
-tracelog
-net none
-shell none
-private-dev
-nosound
 
+net none
+nosound
+shell none
+tracelog
+private-dev
+no3d
+blacklist /tmp/.X11-unix

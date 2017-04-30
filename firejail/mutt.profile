@@ -1,4 +1,13 @@
 # mutt email client profile
+read-only ~/
+
+# In case GnuPG is called
+read-write  ~/.gnupg
+
+# Allow write access to mailboxes
+read-write ~/Mail
+read-write ~/sent
+read-write ~/postponed
 
 noblacklist ~/.muttrc
 noblacklist ~/.mutt
@@ -21,6 +30,10 @@ noblacklist ~/.emacs
 noblacklist ~/.emacs.d
 noblacklist ~/.signature
 noblacklist ~/.bogofilter
+noblacklist ~/.msmtprc
+
+# Allow executing /usr/sbin/sendmail
+noblacklist /usr/sbin
 
 include /etc/firejail/disable-common.inc
 include /etc/firejail/disable-programs.inc
@@ -33,8 +46,11 @@ nogroups
 nonewprivs
 noroot
 nosound
+no3d
 protocol unix,inet,inet6
 seccomp
 shell none
+
+blacklist /tmp/.X11-unix
 
 private-dev
