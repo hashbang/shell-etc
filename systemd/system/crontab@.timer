@@ -1,9 +1,0 @@
-[Unit]
-Description=%Ily timer simulating /etc/cron.%Ily
-PartOf=crontab.target
-RefuseManualStart=yes
-RefuseManualStop=yes
-
-[Timer]
-OnCalendar=1 %I
-Persistent=yes

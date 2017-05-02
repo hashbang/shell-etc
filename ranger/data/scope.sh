@@ -1,1 +1,0 @@
-/usr/share/pyshared/ranger/data/scope.sh

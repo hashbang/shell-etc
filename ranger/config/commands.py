@@ -1,1 +1,0 @@
-/usr/share/pyshared/ranger/config/commands.py
