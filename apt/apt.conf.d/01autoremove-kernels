@@ -2,14 +2,25 @@
 APT::NeverAutoRemove
 {
    "^linux-image-3\.16\.0-4-amd64$";
+   "^linux-image-4\.9\.0-0\.bpo\.2-amd64$";
    "^linux-headers-3\.16\.0-4-amd64$";
+   "^linux-headers-4\.9\.0-0\.bpo\.2-amd64$";
    "^linux-image-extra-3\.16\.0-4-amd64$";
+   "^linux-image-extra-4\.9\.0-0\.bpo\.2-amd64$";
    "^linux-signed-image-3\.16\.0-4-amd64$";
+   "^linux-signed-image-4\.9\.0-0\.bpo\.2-amd64$";
    "^kfreebsd-image-3\.16\.0-4-amd64$";
+   "^kfreebsd-image-4\.9\.0-0\.bpo\.2-amd64$";
    "^kfreebsd-headers-3\.16\.0-4-amd64$";
+   "^kfreebsd-headers-4\.9\.0-0\.bpo\.2-amd64$";
    "^gnumach-image-3\.16\.0-4-amd64$";
+   "^gnumach-image-4\.9\.0-0\.bpo\.2-amd64$";
    "^.*-modules-3\.16\.0-4-amd64$";
+   "^.*-modules-4\.9\.0-0\.bpo\.2-amd64$";
    "^.*-kernel-3\.16\.0-4-amd64$";
+   "^.*-kernel-4\.9\.0-0\.bpo\.2-amd64$";
    "^linux-backports-modules-.*-3\.16\.0-4-amd64$";
+   "^linux-backports-modules-.*-4\.9\.0-0\.bpo\.2-amd64$";
    "^linux-tools-3\.16\.0-4-amd64$";
+   "^linux-tools-4\.9\.0-0\.bpo\.2-amd64$";
 };
