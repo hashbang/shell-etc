@@ -803,6 +803,7 @@ libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
 linux-image-4.9.0-0.bpo.2-amd64			deinstall
+linux-image-4.9.0-0.bpo.3-amd64			install
 linux-libc-dev:amd64				install
 lm-sensors					install
 locales						install
@@ -930,8 +931,8 @@ pep8						install
 perl						install
 perl-base					install
 perl-modules					install
-php5-cgi					deinstall
-php5-cli					deinstall
+php5-cgi					hold
+php5-cli					hold
 php5-common					deinstall
 php5-curl					deinstall
 php5-fpm					deinstall
