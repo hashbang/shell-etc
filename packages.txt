@@ -447,6 +447,7 @@ libheimbase1-heimdal:amd64			install
 libheimntlm0-heimdal:amd64			install
 libhogweed2:amd64				install
 libhx509-5-heimdal:amd64			install
+libice6:amd64					deinstall
 libicu52:amd64					install
 libidn11:amd64					install
 libiec61883-0:amd64				install
@@ -539,7 +540,6 @@ libmpc3:amd64					install
 libmpcdec6:amd64				install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
-libmysqlclient18:amd64				deinstall
 libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
@@ -549,13 +549,16 @@ libnet-idn-encode-perl				install
 libnet-ip-perl					install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
+libnet1:amd64					deinstall
 libnetfilter-acct1:amd64			install
 libnetpbm10					install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
 libnfnetlink0:amd64				install
 libnice10:amd64					install
+libnids1.21					deinstall
 libnl-3-200:amd64				install
+libnl-genl-3-200:amd64				deinstall
 libnl-route-3-200:amd64				install
 libnpth0:amd64					install
 libnspr4:amd64					install
@@ -674,7 +677,9 @@ libsigc++-2.0-0c2a:amd64			install
 libsigsegv2:amd64				install
 libslang2:amd64					install
 libslv2-9					install
+libsm6:amd64					deinstall
 libsmartcols1:amd64				install
+libsmi2ldbl:amd64				deinstall
 libsndfile1:amd64				install
 libsocket6-perl					install
 libsoundtouch0:amd64				install
@@ -756,8 +761,12 @@ libwbclient0:amd64				install
 libwildmidi-config				install
 libwildmidi1:amd64				install
 libwind0-heimdal:amd64				install
+libwireshark-data				deinstall
+libwireshark5:amd64				deinstall
+libwiretap4:amd64				deinstall
 libwmf0.2-7:amd64				install
 libwrap0:amd64					install
+libwsutil4:amd64				deinstall
 libx11-6:amd64					install
 libx11-data					install
 libx11-xcb1:amd64				install
@@ -785,6 +794,7 @@ libxinerama1:amd64				install
 libxml2:amd64					install
 libxml2-dev:amd64				install
 libxmlrpc-core-c3				install
+libxmu6:amd64					deinstall
 libxmuu1:amd64					install
 libxpm4:amd64					install
 libxrandr2:amd64				install
@@ -792,6 +802,7 @@ libxrender1:amd64				install
 libxshmfence1:amd64				install
 libxslt1-dev:amd64				install
 libxslt1.1:amd64				install
+libxt6:amd64					deinstall
 libxtables10					install
 libxv1:amd64					install
 libxvidcore4:amd64				install
@@ -803,6 +814,7 @@ libzvbi-common					install
 libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
+linux-image-4.9.0-0.bpo.2-amd64			deinstall
 linux-image-4.9.0-0.bpo.3-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
@@ -832,6 +844,8 @@ mat						install
 mawk						install
 mc						install
 mc-data						install
+mercurial					deinstall
+mercurial-common				deinstall
 mime-support					install
 mosh						install
 mount						install
@@ -840,7 +854,6 @@ mtr						install
 multiarch-support				install
 mutt						install
 mutt-patched					install
-mysql-common					deinstall
 nano						install
 ncdu						install
 ncurses-base					install
@@ -932,14 +945,8 @@ pep8						install
 perl						install
 perl-base					install
 perl-modules					install
-php5-cgi					deinstall
-php5-cli					deinstall
 php5-common					install
-php5-curl					deinstall
-php5-fpm					deinstall
 php5-json					install
-php5-mysql					deinstall
-php5-sqlite					deinstall
 pidgin-data					install
 pinentry-curses					install
 pkg-config					install
@@ -1208,6 +1215,7 @@ wget						install
 whiptail					install
 whois						install
 wyrd						install
+x11-common					deinstall
 xauth						install
 xdg-user-dirs					install
 xkb-data					install
