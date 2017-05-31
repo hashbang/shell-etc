@@ -567,7 +567,7 @@ libntlm0:amd64					install
 libnumber-compare-perl				install
 libofa0						install
 libogg0:amd64					install
-libonig2:amd64					deinstall
+libonig2:amd64					install
 libopenal-data					install
 libopenal1:amd64				install
 libopenexr6:amd64				install
@@ -628,7 +628,7 @@ libpython3.4-minimal:amd64			install
 libpython3.4-stdlib:amd64			install
 libqalculate5:amd64				install
 libqalculate5-data				install
-libqdbm14					deinstall
+libqdbm14					install
 libqpol1:amd64					install
 libqt4-network:amd64				install
 libqt4-xml:amd64				install
@@ -933,10 +933,10 @@ perl-base					install
 perl-modules					install
 php5-cgi					deinstall
 php5-cli					deinstall
-php5-common					deinstall
+php5-common					install
 php5-curl					deinstall
 php5-fpm					deinstall
-php5-json					deinstall
+php5-json					install
 php5-mysql					deinstall
 php5-sqlite					deinstall
 pidgin-data					install
