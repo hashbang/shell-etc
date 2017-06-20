@@ -29,9 +29,9 @@ StrictModes yes
 
 RSAAuthentication yes
 PubkeyAuthentication yes
-#AuthorizedKeysFile	%h/.ssh/authorized_keys
-AuthorizedKeysCommand /usr/bin/sss_ssh_authorizedkeys
-#AuthorizedKeysCommand /usr/bin/provisor_authorized_keys
+
+AuthorizedKeysFile        none
+AuthorizedKeysCommand     /usr/bin/sss_ssh_authorizedkeys
 AuthorizedKeysCommandUser nobody
 
 # Don't read the user's ~/.rhosts and ~/.shosts files
