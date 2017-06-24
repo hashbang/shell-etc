@@ -736,7 +736,6 @@ libusb-1.0-0:amd64				install
 libusbredirparser1:amd64			install
 libustr-1.0-1:amd64				install
 libutempter0					install
-libuuid-perl					install
 libuuid1:amd64					install
 libv4l-0:amd64					install
 libv4lconvert0:amd64				install
@@ -802,7 +801,6 @@ libzvbi-common					install
 libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
-linux-image-4.9.0-0.bpo.2-amd64			deinstall
 linux-image-4.9.0-0.bpo.3-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
@@ -932,14 +930,14 @@ pep8						install
 perl						install
 perl-base					install
 perl-modules					install
-php5-cgi					deinstall
-php5-cli					deinstall
+php5-cgi					install
+php5-cli					install
 php5-common					install
-php5-curl					deinstall
-php5-fpm					deinstall
+php5-curl					install
+php5-fpm					install
 php5-json					install
-php5-mysql					deinstall
-php5-sqlite					deinstall
+php5-mysql					install
+php5-sqlite					install
 pidgin-data					install
 pinentry-curses					install
 pkg-config					install
