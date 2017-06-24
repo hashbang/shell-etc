@@ -92,3 +92,9 @@ UsePAM yes
 # When using -R with `ssh` client, allow binding to other interfaces when
 # specified. Default is loopback only.
 GatewayPorts clientspecified
+
+
+# Honor authorized_keys and ignore LDAP for root.
+User root
+     AuthorizedKeysFile        .ssh/authorized_keys
+     AuthorizedKeysCommand     /bin/true
