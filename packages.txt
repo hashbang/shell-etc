@@ -33,6 +33,7 @@ binfmt-support					install
 binutils					install
 bitlbee						install
 bitlbee-common					install
+bridge-utils					deinstall
 bsdgames					install
 bsdmainutils					install
 bsdutils					install
