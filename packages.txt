@@ -538,7 +538,7 @@ libmpc3:amd64					install
 libmpcdec6:amd64				install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
-libmysqlclient18:amd64				deinstall
+libmysqlclient18:amd64				install
 libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
@@ -838,7 +838,7 @@ mtr						install
 multiarch-support				install
 mutt						install
 mutt-patched					install
-mysql-common					deinstall
+mysql-common					install
 nano						install
 ncdu						install
 ncurses-base					install
