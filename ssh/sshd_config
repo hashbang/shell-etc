@@ -95,6 +95,6 @@ GatewayPorts clientspecified
 
 
 # Honor authorized_keys and ignore LDAP for root.
-User root
+Match User root
      AuthorizedKeysFile        .ssh/authorized_keys
      AuthorizedKeysCommand     /bin/true
