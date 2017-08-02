@@ -1,0 +1,11 @@
+All the files listed in this file have something related to #! or to the
+domain used when deploying. They should eventually be written as Jinja2
+templates and each variable documented
+
+- ferm/ferm/ferm.conf
+- aliases
+- nslcd.conf
+- postfix/*.cf
+- msmtprc (msmtp/msmtprc)
+- mailname
+- resolvconf/resolv.conf.d/tail
