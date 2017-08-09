@@ -1,11 +1,11 @@
-From: noreply@hashbang.sh
-X-Original-To: {username}@hashbang.sh
-Delivered-To: {username}@hashbang.sh
+From: noreply@{{ system.domain }}
+X-Original-To: {username}@{{ system.domain }}
+Delivered-To: {username}@{{ system.domain }}
 MIME-Version: 1.0
-From: The Local Bot <noreply@hashbang.sh>
+From: The Local Bot <noreply@{{ system.domain }}>
 Date: {date}
 Subject: Press Enter to open this!
-To: {username} <{username}@hashbang.sh>
+To: {username} <{username}@{{ system.domain }}>
 Content-Type: text/plain
 
 Hey! Welcome to #!

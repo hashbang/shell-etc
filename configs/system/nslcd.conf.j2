@@ -7,10 +7,10 @@ uid nslcd
 gid nslcd
 
 # The location at which the LDAP server(s) should be reachable.
-uri ldaps://ldap.hashbang.sh/
+uri ldaps://ldap.{{ system.domain }}/
 
 # The search base that will be used for all queries.
-base dc=hashbang,dc=sh
+base {{ ldap.dc_name }}
 
 # The LDAP protocol version to use.
 #ldap_version 3

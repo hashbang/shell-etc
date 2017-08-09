@@ -1,0 +1,33 @@
+# -*- shell-script -*-
+#
+#  Configuration file for ferm(1).
+#
+#  vim:set noet sts=0 sw=2 ts=2:
+
+table filter {
+	chain INPUT {
+		policy ACCEPT;
+
+		# connection tracking
+		mod state state INVALID DROP;
+	}
+
+	chain OUTPUT {
+		policy ACCEPT;
+
+		# connection tracking
+		mod state state INVALID DROP;
+
+		# Bad addresses
+		{% for item in ferm.bad_addresses %}
+		# {{ item.reason }}
+		daddr ({% for addr in item.addresses %}{{ addr }} {% endfor %}) REJECT;
+		{% endfor %}
+
+		# Bad ports
+		{% for item in ferm.bad_ports %}
+		# {{ item.reason }}
+		proto (udp tcp) dport ({% for port in item.ports %}{{ port }} {% endfor %}) REJECT;
+		{% endfor %}
+	}
+}

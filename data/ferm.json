@@ -1,0 +1,13 @@
+{
+	"bad_addresses": [{
+		"reason": "Feathercoin mining pool",
+		"addresses": ["176.31.126.191", "188.165.223.132"]
+	}, {
+		"reason": "bitcoinshell.mooo.com mining pool",
+		"addresses": ["92.222.41.125"]
+	}],
+	"bad_ports": [{
+		"reason": "Bitcoin-related protocols",
+		"ports": [8082, 8332, 8333, 50002]
+	}]
+}
