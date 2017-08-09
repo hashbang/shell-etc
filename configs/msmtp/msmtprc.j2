@@ -20,5 +20,5 @@ tls_fingerprint {{ mail.cert_fp }}
 # Only applies to the #! account
 syslog LOG_MAIL
 
-# Make hashbang the default account
+# Make our domain the default account
 account default : {{ system.domain }}

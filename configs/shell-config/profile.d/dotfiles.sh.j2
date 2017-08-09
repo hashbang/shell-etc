@@ -27,10 +27,10 @@ EOF
 # cloning
 ###
 
-if ! git clone --recursive https://github.com/hashbang/dotfiles ~/.dotfiles; then
+if ! git clone --recursive {{ dotfiles.repository }} ~/.dotfiles; then
     cat >&2 <<EOF
 CRITICAL: Failed to clone your dotfiles from
-          https://github.com/hashbang/dotfiles
+	  {{ dotfiles.repository }}
 EOF
     rm -rf ~/.dotfiles
     return
@@ -51,7 +51,7 @@ trap - EXIT
 ###
 
 cd ~/.dotfiles
-stow bash git gnupg hashbang ssh tmux weechat zsh
+stow {% for item in dotfiles.stow %}{{ item }}{% endfor %}
 cd
 
 ###
