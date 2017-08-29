@@ -83,12 +83,12 @@
 ### passed to the tunnel agent as <user>@<hostname>.)  If the
 ### built-in ssh scheme were not predefined, it could be defined
 ### as:
-# ssh = $SVN_SSH ssh -q -o ControlMaster=no
+# ssh = $SVN_SSH ssh -q -o ControlMaster=no --
 ### If you wanted to define a new 'rsh' scheme, to be used with
 ### 'svn+rsh:' URLs, you could do so as follows:
-# rsh = rsh
+# rsh = rsh --
 ### Or, if you wanted to specify a full path and arguments:
-# rsh = /path/to/rsh -l myusername
+# rsh = /path/to/rsh -l myusername --
 ### On Windows, if you are specifying a full path to a command,
 ### use a forward slash (/) or a paired backslash (\\) as the
 ### path separator.  A single backslash will be treated as an
