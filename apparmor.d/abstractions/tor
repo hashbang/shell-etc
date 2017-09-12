@@ -7,7 +7,7 @@
   network udp,
 
   capability chown,
-  capability dac_override,
+  capability dac_read_search,
   capability fowner,
   capability fsetid,
   capability setgid,
