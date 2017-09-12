@@ -16,6 +16,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 192.0.2.254
 
+
 # Assuming that native IPv6 is available:
 iface eth0 inet6 static
 	address 2001:DB8:f00d:b1a::10ca1
@@ -32,6 +33,24 @@ iface he-ipv6 inet6 v4tunnel
 	endpoint 203.0.113.226
 	local    192.0.2.42
 	ttl 255
-	# Sad hack
-	up   ip a add dev $IFACE 2001:DB8:f00:b1a::/64
-	down ip a del dev $IFACE 2001:DB8:f00:b1a::/64
+
+
+# The bridge interface for user netns
+# The network 172.19.0.0/16 is non-routable, per RFC1918
+#  It is used for providing IPv4 networking to users
+# The network 2001:DB8:f00:b1a::/64 is reserved for documentation (RFC3849)
+#  and stands for the server's globally-reachable IPv6 subnet
+auto br-users
+iface br-users inet static
+	address 172.19.42.1
+	netmask 255.255.255.0
+	# disable Spanning Tree Protocol
+	bridge_stp off
+	# no delay before a port becomes available
+	bridge_waitport 0
+	# no forwarding delay
+	bridge_fd 0
+
+iface br-users inet6 static
+	address 2001:DB8:f00:b1a::
+	netmask 64
