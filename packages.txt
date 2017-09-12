@@ -801,7 +801,6 @@ libzvbi-common					install
 libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
-linux-image-4.9.0-0.bpo.2-amd64			deinstall
 linux-image-4.9.0-0.bpo.3-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
