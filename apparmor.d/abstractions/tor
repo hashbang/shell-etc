@@ -16,6 +16,9 @@
   /usr/bin/tor r,
   /usr/sbin/tor r,
 
+  # Needed by obfs4proxy
+  /proc/sys/net/core/somaxconn r,
+
   /proc/sys/kernel/random/uuid r,
   /sys/devices/system/cpu/ r,
   /sys/devices/system/cpu/** r,
@@ -24,4 +27,4 @@
   /usr/share/tor/** r,
 
   /usr/bin/obfsproxy PUx,
-  /usr/bin/obfs4proxy PUx,
+  /usr/bin/obfs4proxy Pix,
