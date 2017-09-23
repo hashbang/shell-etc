@@ -154,11 +154,12 @@ case "$1" in
 		log_action_end_msg 0 "already running"
 	else
 		if [ "$USE_AA_EXEC" = "yes" ] &&
-		   [ -x /usr/sbin/aa-status ] && \
-		   [ -x /usr/sbin/aa-exec ] && \
+		   command -v aa-status > /dev/null &&
+		   command -v aa-exec > /dev/null &&
 		   [ -e /etc/apparmor.d/system_tor ] && \
-		   /usr/sbin/aa-status --enabled ; then
-			AA_EXEC="--startas /usr/sbin/aa-exec"
+		   aa-status --enabled ; then
+			AA_EXEC_PATH=$(command -v aa-exec)
+			AA_EXEC="--startas $AA_EXEC_PATH"
 			AA_EXEC_ARGS="--profile=system_tor -- $DAEMON"
 		else
 			AA_EXEC=""
