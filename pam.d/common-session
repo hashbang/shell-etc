@@ -10,5 +10,4 @@
 session	substack	common-session-noninteractive
 
 session	optional	pam_mkhomedir.so
-session	optional	pam_systemd.so
 session	optional	pam_umask.so      usergroups
