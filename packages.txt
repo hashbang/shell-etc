@@ -692,6 +692,8 @@ libsss-idmap0					install
 libsss-sudo					install
 libstdc++-4.9-dev:amd64				install
 libstdc++6:amd64				install
+libc++1				install
+libc++-dev				install
 libstrictures-perl				install
 libsub-exporter-progressive-perl		install
 libsvn1:amd64					install
