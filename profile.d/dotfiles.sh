@@ -19,7 +19,7 @@ trap "rm -rf -- '${GNUPGHOME}'; unset GNUPGHOME" EXIT
 cat > "${GNUPGHOME}/gpg.conf" <<EOF
 # Never, ever, ever do this in your personal gpg.conf
 # However, this is sane when you know you use an empty GNUPGHOME
-keyring /etc/gnupg/hashbang-admins.gpg
+keyring /var/lib/hashbang/admins.gpg
 trust-model always
 EOF
 
