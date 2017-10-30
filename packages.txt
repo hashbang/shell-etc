@@ -33,6 +33,7 @@ binfmt-support					install
 binutils					install
 bitlbee						install
 bitlbee-common					install
+bridge-utils					deinstall
 bsdgames					install
 bsdmainutils					install
 bsdutils					install
@@ -82,6 +83,7 @@ dh-lua						install
 dh-python					install
 dictionaries-common				install
 diffutils					install
+dirmngr						install
 discover					install
 discover-data					install
 distro-info					install
@@ -167,7 +169,6 @@ gnuchess					install
 gnugo						install
 gnupg						install
 gnupg-agent					install
-gnupg2						install
 gnuplot-data					install
 gnuplot-nox					install
 gnuplot-tex					install
@@ -420,7 +421,7 @@ libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
 libgomp1:amd64					install
 libgpg-error0:amd64				install
-libgpgme11:amd64				install
+libgpgme11:amd64				deinstall
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgsasl7					install
@@ -446,6 +447,7 @@ libheimbase1-heimdal:amd64			install
 libheimntlm0-heimdal:amd64			install
 libhogweed2:amd64				install
 libhx509-5-heimdal:amd64			install
+libice6:amd64					deinstall
 libicu52:amd64					install
 libidn11:amd64					install
 libiec61883-0:amd64				install
@@ -548,13 +550,16 @@ libnet-idn-encode-perl				install
 libnet-ip-perl					install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
+libnet1:amd64					deinstall
 libnetfilter-acct1:amd64			install
 libnetpbm10					install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
 libnfnetlink0:amd64				install
 libnice10:amd64					install
+libnids1.21					deinstall
 libnl-3-200:amd64				install
+libnl-genl-3-200:amd64				deinstall
 libnl-route-3-200:amd64				install
 libnpth0:amd64					install
 libnspr4:amd64					install
@@ -611,6 +616,7 @@ libprotobuf-c1					install
 libprotobuf9:amd64				install
 libproxy1:amd64					install
 libpsl0:amd64					install
+libpth20:amd64					install
 libpwquality-common				install
 libpwquality1:amd64				install
 libpython-dev:amd64				install
@@ -673,7 +679,9 @@ libsigc++-2.0-0c2a:amd64			install
 libsigsegv2:amd64				install
 libslang2:amd64					install
 libslv2-9					install
+libsm6:amd64					deinstall
 libsmartcols1:amd64				install
+libsmi2ldbl:amd64				deinstall
 libsndfile1:amd64				install
 libsocket6-perl					install
 libsoundtouch0:amd64				install
@@ -754,8 +762,12 @@ libwbclient0:amd64				install
 libwildmidi-config				install
 libwildmidi1:amd64				install
 libwind0-heimdal:amd64				install
+libwireshark-data				deinstall
+libwireshark5:amd64				deinstall
+libwiretap4:amd64				deinstall
 libwmf0.2-7:amd64				install
 libwrap0:amd64					install
+libwsutil4:amd64				deinstall
 libx11-6:amd64					install
 libx11-data					install
 libx11-xcb1:amd64				install
@@ -783,6 +795,7 @@ libxinerama1:amd64				install
 libxml2:amd64					install
 libxml2-dev:amd64				install
 libxmlrpc-core-c3				install
+libxmu6:amd64					deinstall
 libxmuu1:amd64					install
 libxpm4:amd64					install
 libxrandr2:amd64				install
@@ -790,6 +803,7 @@ libxrender1:amd64				install
 libxshmfence1:amd64				install
 libxslt1-dev:amd64				install
 libxslt1.1:amd64				install
+libxt6:amd64					deinstall
 libxtables10					install
 libxv1:amd64					install
 libxvidcore4:amd64				install
@@ -801,6 +815,7 @@ libzvbi-common					install
 libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
+linux-image-4.9.0-0.bpo.2-amd64			deinstall
 linux-image-4.9.0-0.bpo.3-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
@@ -830,14 +845,16 @@ mat						install
 mawk						install
 mc						install
 mc-data						install
+mercurial					deinstall
+mercurial-common				deinstall
 mime-support					install
 mosh						install
 mount						install
 msmtp						install
 mtr						install
 multiarch-support				install
-mutt						install
-mutt-patched					install
+mutt						deinstall
+mutt-patched					deinstall
 mysql-common					install
 nano						install
 ncdu						install
@@ -1206,6 +1223,7 @@ wget						install
 whiptail					install
 whois						install
 wyrd						install
+x11-common					deinstall
 xauth						install
 xdg-user-dirs					install
 xkb-data					install
