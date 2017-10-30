@@ -18,7 +18,7 @@ ADMIN_KEYS=(
     0x3D7C8D39E8C4DF771583D3F0A8A091FD346001CA # singlerider
 )
 
-[ ! -f "${KEYRING}" ] || gpg2 -q --import "${KEYRING}"
-gpg2 -q --keyserver pool.sks-keyservers.net --recv-keys "${ADMIN_KEYS[@]}"
-gpg2 -q --export --export-options export-clean,export-minimal \
+[ ! -f "${KEYRING}" ] || gpg -q --import "${KEYRING}"
+gpg -q --keyserver pool.sks-keyservers.net --recv-keys "${ADMIN_KEYS[@]}"
+gpg -q --export --export-options export-clean,export-minimal \
      -o "${KEYRING}" "${ADMIN_KEYS[@]}"
