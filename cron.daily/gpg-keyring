@@ -1,0 +1,24 @@
+#!/bin/bash -e
+
+KEYRING=/var/lib/hashbang/admins.gpg
+mkdir -p "$(dirname "${KEYRING}")"
+
+unset GNUPGHOME
+trap 'rm -rf -- "${GNUPGHOME}"'
+export GNUPGHOME="$(mktemp -d)"
+
+ADMIN_KEYS=(
+    0x954A3772D62EF90E4B31FBC6C91A9911192C187A # daurnimator
+    0xC35A2549BBC9B88C9149E9B4427D14BCAA570BF1 # DeviaVir
+    0xA68847F70315340C5117B31778FC3358C2E3276E # dgrove
+    0xF2B7999666D83093F8D4212926CDD32189AA2885 # dpflug
+    0x700E88FC14B533111AD7A40F1D7C08C6CC263D74 # kellerfuchs
+    0x6B61ECD76088748C70590D55E90A401336C8AAA9 # lrvick
+    0x47BF2F123A4F98EF279DC3DFC60D4B85F1BAB95A # ryan
+    0x3D7C8D39E8C4DF771583D3F0A8A091FD346001CA # singlerider
+)
+
+[ ! -f "${KEYRING}" ] || gpg2 -q --import "${KEYRING}"
+gpg2 -q --keyserver pool.sks-keyservers.net --recv-keys "${ADMIN_KEYS[@]}"
+gpg2 -q --export --export-options export-clean,export-minimal \
+     -o "${KEYRING}" "${ADMIN_KEYS[@]}"
