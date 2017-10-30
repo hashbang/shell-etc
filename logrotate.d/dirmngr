@@ -1,0 +1,7 @@
+/var/log/dirmngr/dirmngr.log {
+	missingok
+	notifempty
+	postrotate
+		invoke-rc.d --quiet dirmngr try-restart >/dev/null
+	endscript
+}
