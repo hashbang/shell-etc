@@ -1,3 +1,0 @@
-Package: gnupg gnupg2 gnupg-agent libassuan0 libgcrypt20 libgpg-error0 libksba8 libnpth0 signing-party
-Pin: release n=stretch
-Pin-Priority: 990
