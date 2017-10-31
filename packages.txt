@@ -303,6 +303,9 @@ libbrlapi0.6:amd64				install
 libbsd-dev:amd64				install
 libbsd0:amd64					install
 libbz2-1.0:amd64				install
+libc++-dev:amd64				install
+libc++-helpers					install
+libc++1:amd64					install
 libc-ares-dev:amd64				install
 libc-ares2:amd64				install
 libc-bin					install
@@ -422,7 +425,7 @@ libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
 libgomp1:amd64					install
 libgpg-error0:amd64				install
-libgpgme11:amd64				deinstall
+libgpgme11:amd64				install
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgsasl7					install
@@ -839,7 +842,7 @@ mount						install
 msmtp						install
 mtr						install
 multiarch-support				install
-mutt						deinstall
+mutt						install
 mutt-patched					deinstall
 mysql-common					install
 nano						install
