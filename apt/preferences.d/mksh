@@ -1,0 +1,3 @@
+Package: mksh
+Pin: release n=jessie-backports
+Pin-Priority: 990
