@@ -9,3 +9,5 @@
 /usr/bin/zsh
 /bin/ksh93
 /usr/bin/fish
+/bin/mksh
+/bin/mksh-static

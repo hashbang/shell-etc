@@ -4,6 +4,7 @@ acpi-support-base				install
 acpid						install
 adduser						install
 aglfn						install
+alpine						install
 ansible						install
 apt						install
 apt-file					install
@@ -83,6 +84,7 @@ dh-python					install
 dictionaries-common				install
 diffutils					install
 dirmngr						install
+discount					install
 discover					install
 discover-data					install
 distro-info					install
@@ -524,6 +526,7 @@ libmagickcore-6.q16-2:amd64			install
 libmagickwand-6.q16-2:amd64			install
 libmail-sendmail-perl				install
 libmailtools-perl				install
+libmarkdown2:amd64				install
 libmd0:amd64					install
 libmeanwhile1					install
 libmhash2:amd64					install
@@ -806,6 +809,7 @@ libzvbi-common					install
 libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
+linux-image-4.9.0-0.bpo.2-amd64			deinstall
 linux-image-4.9.0-0.bpo.3-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
@@ -836,6 +840,8 @@ mawk						install
 mc						install
 mc-data						install
 mime-support					install
+mksh						install
+mlock						install
 mosh						install
 mount						install
 msmtp						install
@@ -1139,6 +1145,7 @@ silversearcher-ag-el				install
 slashem						install
 slashem-common					install
 socat						install
+sqlite3						install
 ssh						install
 ssl-cert					install
 sssd						install
@@ -1167,7 +1174,11 @@ tar						install
 task-english					install
 tasksel						install
 tasksel-data					install
+tcl						install
+tcl-tls						install
 tcl8.5						install
+tcl8.6						install
+tcllib						install
 tcpd						install
 telnet						install
 tig						install

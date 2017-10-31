@@ -1,0 +1,49 @@
+# Debian mksh
+# Skeleton ~/.mkshrc file adding a level of indirection
+
+# check if this is really mksh	# {((
+case ${KSH_VERSION:-} in
+*MIRBSD\ KSH*) ;;
+*) return 0 ;;
+esac				# }
+
+# source the system-wide mkshrc file
+[[ -s /etc/mkshrc ]] && \. /etc/mkshrc
+
+# prepend $debian_chroot support to PS1
+p=$'\001'
+if [[ ${PS1:1:1} = $'\r' ]]; then
+	p=${PS1:0:1}
+	PS1=${PS1:2}
+else
+	p=$'\001'
+fi
+[[ -z ${debian_chroot:-} && -r /etc/debian_chroot ]] && \
+    debian_chroot=$(</etc/debian_chroot)
+PS1=$p$'\r${debian_chroot:+'$p$'\e[0;1m'$p'($debian_chroot)'$p$'\e[0m'$p'}'$PS1
+\unset p
+
+\: put your local alias/function definitions, patches, etc. here
+
+# fixup ncurses-term badness
+#[[ $TERM = screen.* ]] && TERM=screen
+
+# force sane environment (e.g. for scripting), Debian-specific libc patch
+#\export LC_ALL=C.UTF-8
+# - or - switch to a slightly user-friendly and more portable locale
+#\unset LANGUAGE LC_ADDRESS LC_ALL LC_COLLATE LC_IDENTIFICATION LC_MONETARY \
+#    LC_NAME LC_NUMERIC LC_TELEPHONE LC_TIME
+#p=en_GB.UTF-8
+#\export LANG=C LC_CTYPE=$p LC_MEASUREMENT=$p LC_MESSAGES=$p LC_PAPER=$p
+
+# in either case: sync mksh UTF-8 mode to current locale (expected on GNU)
+set -U; [[ ${LC_ALL:-${LC_CTYPE:-${LANG:-}}} = *[Uu][Tt][Ff]?(-)8* ]] || set +U
+
+# set a sensible editor
+#p=$(\builtin whence -p jupp) || p=
+#[[ -n $p ]] || p=$(\builtin whence -p jstar) || p=
+#[[ -n $p ]] && export EDITOR=$p VISUAL=$p
+#
+#\unset p
+
+\: make sure this is the last line, to ensure a good return code
