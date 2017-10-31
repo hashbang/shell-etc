@@ -90,4 +90,4 @@ aliases.db
 ld.so.preload
 
 # Files created by systemd
-systemd/system/user-*.slice.d/*.conf
+systemd/system/user-*
