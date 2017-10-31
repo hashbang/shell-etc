@@ -33,7 +33,6 @@ text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page
 text/html; /usr/bin/sensible-browser %s; description=HTML Text; nametemplate=%s.html
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 application/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
-message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
 text/plain; more %s; needsterminal
 image/avs; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/bie; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
