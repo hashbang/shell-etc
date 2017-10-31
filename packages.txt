@@ -168,7 +168,7 @@ glib-networking-services			install
 gnuchess					install
 gnugo						install
 gnupg						install
-gnupg-agent					install
+gnupg-agent					deinstall
 gnuplot-data					install
 gnuplot-nox					install
 gnuplot-tex					install
