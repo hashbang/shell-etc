@@ -1,7 +1,9 @@
 #!/bin/bash -e
-
 KEYRING=/var/lib/hashbang/admins.gpg
-mkdir -p "$(dirname "${KEYRING}")"
+
+umask 002
+mkdir -p   "$(dirname "${KEYRING}")"
+chmod 0644 "$(dirname "${KEYRING}")"
 
 unset GNUPGHOME
 trap 'rm -rf -- "${GNUPGHOME}"' EXIT
@@ -19,6 +21,6 @@ ADMIN_KEYS=(
 )
 
 [ ! -f "${KEYRING}" ] || gpg -q --import "${KEYRING}"
-gpg -q --keyserver pool.sks-keyservers.net --recv-keys "${ADMIN_KEYS[@]}"
-gpg -q --export --export-options export-clean,export-minimal \
+gpg -q --batch --keyserver pool.sks-keyservers.net --recv-keys "${ADMIN_KEYS[@]}"
+gpg -q --batch --yes --export --export-options export-clean,export-minimal \
      -o "${KEYRING}" "${ADMIN_KEYS[@]}"
