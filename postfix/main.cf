@@ -11,12 +11,13 @@ alias_maps    = hash:/etc/aliases
 
 # Relay settings
 relayhost                       = mail.$mydomain
-smtp_tls_security_level         = fingerprint
+smtp_tls_security_level         = secure
+smtp_tls_CAfile                 = /etc/ssl/certs/ca-certificates.crt
 smtp_tls_fingerprint_digest     = sha1
-smtp_tls_fingerprint_cert_match = 73:E7:EC:E1:53:7F:D6:09:C9:3A:B3:62:84:64:7B:1D:D3:85:DF:D6
-smtp_tls_mandatory_protocols    = !SSLv2, !SSLv3, !TLSv1
+smtp_tls_mandatory_protocols    = !SSLv2,!SSLv3,!TLSv1,!TLSv1.1
+smtp_tls_protocols              = !SSLv2,!SSLv3,!TLSv1,!TLSv1.1
 smtp_tls_exclude_ciphers        = NULL, MD5, DES, RC4
-smtp_tls_mandatory_ciphers      = high
+smtp_tls_mandatory_ciphers      = ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
 
 # TLS Settings
 smtpd_use_tls                    = yes
