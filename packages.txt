@@ -34,6 +34,7 @@ binfmt-support					install
 binutils					install
 bitlbee						install
 bitlbee-common					install
+bridge-utils					deinstall
 bsdgames					install
 bsdmainutils					install
 bsdutils					install
@@ -563,6 +564,7 @@ libnfnetlink0:amd64				install
 libnice10:amd64					install
 libnl-3-200:amd64				install
 libnl-route-3-200:amd64				install
+libnpth0:amd64					install
 libnspr4:amd64					install
 libnss-ldapd:amd64				install
 libnss-sss:amd64				install
@@ -809,6 +811,7 @@ libzvbi0:amd64					install
 linux-base					install
 linux-image-3.16.0-4-amd64			install
 linux-image-4.9.0-0.bpo.3-amd64			install
+linux-image-4.9.0-0.bpo.4-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
 lm-sensors					install
