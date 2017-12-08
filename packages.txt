@@ -1121,7 +1121,7 @@ remind						install
 reportbug					install
 reptyr						install
 resolvconf					install
-rlwrap					install
+rlwrap						install
 rsync						install
 rsyslog						install
 rtorrent					install
