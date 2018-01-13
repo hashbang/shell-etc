@@ -812,6 +812,7 @@ linux-image-3.16.0-4-amd64			install
 linux-image-4.9.0-0.bpo.2-amd64			deinstall
 linux-image-4.9.0-0.bpo.3-amd64			install
 linux-image-4.9.0-0.bpo.4-amd64			install
+linux-image-4.9.0-0.bpo.5-amd64			install
 linux-image-amd64				install
 linux-libc-dev:amd64				install
 lm-sensors					install
