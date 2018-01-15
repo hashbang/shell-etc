@@ -568,7 +568,6 @@ libnids1.21					deinstall
 libnl-3-200:amd64				install
 libnl-genl-3-200:amd64				deinstall
 libnl-route-3-200:amd64				install
-libnpth0:amd64					install
 libnspr4:amd64					install
 libnss-ldapd:amd64				install
 libnss-sss:amd64				install
@@ -1234,7 +1233,10 @@ wamerican					install
 weechat						install
 weechat-core					install
 weechat-curses					install
+weechat-lua					install
+weechat-perl					install
 weechat-plugins					install
+weechat-python					install
 wget						install
 whiptail					install
 whois						install
