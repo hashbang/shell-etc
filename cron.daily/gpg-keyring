@@ -3,7 +3,7 @@ KEYRING=/var/lib/hashbang/admins.gpg
 
 umask 002
 mkdir -p   "$(dirname "${KEYRING}")"
-chmod 0644 "$(dirname "${KEYRING}")"
+chmod 0755 "$(dirname "${KEYRING}")"
 
 unset GNUPGHOME
 trap 'rm -rf -- "${GNUPGHOME}"' EXIT
