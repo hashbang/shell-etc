@@ -5,5 +5,5 @@ RefuseManualStart=yes
 RefuseManualStop=yes
 
 [Timer]
-OnCalendar=1 %I
+OnCalendar=%I
 Persistent=yes
