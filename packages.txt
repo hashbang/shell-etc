@@ -1219,7 +1219,10 @@ wamerican					install
 weechat						install
 weechat-core					install
 weechat-curses					install
+weechat-lua                                     install
 weechat-plugins					install
+weechat-perl                                    install
+weechat-python                                  install
 wget						install
 whiptail					install
 whois						install
