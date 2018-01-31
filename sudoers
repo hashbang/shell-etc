@@ -8,9 +8,9 @@
 #
 Defaults	env_reset
 Defaults	mail_badpass
-Defaults	!requiretty
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-Defaults	!tty_tickets
+Defaults	!requiretty, !tty_tickets
+Defaults	use_pty
 
 # Host alias specification
 
