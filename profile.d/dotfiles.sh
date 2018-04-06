@@ -58,7 +58,7 @@ cd
 # Make sure a proper maildir is in place
 ###
 
-mkdir -p ~/Mail/{cur,new,tmp}
+mkdir -p ~/Mail/cur ~/Mail/new ~/Mail/tmp
 
 ###
 # Edit the welcome message
